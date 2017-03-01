@@ -148,6 +148,93 @@ public class OneToTen {
     }
 
 
+    //3. Longest Substring Without Repeating Characters
+
+    //use hashtable two pointers
+    //耻辱
+//    public int lengthOfLongestSubstring(String s) {
+//        char []arrs=s.toCharArray();
+//        int n=s.length(),maxLength=0,start=0;
+//        Map<Character,Integer>map=new HashMap<>();
+//        for(int i=0;i<n;++i){
+//            if(map.containsKey(arrs[i])){
+//                if(start>map.get(arrs[i]))
+//                    maxLength=Math.max(maxLength,i-start+1);
+//                else
+//                    maxLength=Math.max(maxLength,i-start);
+//                start=Math.max(start+1,map.get(arrs[i])+1);
+//            }
+//            map.put(arrs[i],i);
+//        }
+//
+//        return Math.max(maxLength,n-start);
+//    }
+
+    //hashtable + two pointers
+    public int lengthOfLongestSubstring(String s){
+        int start=-1,n=s.length(),maxLength=0;
+        char []arrs=s.toCharArray();
+        Map<Character,Integer>map=new HashMap<>();
+        for(int i=0;i<n;++i){
+            if(map.containsKey(arrs[i]))
+                start=Math.max(start,map.get(arrs[i]));
+            map.put(arrs[i],i);
+            maxLength=Math.max(maxLength,i-start);
+        }
+        return maxLength;
+
+    }
+
+    //window: this is most efficient algo I have ever seen
+
+
+    //by zjh
+//    int findSubstring(string s){
+//        vector<int> map(128,0);
+//        int counter; // check whether the substring is valid
+//        int begin=0, end=0; //two pointers, one point to tail and one  head
+//        int d; //the length of substring
+//
+//        for() { /* initialize the hash map here */ }
+//
+//        while(end<s.size()){
+//
+//            if(map[s[end++]]-- ?){  /* modify counter here */ }
+//
+//            while(/* counter condition */){
+//
+//                 /* update d here if finding minimum*/
+//
+//                //increase begin to make it invalid/valid again
+//
+//                if(map[s[begin++]]++ ?){ /*modify counter here*/ }
+//            }
+//
+//            /* update d here if finding maximum*/
+//        }
+//        return d;
+//    }
+
+    //One thing needs to be mentioned is that when asked to find maximum substring,
+    // we should update maximum after the inner while loop to guarantee that the substring is valid.
+    // On the other hand, when asked to find minimum substring, we should update minimum inside the inner while loop.
+
+    public int lengthOfLongestSubstringWindow(String s){
+        int []cnt=new int[128];
+        int n=s.length();
+        int begin=0,end=0,maxLength=0,count=0;
+        while(end<n){
+            if(++cnt[s.charAt(end++)]>1)
+                count++;
+            while(count>0){
+                if(--cnt[begin++]==1)
+                    count--;
+            }
+            maxLength=Math.max(end-begin,maxLength);
+        }
+        return maxLength;
+    }
+
 
 
     //4 median of two sorted arrays

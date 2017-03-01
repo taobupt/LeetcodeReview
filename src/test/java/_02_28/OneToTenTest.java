@@ -30,4 +30,9 @@ public class OneToTenTest {
         //System.out.println(oneToTen.findMedianSortedArraysBetterWays(nums1,nums2));
     }
 
+    @Test
+    public  void testLongestWithouDuplic()throws Exception{
+        System.out.println(oneToTen.lengthOfLongestSubstringOrigin("tmmzuxt"));
+    }
+
 }
