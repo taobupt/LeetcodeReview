@@ -1,0 +1,396 @@
+package _02_28;
+
+import common.ListNode;
+import common.Tuple;
+
+import java.util.*;
+
+/**
+ * Created by Tao on 2/28/2017.
+ */
+public class OneToTen {
+
+    // 1 Two Sum
+
+    //method one hashmap
+    public int[] twoSum(int[] nums, int target) {
+        int n=nums.length;
+        Map<Integer,Integer> map=new HashMap<>();
+        int []res=new int[2];
+        for(int i=0;i<n;++i){
+            if(map.containsKey(target-nums[i])){
+                res[0]=map.get(target-nums[i]);
+                res[1]=i;
+                break;
+            }
+            map.put(nums[i],i);
+        }
+        return res;
+    }
+
+    //Two pointers
+    public int[]twoSumWithTwoPointers(int []nums,int target){
+        int n=nums.length;
+        List<Tuple>li=new ArrayList<>();
+        for(int i=0;i<n;++i)
+            li.add(new Tuple(nums[i],i));
+        //sort by value
+        li.sort(new Comparator<Tuple>() {
+            @Override
+            public int compare(Tuple o1, Tuple o2) {
+                if((int)o1.x==(int)o2.x)
+                    return 0;
+                else if((int)o1.x>(int)o2.x)
+                    return 1;
+                else
+                    return -1;
+            }
+        });
+        int begin=0,end=n-1;
+        int []res=new int[2];
+        while(begin<end){
+            int val1=(int)li.get(begin).x;
+            int val2=(int)li.get(end).x;
+            if(val1+val2==target){
+                res[0]=(int)li.get(begin).y;
+                res[1]=(int)li.get(end).y;
+                break;
+            }else if(val1+val2>target)
+                end--;
+            else
+                begin++;
+        }
+        return res;
+    }
+
+    //also you can copy the array to an new array and use two pointers to find two number and linear search
+
+
+
+
+
+
+    //2 add two numbers
+    //as for the linkedlist & tree, there are always two ways, iterative way and recursive
+    // no need to add more ways, just one way
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode head=new ListNode(0);
+        ListNode p=head;
+        int carray=0;
+        while(l1!=null||l2!=null||carray!=0){
+            carray+=(l1!=null?l1.val:0)+(l2!=null?l2.val:0);
+            p.next=new ListNode(carray%10);
+            carray/=10;
+            l1=l1!=null?l1.next:null;
+            l2=l2!=null?l2.next:null;
+            p=p.next;
+        }
+        return head.next;
+    }
+
+    //recursive way
+    //also you can add carry into l1.val
+    //something like that next=l1.next
+    //if(next!=null)
+    //next.val+=c;
+    //else if(c>0)
+    //next=new ListNode(c);
+    //but my way is concise
+    public ListNode addTwoNumbersRecursive(ListNode l1, ListNode l2,int carry){
+        if(l1==null && l2==null && carry==0)
+            return null;
+        carry+=(l1!=null?l1.val:0)+(l2!=null?l2.val:0);
+        ListNode head=new ListNode(carry%10);
+        head.next=addTwoNumbersRecursive(l1!=null?l1.next:null,l2!=null?l2.next:null,carry/10);
+        return head;
+    }
+
+    public ListNode addTwoNumbersRecursive(ListNode l1, ListNode l2){
+        return addTwoNumbersRecursive(l1,l2,0);
+    }
+
+    //there  is a related question, just represent number in a reverse order
+    //the naive way was to reverse first and do the same as above
+    //or you can use two stack to store the value first
+    //or you can get the two list length, and solve by recursive
+    //应该好好想想为啥不能把carry加进去，上次可以加入carry是因为进位本来就是从前到后的，现在是从后往前的，所以要万分小心啊。
+    public int getLength(ListNode l1){
+        int count=0;
+        while(l1!=null){
+            count++;
+            l1=l1.next;
+        }
+        return count;
+    }
+    public ListNode recursive(ListNode l1,ListNode l2,int offset){
+        if(l1==null)
+            return null;
+        ListNode head=offset==0?new ListNode(l1.val+l2.val):new ListNode(l1.val);
+        head.next=offset==0?recursive(l1.next,l2.next,0):recursive(l1.next,l2,offset-1);
+        if(head.next!=null && head.next.val>9){
+            head.val+=1;
+            head.next.val=head.next.val%10;
+        }
+        return head;
+    }
+
+
+    public ListNode addTwoNumberII(ListNode l1,ListNode l2){
+        int size1=getLength(l1);
+        int size2=getLength(l2);
+        ListNode head=new ListNode(1);
+        head.next=size1>=size2?recursive(l1,l2,size1-size2):recursive(l2,l1,size2-size1);
+        if(head.next!=null && head.next.val>9){
+            head.next.val=head.next.val%10;
+            return head;
+        }
+        return head.next;
+    }
+
+
+
+
+    //4 median of two sorted arrays
+    //you can merge and find in O(1)t ime;
+    //this is o(n+m) time
+    //LTE
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        int m=nums1.length,n=nums2.length;
+        int []res=new int[m+n];
+        int i=0,j=0,index=0;
+        while(i<m && j<n){
+            if(nums1[i]<nums2[j])
+                res[index++]=nums1[i++];
+            else
+                res[index++]=nums2[j++];
+        }
+
+        return res.length%2!=0?1.0*res[res.length/2]:(res[res.length/2-1]+res[res.length/2])/2.0;
+    }
+
+    //O(log(M+n)
+
+    //k is length
+    public int findMedian(int[]nums1,int start1,int[]nums2,int start2,int k){
+        if(nums1.length-start1>nums2.length-start2)
+            return findMedian(nums2,start2,nums1,start1,k);
+        if(nums1.length==start1)
+            return nums2[start2+k-1];//in case of index boundary overflow
+        if(k==1)
+            return Math.min(nums1[start1],nums2[start2]);//recursive break condition
+        int pa=Math.min(k/2,nums1.length-start1);
+        int pb=k-pa;
+        if(nums1[start1+pa-1]<nums2[start2+pb-1])
+            return findMedian(nums1,start1+pa,nums2,start2,k-pa);
+        else if(nums1[start1+pa-1]>nums2[start2+pb-1])
+            return findMedian(nums1,start1,nums2,start2+pb,k-pb);
+        else
+            return nums1[start1+pa-1];
+    }
+
+    public double findMedianSortedArraysBetterWays(int[]nums1,int[]nums2){
+        int m=nums1.length,n=nums2.length;
+
+        int median1= findMedian(nums1,0,nums2,0,(m+n)/2+1);
+        if((m+n)%2==0)
+            return median1*1.0;
+        else return (median1+findMedian(nums1,0,nums2,0,(m+n)/2));
+    }
+
+
+
+
+
+    //6 zigzag conversion
+    public String convert(String s, int numRows) {
+        StringBuilder[]strs=new StringBuilder[numRows];
+        for(int j=0;j<numRows;++j)
+            strs[j]=new StringBuilder();
+        int n=s.length();
+        int i=0;
+        while(i<n){
+            for(int j=0;j<numRows;++j)
+                if(i<n)
+                    strs[j].append(s.charAt(i++));
+            for(int j=numRows-2;j>=1;--j)
+                if(i<n)
+                    strs[j].append(s.charAt(i++));
+        }
+        StringBuilder res=new StringBuilder();
+        for(int j=0;j<numRows;++j)
+            res.append(strs[j]);
+        return res.toString();
+    }
+
+    //mathmatical ways
+    public String convertBetter(String s,int numRows){
+        /*n=numRows
+Δ=2n-2    1                           2n-1                         4n-3
+Δ=        2                     2n-2  2n                    4n-4   4n-2
+Δ=        3               2n-3        2n+1              4n-5       .
+Δ=        .           .               .               .            .
+Δ=        .       n+2                 .           3n               .
+Δ=        n-1 n+1                     3n-3    3n-1                 5n-5
+Δ=2n-2    n                           3n-2                         5n-4
+*/
+        StringBuilder res=new StringBuilder();
+        if(numRows==1)
+            return s;
+        int step1=0,step2=0;// step1 is 2 to 2n-2 , 2n-2 to 2n
+        int len=s.length();
+        for(int i=0;i<numRows;++i){
+            step1=(numRows-1-i)*2;
+            step2=2*i;
+            int pos=i;
+            if(pos<len)
+                res.append(s.charAt(pos));
+            while(true){
+                pos+=step1;
+                if(pos>=len)
+                    break;
+                if(step1!=0)
+                    res.append(s.charAt(pos));
+                pos+=step2;
+                if(pos>=len)
+                    break;
+                if(step2!=0)
+                    res.append(s.charAt(pos));
+            }
+        }
+        return res.toString();
+
+    }
+
+    //7 reverse integer
+    public int reverse(int x) {
+        long res=0;//-2%3=-2;
+        while(x!=0){
+            res=10*res+x%10;
+            x/=10;
+        }
+        if(res>Integer.MAX_VALUE||res<Integer.MIN_VALUE)
+            return 0;
+        return (int)res;
+    }
+
+    //better
+    //if overflow exists, the new result will not equal previous one
+    public int reverseBetter(int x){
+        int res=0;
+        while(x!=0){
+            int tail=x%10;
+            int newRes=res*10+tail;
+            if((newRes-tail)/10!=res)
+                return 0;
+            res=newRes;
+            x/=10;
+        }
+        return res;
+    }
+
+
+    //9 palindrome number
+    //you can change it into string and check whether the string is a valid palindrome
+    //but more efficient way is to check
+    public boolean isPalindrome(int x) {
+        //negative number is not
+
+        if(x<0)
+            return false;
+        long res=0;
+        int copy=x;
+        while(x!=0){
+            res=10*res+x%10;
+            x/=10;
+        }
+        return res==copy;
+    }
+
+    //interesting way
+    //faster way,just check to middle
+    public boolean isPalindromeFaster(int x){
+        if(x<0||(x!=0 && x%10==0))
+            return false;
+        int rev=0;
+        while(rev<x){
+            rev=10*rev+x%10;
+            x/=10;
+        }
+        return rev==x||rev==10*x;
+    }
+
+
+    //10. Regular Expression Matching
+
+    //recursive way
+    public boolean isMatch(String s, String p) {
+        if(p.isEmpty())
+            return s.isEmpty();
+        if(p.length()==1){
+            return (s.length()==1)&&(s.charAt(0)==p.charAt(0)||p.charAt(0)=='.');
+        }
+
+        if(s.isEmpty())
+            return (p.charAt(1)=='*') && isMatch(s,p.substring(2));
+        if(p.charAt(1)=='*'){
+            return isMatch(s,p.substring(2))||((s.charAt(0)==p.charAt(0)||p.charAt(0)=='.')&&isMatch(s.substring(1),p));//0 or number of way
+        }else
+            return (s.charAt(0)==p.charAt(0)||p.charAt(0)=='.')&&isMatch(s.substring(1),p.substring(1));
+    }
+
+    //dynamic programming way
+    public boolean isMatchDP(String s,String p){
+        if(p.isEmpty())//do not forget this sentence
+            return s.isEmpty();
+        int m=s.length(),n=p.length();
+        boolean [][]dp=new boolean[m+1][n+1];
+        dp[0][0]=true;
+        for(int i=2;i<=n;++i)
+            dp[0][i]=dp[0][i-2] && p.charAt(i-1)=='*';
+        for(int i=1;i<=m;++i){
+            dp[i][1]=(i==1) && (s.charAt(i-1)==p.charAt(0)||p.charAt(0)=='.');//this would be error if the first sentence does not exist
+            for(int j=2;j<=n;++j){
+                if(p.charAt(j-1)=='*')
+                    dp[i][j]=dp[i][j-2]||((s.charAt(i-1)==p.charAt(j-2)||p.charAt(j-2)=='.')&&dp[i-1][j]);//this is -2 not -1
+                else
+                    dp[i][j]=(s.charAt(i-1)==p.charAt(j-1)||p.charAt(j-1)=='.')&&dp[i-1][j-1];
+            }
+        }
+        return dp[m][n];
+    }
+
+    //save space
+    //but I can't understand; sorry;
+    //you can try to contact Haifeng Jin
+    public boolean isMatchDPSaveSpace(String s,String p){
+        int m=s.length(),n=p.length();
+        boolean []dp=new boolean[n+1];
+        dp[0]=true;
+        for(int i=2;i<=n;++i)
+            dp[i]=dp[i-2] && p.charAt(i-1)=='*';
+        boolean left_up=false;
+        for(int i=0;i<m;++i){
+            left_up=dp[0];
+            dp[0]=false;
+            for(int j=0;j<n;++j){
+                boolean up=dp[j+1];
+                if(p.charAt(j)!='*')
+                    dp[j+1]=left_up&&(s.charAt(i)==p.charAt(j)||p.charAt(j)=='.');
+                else
+                    dp[j+1]=dp[j-1]||dp[j+1]&&(s.charAt(i)==p.charAt(j-1)||p.charAt(j-1)=='.');
+                left_up=up;
+            }
+        }
+        return dp[n];
+    }
+
+
+
+
+
+
+
+
+
+
+}
