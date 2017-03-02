@@ -286,6 +286,63 @@ public class OneToTen {
 
 
 
+    //5 longest palindromic substring
+    //dp 居然过了，意料之中，毕竟才是1000，O(n^2)妥妥过
+    public String longestPalindrome(String s) {
+        if(s.isEmpty())
+            return s;
+        char[]arrs=s.toCharArray();
+        int n=arrs.length;
+        boolean [][]dp=new boolean[n][n];
+        int start=0,end=0,maxLength=1;
+        for(int i=0;i<n;++i){
+            for(int j=0;j<=i;++j){
+                if(arrs[i]==arrs[j] &&(i-j<=2||dp[j+1][i-1])) {
+                    dp[j][i] = true;
+                    if(maxLength<(i-j+1)){
+                        maxLength=i-j+1;
+                        start=j;
+                        end=i;
+                    }
+                }
+            }
+        }
+        return s.substring(start,end+1);
+    }
+
+    //O(n^2)
+    public String longestPalindromeExtend(String s){
+        //you should use global variable, but, you can use array here to
+        int []res=new int[2];//res[0] is the start index, res[1] is the maxLength;
+        int len=s.length();
+        if(len<2)
+            return s;
+        char[]arrs=s.toCharArray();
+        for(int i=0;i<len-1;++i){
+            extendPalindrome(arrs,i,i,res);//assume odd length;
+            extendPalindrome(arrs,i,i+1,res);//assume even length
+        }
+        return s.substring(res[0],res[0]+res[1]);
+    }
+
+    public void extendPalindrome(char[]arrs, int j, int k,int []res){
+        while(j>=0 && k<arrs.length && arrs[j]==arrs[k]){
+            j--;
+            k++;
+        }
+        if(res[1]<k-j-1){
+            res[0]=j+1;
+            res[1]=k-j-1;
+        }
+    }
+
+    //actually you can use O(n)
+    public String longestPalindromeManacher(String s){
+        return s;
+    }
+
+
+
 
 
     //6 zigzag conversion
@@ -374,6 +431,55 @@ public class OneToTen {
         }
         return res;
     }
+
+    //8. String to Integer atoi
+
+    public int myAtoi(String str) {
+        //not like 1e7, valid number
+        str=str.trim();
+        char []arrs=str.toCharArray();
+        int n=str.length();
+        long res=0;
+        int negative=1;
+        int index=0;
+        if(index<n && (arrs[index]=='+'||arrs[index]=='-'))
+            if(arrs[index++]=='-')
+                negative=-1;
+        while(index<n && Character.isDigit(arrs[index])){
+            res=10*res+arrs[index++]-'0';
+            if(res>=2147483647)
+                break;
+        }
+        res*=negative;
+        if(res>=Integer.MAX_VALUE)
+            return Integer.MAX_VALUE;
+        if(res<=Integer.MIN_VALUE)
+            return Integer.MIN_VALUE;
+        return (int)res;
+    }
+
+    //without long
+
+    public int myAtoiConcise(String str){
+        str=str.trim();
+        int n=str.length();
+        char []arrs=str.toCharArray();
+        int sign=1,base=0,index=0;
+        if(index<n &&(arrs[index]=='+'||arrs[index]=='-'))
+            sign=arrs[index++]=='+'?1:-1;
+        while(index<n && Character.isDigit(arrs[index])){
+            if(base>Integer.MAX_VALUE/10||(base==Integer.MAX_VALUE/10 && arrs[index]-'0'>7)){
+                if(sign==1)
+                    return Integer.MAX_VALUE;
+                else
+                    return Integer.MIN_VALUE;
+            }
+            base=10*base+(arrs[index++]-'0');
+        }
+        return base*sign;
+    }
+
+
 
 
     //9 palindrome number

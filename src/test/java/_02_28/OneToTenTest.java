@@ -32,7 +32,17 @@ public class OneToTenTest {
 
     @Test
     public  void testLongestWithouDuplic()throws Exception{
-        System.out.println(oneToTen.lengthOfLongestSubstringOrigin("tmmzuxt"));
+        System.out.println(oneToTen.lengthOfLongestSubstring("tmmzuxt"));
+    }
+
+    @Test
+    public void testStoi()throws  Exception{
+        System.out.println(oneToTen.myAtoi("     1122m6780787"));
+    }
+
+    @Test
+    public void testlongestPalindrome(){
+        System.out.println(oneToTen.longestPalindrome(""));
     }
 
 }
