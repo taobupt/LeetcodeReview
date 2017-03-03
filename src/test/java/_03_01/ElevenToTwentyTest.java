@@ -39,4 +39,10 @@ public class ElevenToTwentyTest {
         et.fourSum(nums,2);
     }
 
+    @Test
+    public void testPrefix()throws Exception{
+        String[]strs={"ab","abc","abcd"};
+        System.out.println(et.longestCommonPrefixByTrie(strs));
+    }
+
 }

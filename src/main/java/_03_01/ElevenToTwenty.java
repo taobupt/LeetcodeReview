@@ -1,6 +1,8 @@
 package _03_01;
 
 import common.ListNode;
+import common.Trie;
+import common.TrieNode;
 
 import java.util.*;
 
@@ -188,11 +190,28 @@ public class ElevenToTwenty {
         return result.toString();
     }
 
+    //passed the test
+    public String longestCommonPrefixByTrie(String []strs){
+        Trie t=new Trie();
+        for(String str:strs)
+            t.addWords(str);
+        TrieNode root=t.root;
+        while(root.size==1 && !root.isEnd){
+            for(TrieNode node:root.children)
+                if(node!=null){
+                    root=node;
+                    break;
+                }
+        }
+        return root.word.toString();
+    }
 
 
     //you can also use trie
     //insert all the words and start to find the node that has more than one child, that's the end
     //I will implement later
+
+
 
     //15 3sum
     //sort and two pointers
@@ -325,7 +344,20 @@ public class ElevenToTwenty {
     //another way
     //queue
     //iterative way
-
+    public List<String> letterCombinationsIterative(String digits){
+        LinkedList<String> ans = new LinkedList<String>();
+        String[] mapping = new String[] {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+        ans.add("");
+        for(int i =0; i<digits.length();i++){
+            int x = Character.getNumericValue(digits.charAt(i));
+            while(ans.peek().length()==i){
+                String t = ans.remove();
+                for(char s : mapping[x].toCharArray())
+                    ans.add(t+s);
+            }
+        }
+        return ans;
+    }
 
 
 
