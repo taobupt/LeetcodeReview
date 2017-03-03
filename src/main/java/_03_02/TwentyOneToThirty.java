@@ -118,6 +118,7 @@ public class TwentyOneToThirty {
     //23 merge k sorted lists
     //priority queue
     //O(nlogk)
+    //可以拓展成n array;
     public ListNode mergeKLists(ListNode[] lists) {
         PriorityQueue<ListNode>pq=new PriorityQueue<>((ListNode node1,ListNode node2)->node1.val-node2.val);
         for(ListNode node:lists)
@@ -138,6 +139,7 @@ public class TwentyOneToThirty {
 
     //n log(k)
     //you can also use divide and conquer, something like the merge sort
+    //这个居然快很多
     public ListNode mergeKListsDivideAndConquer(ListNode[]lists){
         return partition(lists,0,lists.length-1);
     }
