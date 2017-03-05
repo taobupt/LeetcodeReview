@@ -1,13 +1,126 @@
 package _03_03;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by taobupt on 3/3/2017.
  */
 public class ThirtyOneToForty {
+
+
+    //31 next premutation
+    //just swap, no need to sort
+    public void reverse(int []nums,int start,int end){
+        while(start<end){
+            int tmp=nums[start];
+            nums[start++]=nums[end];
+            nums[end--]=tmp;
+        }
+    }
+    public void nextPermutation(int []nums){
+        int n=nums.length;
+
+        //check whether it is empty or not;
+
+        if(n==0)
+            return;
+        int j=n-2;
+        for(;j>=0;--j){
+            if(nums[j]<nums[j+1])
+                break;
+        }
+        if(j==-1){
+            //all sorted ,just reverse
+            reverse(nums,0,n-1);
+            return;
+        }
+
+        //find the next larget element than nums[j];
+        int i=n-1;
+        for(;i>=j;--i){
+            if(nums[i]>nums[j])
+                break;
+        }
+
+        //just swap the two elements
+        int tmp=nums[i];
+        nums[i]=nums[j];
+        nums[j]=tmp;
+        reverse(nums,j+1,n-1);
+    }
+
+
+    //32 Longest Valid Parentheses
+    //stack
+    //这道题确实不太会啊
+    public int longestValidParentheses(String s) {
+        char[]arrs=s.toCharArray();
+        int n=s.length();
+        Stack<Integer>stk=new Stack<>();
+        //sential
+        //stk.push(-1);
+        int maxLength=0;
+        for(int i=0;i<n;++i){
+            if(!stk.isEmpty() && arrs[stk.peek()]=='(' && arrs[i]==')'){
+                stk.pop();
+                maxLength=Math.max(maxLength,i-(stk.isEmpty()?-1:stk.peek()));
+            }else
+                stk.push(i);
+        }
+        return maxLength;
+    }
+
+    //还可以用dp来写
+
+
+
+
+    //33 Search in Rotated Sorted Array
+    //just normal binary search
+    public int search(int[] nums, int target) {
+        int n=nums.length;
+        int begin=0,end=n-1;
+        if(n==0)
+            return -1;
+        while(begin<end){
+            int mid=(end-begin)/2+begin;
+            if(nums[mid]==target)
+                return mid;
+            if(nums[mid]>nums[end]){
+                if(nums[mid]>target && target>=nums[begin])
+                    end=mid;
+                else
+                    begin=mid+1;//think it a lot
+            }
+            else if(nums[mid]<nums[end]){
+                if(nums[mid]<target && target<=nums[end])//this is end: think a lot
+                    begin=mid+1;
+                else
+                    end=mid;
+            }
+        }
+        return nums[begin]==target?begin:-1;
+    }
+
+    //actually you can find the pivot first ,and then use the normal search
+
+
+    //34 search for a range
+    //two binary search to find
+    public int[] searchRange(int[] nums, int target) {
+        int n=nums.length;
+        int low=searchInsert(nums,target);
+        if(low==n||nums[low]!=target)
+            return new int[]{-1,-1};
+        int hi=upperBound(nums,target);
+        return new int[]{low,hi-1};
+    }
+
+    //if we want a one binary, that why I failed in the linkedin interview, sign
+    public int[] searchRangeOneBinarySearch(int[] nums, int target){
+        return new int[]{};
+    }
+
 
     //35 search insert position
     //binary search lower_bound
@@ -59,20 +172,86 @@ public class ThirtyOneToForty {
     }
 
 
-    //34 search for a range
-    //two binary search to find
-    public int[] searchRange(int[] nums, int target) {
-        int n=nums.length;
-        int low=searchInsert(nums,target);
-        if(low==n||nums[low]!=target)
-            return new int[]{-1,-1};
-        int hi=upperBound(nums,target);
-        return new int[]{low,hi-1};
+    //36 valid sudoku
+
+    public boolean checkRowOrCol(char[][]board,boolean isRow,int []cnt){
+        for(int i=0;i<9;++i){
+            for(int j=0;j<9;++j){
+                if(isRow){
+                    if(board[i][j]!='.' && cnt[board[i][j]]++==1)
+                        return false;
+                }else{
+                    if(board[j][i]!='.' && cnt[board[j][i]]++==1)
+                        return false;
+                }
+            }
+            Arrays.fill(cnt,0);
+        }
+        Arrays.fill(cnt,0);
+        return true;
+    }
+    public boolean isValidSudoku(char[][] board) {
+        //横竖，每个9宫格都要保持合法
+
+        int []cnt=new int[128];
+        //first check the rows;
+        if(!checkRowOrCol(board,true,cnt))
+            return false;
+        if(!checkRowOrCol(board,false,cnt))
+            return false;
+        for(int i=0;i<9;i+=3){
+            for(int j=0;j<9;j+=3){
+                for(int m=i;m<i+3;++m){
+                    for(int n=j;n<j+3;++n){
+                        if(board[m][n]!='.' &&cnt[board[m][n]]++==1)
+                            return false;
+                    }
+                }
+                Arrays.fill(cnt,0);
+            }
+        }
+        return true;
     }
 
-    //if we want a one binary, that why I failed in the linkedin interview, sign
-    public int[] searchRangeOneBinarySearch(int[] nums, int target){
-        return new int[]{};
+
+    //37 Sudoku Solver
+    //和n queens 差不多，都是回溯，试探
+    //晚上记得复习，两道hard，这道的话其实和tree的那道很像，dfs都是带boolean,能极大的剪枝，什么时候用boolean, 什么时候用void呢？
+    //可以问下大神
+    private boolean valid(char[][] board, int row, int col, char c){
+        for(int i = 0; i < 9; i++) {
+            if(board[i][col] != '.' && board[i][col] == c) return false; //check row
+            if(board[row][i] != '.' && board[row][i] == c) return false; //check column
+            if(board[3 * (row / 3) + i / 3][ 3 * (col / 3) + i % 3] != '.' &&
+                    board[3 * (row / 3) + i / 3][3 * (col / 3) + i % 3] == c) return false; //check 3*3 block
+        }
+        return true;
+    }
+    public boolean dfs(char[][]board,int pos){
+        if(pos==81){
+            return true;
+        }
+        for(int i=pos;i<81;++i){
+            if(board[i/9][i%9]=='.'){
+                //search for a possible value
+                for(int k='1';k<='9';++k){
+
+                    if(valid(board,i/9,i%9,(char)k)){
+                        board[i/9][i%9]=(char)k;
+                        if(dfs(board,i+1))
+                            return true;
+                        else
+                            board[i/9][i%9]='.';
+                    }
+                }
+                return false;
+
+            }
+        }
+        return true;
+    }
+    public void solveSudoku(char[][] board) {
+        dfs(board,0);
     }
 
 
