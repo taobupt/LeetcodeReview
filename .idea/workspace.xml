@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b2dbafe-adc1-43bb-8fae-e149128a4c70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_03_04/FortyOneToFifty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_03_04/FortyOneToFiftyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/Interval.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java" afterPath="$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_03_03/ThirtyOneToFortyTest.java" afterPath="$PROJECT_DIR$/src/test/java/_03_03/ThirtyOneToFortyTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java" afterPath="$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java" afterPath="$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,6 +16,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/LeetcodeReview$FiftyOneToSixtyTest_testSubarrysSum.coverage" NAME="FiftyOneToSixtyTest.testSubarrysSum Coverage Results" MODIFIED="1488764920699" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>_03_05.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -28,10 +30,14 @@
       <file leaf-file-name="FiftyOneToSixty.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+            <state relative-caret-position="379">
+              <caret line="405" column="9" lean-forward="true" selection-start-line="405" selection-start-column="9" selection-end-line="405" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3803#3804#0" expanded="true" />
+                <element signature="e#3859#3860#0" expanded="true" />
+                <element signature="e#7553#7554#0" expanded="true" />
+                <element signature="e#7628#7629#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,11 +46,11 @@
       <file leaf-file-name="FiftyOneToSixtyTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+            <state relative-caret-position="313">
+              <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
               <folding>
-                <element signature="e#238#239#0" expanded="true" />
-                <element signature="e#278#279#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#354#355#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,8 +61,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,8 +94,9 @@
         <option value="$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java" />
         <option value="$PROJECT_DIR$/src/test/java/_03_04/FortyOneToFiftyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_04/FortyOneToFifty.java" />
-        <option value="$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/Interval.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java" />
       </list>
     </option>
   </component>
@@ -129,7 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -157,6 +163,40 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_03_05" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetcodeReview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetcodeReview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -177,6 +217,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -258,8 +302,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetcodeReview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LeetcodeReview" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -286,85 +353,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FiftyOneToSixtyTest.solveNQueens">
-    <configuration default="false" name="ThirtyOneToFortyTest.testSudu" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_03_03.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_03_03" />
-      <option name="MAIN_CLASS_NAME" value="_03_03.ThirtyOneToFortyTest" />
-      <option name="METHOD_NAME" value="testSudu" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FortyOneToFiftyTest.firstMissingPositive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_03_04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_03_04" />
-      <option name="MAIN_CLASS_NAME" value="_03_04.FortyOneToFiftyTest" />
-      <option name="METHOD_NAME" value="firstMissingPositive" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FortyOneToFiftyTest.testMutliply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_03_04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_03_04" />
-      <option name="MAIN_CLASS_NAME" value="_03_04.FortyOneToFiftyTest" />
-      <option name="METHOD_NAME" value="testMutliply" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.FiftyOneToSixtyTest.testSpiral">
     <configuration default="false" name="FortyOneToFiftyTest.testPermuation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -404,6 +393,84 @@
       <option name="PACKAGE_NAME" value="_03_05" />
       <option name="MAIN_CLASS_NAME" value="_03_05.FiftyOneToSixtyTest" />
       <option name="METHOD_NAME" value="solveNQueens" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FiftyOneToSixtyTest.testSubarrysSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_03_05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_03_05" />
+      <option name="MAIN_CLASS_NAME" value="_03_05.FiftyOneToSixtyTest" />
+      <option name="METHOD_NAME" value="testSubarrysSum" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FiftyOneToSixtyTest.testMerge" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_03_05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_03_05" />
+      <option name="MAIN_CLASS_NAME" value="_03_05.FiftyOneToSixtyTest" />
+      <option name="METHOD_NAME" value="testMerge" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FiftyOneToSixtyTest.testSpiral" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_03_05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_03_05" />
+      <option name="MAIN_CLASS_NAME" value="_03_05.FiftyOneToSixtyTest" />
+      <option name="METHOD_NAME" value="testSpiral" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -798,19 +865,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ThirtyOneToFortyTest.testSudu" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.firstMissingPositive" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testMutliply" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testPermuation" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.solveNQueens" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testPermuation" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.solveNQueens" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testSubarrysSum" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testMerge" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testSpiral" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.solveNQueens" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testPermuation" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testMutliply" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.firstMissingPositive" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ThirtyOneToFortyTest.testSudu" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testSpiral" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testMerge" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.testSubarrysSum" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FiftyOneToSixtyTest.solveNQueens" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FortyOneToFiftyTest.testPermuation" />
       </list>
     </recent_temporary>
   </component>
@@ -838,7 +905,9 @@
       <workItem from="1488580710119" duration="5320000" />
       <workItem from="1488641574946" duration="7663000" />
       <workItem from="1488654163251" duration="10729000" />
-      <workItem from="1488727974065" duration="2242000" />
+      <workItem from="1488727974065" duration="2329000" />
+      <workItem from="1488731418889" duration="467000" />
+      <workItem from="1488763505203" duration="9082000" />
     </task>
     <task id="LOCAL-00001" summary="add first 7  /02/28">
       <created>1488350088580</created>
@@ -847,46 +916,53 @@
       <option name="project" value="LOCAL" />
       <updated>1488350088580</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add  50-60  /03/05">
+      <created>1488731295856</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1488731295856</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FiftyOneToSixtyTest_solveNQueens - 2017.03.05 at 10h 04m 22s.xml">
-      <configuration name="FiftyOneToSixtyTest.solveNQueens" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 51m 51s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FiftyOneToSixtyTest_solveNQueens - 2017.03.05 at 10h 05m 00s.xml">
-      <configuration name="FiftyOneToSixtyTest.solveNQueens" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 52m 08s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FiftyOneToSixtyTest_solveNQueens - 2017.03.05 at 10h 06m 09s.xml">
-      <configuration name="FiftyOneToSixtyTest.solveNQueens" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 52m 15s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FortyOneToFiftyTest_testMutliply - 2017.03.04 at 14h 05m 18s.xml">
-      <configuration name="FortyOneToFiftyTest.testMutliply" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 08s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FortyOneToFiftyTest_testMutliply - 2017.03.04 at 14h 08m 24s.xml">
-      <configuration name="FortyOneToFiftyTest.testMutliply" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 22s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FortyOneToFiftyTest_testMutliply - 2017.03.04 at 14h 08m 36s.xml">
-      <configuration name="FortyOneToFiftyTest.testMutliply" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 29s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FortyOneToFiftyTest_testPermuation - 2017.03.04 at 18h 23m 40s.xml">
-      <configuration name="FortyOneToFiftyTest.testPermuation" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 36s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FortyOneToFiftyTest_testPermuation - 2017.03.05 at 10h 04m 19s.xml">
-      <configuration name="FortyOneToFiftyTest.testPermuation" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 48s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThirtyOneToFortyTest_testSudu - 2017.03.04 at 10h 49m 38s.xml">
-      <configuration name="ThirtyOneToFortyTest.testSudu" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 53m 58s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThirtyOneToFortyTest_testSudu - 2017.03.04 at 10h 52m 09s.xml">
-      <configuration name="ThirtyOneToFortyTest.testSudu" configurationId="JUnit" />
+    <history-entry file="FiftyOneToSixtyTest_testSpiral - 2017.03.05 at 22h 54m 06s.xml">
+      <configuration name="FiftyOneToSixtyTest.testSpiral" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93917000" />
+    <option name="totallyTimeSpent" value="103553000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -899,7 +975,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -911,7 +988,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1375" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3703125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -928,7 +1005,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add first 7  /02/28" />
-    <option name="LAST_COMMIT_MESSAGE" value="add first 7  /02/28" />
+    <MESSAGE value="add  50-60  /03/05" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  50-60  /03/05" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1048,12 +1126,36 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java</url>
-          <line>40</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java</url>
+          <line>124</line>
+          <properties />
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java</url>
+          <line>201</line>
+          <properties />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java</url>
+          <line>390</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java</url>
+          <line>399</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="57" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1062,6 +1164,42 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3859#3860#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7628#7629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_03_04/FortyOneToFifty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1074,7 +1212,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,13 +1507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/_03_03/ThirtyOneToFortyTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -1388,7 +1518,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1400,31 +1529,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="33" lean-forward="true" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding>
-            <element signature="e#238#239#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="582">
+          <caret line="232" column="9" lean-forward="false" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Interval.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="232" column="9" lean-forward="true" selection-start-line="232" selection-start-column="9" selection-end-line="232" selection-end-column="9" />
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_03_05/FiftyOneToSixtyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="42" column="48" lean-forward="false" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#354#355#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="65" column="13" lean-forward="true" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        <state relative-caret-position="379">
+          <caret line="405" column="9" lean-forward="true" selection-start-line="405" selection-start-column="9" selection-end-line="405" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#3803#3804#0" expanded="true" />
+            <element signature="e#3859#3860#0" expanded="true" />
+            <element signature="e#7553#7554#0" expanded="true" />
+            <element signature="e#7628#7629#0" expanded="true" />
           </folding>
         </state>
       </provider>
