@@ -2,6 +2,7 @@ package _03_08;
 
 import org.junit.Before;
 import org.junit.Test;
+import sun.reflect.annotation.ExceptionProxy;
 
 import static org.junit.Assert.*;
 
@@ -42,6 +43,17 @@ public class SeventyToEightyTest {
     @Test
     public void window()throws Exception{
         System.out.println(se.minWindow("ADOBECODEBANC","ABC"));
+    }
+
+    @Test
+    public void testSubset()throws Exception{
+        int []nums={1,2,3};
+        se.subsetsIterative(nums);
+    }
+    @Test
+    public void testSearchMatrix()throws Exception{
+        int [][]matrix={{1,3,5,7},{10,11,16,20},{23,30,34,50}};
+        System.out.println(se.searchMatrixByRow(matrix,23));
     }
 
 }

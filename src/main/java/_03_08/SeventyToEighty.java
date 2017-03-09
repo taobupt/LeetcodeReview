@@ -122,6 +122,7 @@ public class SeventyToEighty {
 
 
     //74. Search a 2D Matrix
+    //3 种方法
     //普通的二分查找
     //从右上角开始查找的话，也是可以的，但那是ii,最坏情况是o(m+n)
     /*
@@ -143,6 +144,44 @@ public class SeventyToEighty {
                 begin=mid;
         }
         return matrix[begin/n][begin%n]==target;
+    }
+
+    //find the row first and find the col next
+    public boolean searchMatrixByRow(int[][]matrix,int target){
+        if(matrix.length==0||matrix[0].length==0)
+            return false;
+        int m=matrix.length,n=matrix[0].length;
+        if(matrix[0][0]>target||target>matrix[m-1][n-1])
+            return false;
+        //find the row first
+        int begin=0,end=m-1;
+        while(begin<end){
+            int mid=(end-begin)/2+begin;
+            if(matrix[mid][0]==target)
+                return true;
+            else if(matrix[mid][0]>target)
+                end=mid;
+            else
+                begin=mid+1;
+        }
+        //应该和search range 那道题好好联系在一起
+        //默认都是lowbound的，但是最后一行又有所区别，因为到不了end，end=n-1，跳出循环的时候才能到达。真的很有意思
+        if(matrix[begin][0]>target)
+            begin--;
+        int start=0;
+        end=n-1;
+        while(start<end){
+            int mid=(end-start)/2+start;
+            if(matrix[begin][mid]==target)
+                return true;
+            else if(matrix[begin][mid]>target)
+                end=mid;
+            else
+                start=mid+1;
+        }
+        return matrix[begin][start]==target;
+
+
     }
 
     //75 sort color
@@ -221,12 +260,32 @@ void sortColors(int A[], int n) {
             path.remove(path.size()-1);
         }
     }
-    public List<List<Integer>> combine(int n, int k) {
+    public List<List<Integer>> combine1(int n, int k) {
         List<List<Integer>>res=new ArrayList<>();
         List<Integer>path=new ArrayList<>();
         dfs(res,path,n,k,1);
         return res;
 
+    }
+    //mathematic way
+    /*
+    the mathematical formula C(n,k)=C(n-1,k-1)+C(n-1,k).
+    Here C(n,k) is divided into two situations. Situation one, number n is selected,
+    so we only need to select k-1 from n-1 next. Situation two, number n is not selected, and the rest job is selecting k from n-1.
+     */
+    //虽然很费时间，但是却非常有创意，解释非常有创意
+    public List<List<Integer>> combine(int n, int k) {
+        if (k == n || k == 0) {
+            List<Integer> row = new LinkedList<>();
+            for (int i = 1; i <= k; ++i) {
+                row.add(i);
+            }
+            return new LinkedList<>(Arrays.asList(row));
+        }
+        List<List<Integer>> result = this.combine(n - 1, k - 1);
+        result.forEach(e -> e.add(n));
+        result.addAll(this.combine(n - 1, k));
+        return result;
     }
 
 
@@ -234,22 +293,54 @@ void sortColors(int A[], int n) {
     //there should be dfs way and iterative way
     //dfs way
     //bit way
+    //bfs way
 
-    public void dfs(int[]nums,List<List<Integer>>res,List<Integer>path){
+    public void dfs(int[]nums,List<List<Integer>>res,List<Integer>path,int pos){
         res.add(new ArrayList<>(path));
-        for(int i=path.size();i<nums.length;++i){
+        for(int i=pos;i<nums.length;++i){
             path.add(nums[i]);
-            dfs(nums,res,path);
+            dfs(nums,res,path,i+1);
             path.remove(path.size()-1);
         }
     }
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>>res=new ArrayList<>();
         List<Integer>path=new ArrayList<>();
-        Arrays.sort(nums);//sort he和不sort其实是一样的。
-        dfs(nums,res,path);
+        Arrays.sort(nums);//sort 和sort其实差不多
+        dfs(nums,res,path,0);
         return res;
     }
+
+    //iterative way
+    public List<List<Integer>> subsetsIterative(int[]nums){
+        List<List<Integer>>res=new ArrayList<>();
+        res.add(new ArrayList<>());
+        int n=nums.length;
+        for(int i=0;i<n;++i){
+            int m=res.size();
+            for(int j=0;j<m;++j){
+                List<Integer>li=new ArrayList<>(res.get(j));
+                li.add(nums[i]);
+                res.add(li);
+            }
+        }
+        return res;
+    }
+    //bitmap
+    public List<List<Integer>> subsetsBitMap(int[]nums){
+        int n=nums.length;
+        int nn=1<<n;
+        List<List<Integer>>res=new ArrayList<>();
+        for(int i=0;i<nn;++i){
+            res.add(new ArrayList<>());
+            for(int j=0;j<n;++j){
+                if(((i>>j)&0x1)!=0)
+                    res.get(i).add(nums[j]);
+            }
+        }
+        return res;
+    }
+
 
 
 
