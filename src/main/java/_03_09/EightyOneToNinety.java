@@ -156,11 +156,8 @@ public class EightyOneToNinety {
             }
             head=head.next;
         }
-        psmall.next=null;//这两句是砍掉藕断丝连
+        //这句是砍掉藕断丝连
         plarge.next=null;
-        psmall=small;
-        while(psmall.next!=null)
-            psmall=psmall.next;
         psmall.next=large.next;
         return small.next;
     }
