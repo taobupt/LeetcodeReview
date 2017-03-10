@@ -34,4 +34,9 @@ public class EightyOneToNinetyTest {
         en.grayCode(2);
     }
 
+    @Test
+    public void testIsScramble()throws Exception{
+        System.out.println(en.isScramble("great","rgtae"));
+    }
+
 }

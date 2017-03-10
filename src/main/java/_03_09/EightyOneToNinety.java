@@ -167,9 +167,38 @@ public class EightyOneToNinety {
 
 
     //87 Scramble String
+    //dp and recursive
+    //TLE,要加cnt来判断，感觉这个能极大的加速，不然就得跪了
+    //当然还有dp，感觉dp是个好东西，你试试能不能做出来
     public boolean isScramble(String s1, String s2) {
-        return true;
+        if(s1.isEmpty() ||s2.isEmpty())
+            return false;
+        if(s1.equals(s2))
+            return true;
+        int m=s1.length();
+        int []cnt=new int[26];
+        for(int i=0;i<m;++i){
+            cnt[s1.charAt(i)-'a']++;
+            cnt[s2.charAt(i)-'a']--;
+        }
+        for(int i=0;i<m;++i){
+            if(cnt[s2.charAt(i)-'a']!=0)
+                return false;
+        }
+        for(int i=1;i<m;++i){
+            boolean res=isScramble(s1.substring(0,i),s2.substring(0,i)) && isScramble(s1.substring(i),s2.substring(i))||isScramble(s1.substring(0,i),s2.substring(m-i,m)) && isScramble(s1.substring(i),s2.substring(0,m-i));
+            if(res)
+                return true;
+        }
+        return false;
     }
+
+
+    //dp way
+    public boolean isScrambledp(String s1, String s2){
+        return true;//好像是有点难搞
+    }
+
 
 
     //88 merge sorted array
