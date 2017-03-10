@@ -29,4 +29,9 @@ public class EightyOneToNinetyTest {
         en.partition(head,3);
     }
 
+    @Test
+    public void graycode()throws  Exception{
+        en.grayCode(2);
+    }
+
 }

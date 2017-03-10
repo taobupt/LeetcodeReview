@@ -2,6 +2,11 @@ package _03_09;
 
 import common.ListNode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Stack;
+
 /**
  * Created by tao on 3/9/17.
  */
@@ -82,7 +87,51 @@ public class EightyOneToNinety {
         return first.next;
     }
 
+    //84 largest rectangle in historgram
+    //都可以理解为单调栈的问题
+    public int largestRectangleArea(int[] heights) {
+        Stack<Integer>stk=new Stack<>();
+        int n=heights.length;
+        int largest=0;
+        for(int i=0;i<n;++i){
+            while(!stk.isEmpty() && heights[i]<heights[stk.peek()]){
+                int h=heights[stk.pop()];
+                int width=i-1-(stk.isEmpty()?-1:stk.peek());
+                largest=Math.max(largest,h*width);
+            }
+            stk.push(i);
+        }
+        //其实最后加一个哨兵是最好的，就省掉了以下的code
+        while(!stk.isEmpty()){
+            int h=heights[stk.pop()];
+            int width=n-1-(stk.isEmpty()?-1:stk.peek());
+            largest=Math.max(largest,h*width);
+        }
+        return largest;
+    }
 
+
+    //85. Maximal Rectangle
+
+    public int maximalRectangle(char[][] matrix) {
+        if(matrix.length==0||matrix[0].length==0)
+            return 0;
+        int m=matrix.length,n=matrix[0].length;
+        int [][]dp=new int[m][n];
+        int largest=0;
+        for(int j=0;j<n;++j){
+            dp[0][j]=matrix[0][j]=='0'?0:1;
+        }
+        largest=Math.max(largest,largestRectangleArea(dp[0]));
+        for(int i=1;i<m;++i){
+            for(int j=0;j<n;++j){
+                dp[i][j]=matrix[i][j]=='0'?0:dp[i-1][j]+1;
+            }
+            largest=Math.max(largest,largestRectangleArea(dp[i]));
+        }
+        return largest;
+
+    }
     //86 partition list
     /*
     Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
@@ -117,6 +166,11 @@ public class EightyOneToNinety {
     }
 
 
+    //87 Scramble String
+    public boolean isScramble(String s1, String s2) {
+        return true;
+    }
+
 
     //88 merge sorted array
     public void merge(int[] nums1, int m, int[] nums2, int n) {
@@ -133,5 +187,62 @@ public class EightyOneToNinety {
         while(j>=0){
             nums1[index--]=nums2[j--];
         }
+    }
+
+
+    //89 gray code
+    //一种是利用数学公式
+    //一种是观察规律
+    public List<Integer> grayCode(int n) {
+        List<Integer>res=new ArrayList<>();
+        res.add(0);
+        for(int i=0;i<n;++i){
+            int m=res.size();
+            for(int j=m-1;j>=0;--j){
+                res.add(res.get(j)|(1<<i));
+            }
+        }
+        return res;
+    }
+
+    //90 subsets II
+    //两种方法。一种回溯，一种迭代
+    public void dfs(int[]nums,List<List<Integer>>res,List<Integer>path,int pos){
+        res.add(new ArrayList<>(path));
+        for(int i=pos;i<nums.length;++i){
+            path.add(nums[i]);
+            dfs(nums,res,path,i+1);
+            while(i<nums.length-1 && nums[i]==nums[i+1])
+                i++;
+            path.remove(path.size()-1);
+        }
+    }
+
+
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        List<Integer>path=new ArrayList<>();
+        List<List<Integer>>res=new ArrayList<>();
+        Arrays.sort(nums);
+        dfs(nums,res,path,0);
+        return res;
+    }
+
+
+    //another way
+    public List<List<Integer>>subsetsWithDupIterative(int[]nums){
+        Arrays.sort(nums);
+        List<List<Integer>>res=new ArrayList<>();
+        res.add(new ArrayList<>());
+        int n=nums.length,m=res.size();
+        for(int i=0;i<n;++i){
+            int start=(i>0 && nums[i]==nums[i-1])?0:m;
+            m=res.size();
+            for(int j=start;j<m;++j){
+                List<Integer>tmp=new ArrayList<>(res.get(j));
+                tmp.add(nums[i]);
+                res.add(tmp);
+            }
+        }
+        return res;
     }
 }
