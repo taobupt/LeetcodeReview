@@ -202,8 +202,25 @@ public class SeventyToEighty {
             }else
                 i++;
         }
-
     }
+    public void sortColorsByCountSort(int[] nums) {
+        // write your code here
+        int []res=new int[3];
+        for(int x:nums)
+            res[x]++;
+        for(int i=1;i<=2;++i){
+            res[i]+=res[i-1];
+        }
+        int n=nums.length;
+        int []ans=nums.clone();
+        for(int i=n-1;i>=0;--i){
+            ans[--res[nums[i]]]=nums[i];
+        }
+
+        for(int i=0;i<n;++i)
+            nums[i]=ans[i];
+    }
+
     /*
     // two pass O(m+n) space
 void sortColors(int A[], int n) {

@@ -21,6 +21,7 @@ public class Trie {
                 cur.children[c>=97?c-'a'+26:c-'A'].word.append(cur.word).append(c);
             }
             cur=cur.children[c>=97?c-'a'+26:c-'A'];
+            cur.cnt++;
         }
         cur.isEnd=true;
     }
