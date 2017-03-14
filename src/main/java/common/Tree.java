@@ -1,5 +1,6 @@
 package common;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
@@ -121,6 +122,7 @@ public class Tree {
     }
 
     //another postorder way
+    //还可以用postorder搞一搞
     public void postorderByAnotherStack(TreeNode node){
         if(node==null)
             return;

@@ -338,7 +338,32 @@ public class OneToTen {
 
     //actually you can use O(n)
     public String longestPalindromeManacher(String s){
-        return s;
+        char []ss=s.toCharArray();
+        int n=ss.length;
+        char []news=new char[2*n+3];
+        Arrays.fill(news,'#');
+        news[0]='$';//in case of overflow;
+        news[2*n+2]='\0';//这两个要不一样
+
+        for(int i=0;i<n;++i)
+            news[2*i+2]=ss[i];
+
+        int []len=new int[2*n+2];
+        int mx=0,id=0,max_pos=0;//mx is max position, id is the center,max_pos is the maxlength palindrome length center
+        for(int i=1;i<2*n+2;++i){
+            len[i]=i<mx?Math.min(mx-i,len[2*id-i]):1;
+            while(news[i-len[i]]==news[i+len[i]])
+                len[i]++;
+            if(i+len[i]>mx){
+                mx=i+len[i];
+                id=i;
+            }
+            max_pos=len[i]>len[max_pos]?i:max_pos;
+        }
+        //System.out.println(max_pos);
+        int length=len[max_pos]-1;
+        int start=(max_pos-len[max_pos])/2;
+        return s.substring(start,start+length);
     }
 
 
