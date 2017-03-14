@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b2dbafe-adc1-43bb-8fae-e149128a4c70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_03_13/OneHundredTenToOneHundredTwenty.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/StringAlgo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/TreeLinkNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_03_13/OneHundredTenToOneHundredTwentyTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/common/StringAlgoTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/_02_28/OneToTen.class" afterPath="$PROJECT_DIR$/target/classes/_02_28/OneToTen.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/UnionFind.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_03_14/OneHundredTwentyOneToThrityTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_02_28/OneToTen.java" afterPath="$PROJECT_DIR$/src/main/java/_02_28/OneToTen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/Tree.java" afterPath="$PROJECT_DIR$/src/main/java/common/Tree.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java" afterPath="$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +30,34 @@
       <file leaf-file-name="OneHundredTwentyOneToThrity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="122" column="56" lean-forward="false" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
+            <state relative-caret-position="105">
+              <caret line="131" column="26" lean-forward="true" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OneHundredTwentyOneToThrityTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/_03_14/OneHundredTwentyOneToThrityTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+              <folding>
+                <element signature="e#311#312#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnionFind.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/common/UnionFind.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -50,8 +67,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -116,6 +133,8 @@
         <option value="$PROJECT_DIR$/src/main/java/common/TreeLinkNode.java" />
         <option value="$PROJECT_DIR$/src/test/java/_03_13/OneHundredTenToOneHundredTwentyTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_13/OneHundredTenToOneHundredTwenty.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_03_14/OneHundredTwentyOneToThrityTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/UnionFind.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java" />
       </list>
     </option>
@@ -156,7 +175,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -227,14 +245,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_03_14" />
+              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -251,43 +270,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="_03_14" />
       <recent name="common" />
       <recent name="_03_13" />
       <recent name="contest" />
       <recent name="_03_07" />
-      <recent name="_03_09" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OneHundredTenToOneHundredTwentyTest.testConnect">
-    <configuration default="false" name="OneHundredTenToOneHundredTwentyTest.pathSumII" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_03_13.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_03_13" />
-      <option name="MAIN_CLASS_NAME" value="_03_13.OneHundredTenToOneHundredTwentyTest" />
-      <option name="METHOD_NAME" value="pathSumII" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind">
     <configuration default="false" name="StringAlgoTest.indexof" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -379,6 +372,32 @@
       <option name="PACKAGE_NAME" value="_03_13" />
       <option name="MAIN_CLASS_NAME" value="_03_13.OneHundredTenToOneHundredTwentyTest" />
       <option name="METHOD_NAME" value="testConnect" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_03_14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_03_14" />
+      <option name="MAIN_CLASS_NAME" value="_03_14.OneHundredTwentyOneToThrityTest" />
+      <option name="METHOD_NAME" value="longestConsecutiveByUnionFind" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -773,19 +792,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.pathSumII" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.indexof" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.testMancher" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testDistinct" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testConnect" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.indexof" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.testMancher" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testDistinct" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testConnect" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testConnect" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testDistinct" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.testMancher" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.indexof" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.pathSumII" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testConnect" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.OneHundredTenToOneHundredTwentyTest.testDistinct" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.testMancher" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.StringAlgoTest.indexof" />
       </list>
     </recent_temporary>
   </component>
@@ -835,6 +854,11 @@
       <workItem from="1489429714813" duration="6143000" />
       <workItem from="1489445613535" duration="3931000" />
       <workItem from="1489470585487" duration="2329000" />
+      <workItem from="1489504198135" duration="75000" />
+      <workItem from="1489504394078" duration="700000" />
+      <workItem from="1489506897037" duration="385000" />
+      <workItem from="1489507603134" duration="1109000" />
+      <workItem from="1489509405567" duration="2583000" />
     </task>
     <task id="LOCAL-00001" summary="add first 7  /02/28">
       <created>1488350088580</created>
@@ -896,39 +920,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testConnect - 2017.03.13 at 18h 19m 32s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testConnect" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 14m 17s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 17h 54m 56s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 14m 40s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 17h 55m 11s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 15m 38s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 17h 55m 30s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 15m 47s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 17h 55m 49s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 17m 59s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 17h 55m 58s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 18m 50s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="OneHundredTenToOneHundredTwentyTest_testDistinct - 2017.03.13 at 18h 03m 17s.xml">
-      <configuration name="OneHundredTenToOneHundredTwentyTest.testDistinct" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 20m 24s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringAlgoTest_testMancher - 2017.03.13 at 15h 25m 24s.xml">
-      <configuration name="StringAlgoTest.testMancher" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 20m 59s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringAlgoTest_testMancher - 2017.03.13 at 15h 27m 28s.xml">
-      <configuration name="StringAlgoTest.testMancher" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 23m 23s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="StringAlgoTest_testMancher - 2017.03.13 at 15h 38m 46s.xml">
-      <configuration name="StringAlgoTest.testMancher" configurationId="JUnit" />
+    <history-entry file="OneHundredTwentyOneToThrityTest_longestConsecutiveByUnionFind - 2017.03.14 at 12h 24m 04s.xml">
+      <configuration name="OneHundredTwentyOneToThrityTest.longestConsecutiveByUnionFind" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174322000" />
+    <option name="totallyTimeSpent" value="179174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -937,13 +961,14 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38500506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3671875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2921875" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -954,13 +979,12 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36875" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38500506" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1307,8 +1331,14 @@
           <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="106" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="106" />
+      <option name="time" value="107" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1317,21 +1347,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/_02_28/OneToTenTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="34" column="75" lean-forward="false" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_02_28/OneToTen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/_02_28/OneToTenTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -1652,16 +1667,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/StringAlgo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1012">
-          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/common/StringAlgoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -1681,7 +1686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1690,7 +1694,7 @@
         <state relative-caret-position="-957">
           <caret line="245" column="26" lean-forward="true" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1699,14 +1703,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="453">
           <caret line="56" column="41" lean-forward="false" selection-start-line="56" selection-start-column="41" selection-end-line="56" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/StringAlgo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_03_14/OneHundredTwentyOneToThrityTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="67" lean-forward="false" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+          <folding>
+            <element signature="e#311#312#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/UnionFind.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_03_14/OneHundredTwentyOneToThrity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="122" column="56" lean-forward="false" selection-start-line="122" selection-start-column="56" selection-end-line="122" selection-end-column="56" />
+        <state relative-caret-position="105">
+          <caret line="131" column="26" lean-forward="true" selection-start-line="131" selection-start-column="26" selection-end-line="131" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
