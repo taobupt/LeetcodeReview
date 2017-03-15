@@ -350,7 +350,7 @@ public class ElevenToTwenty {
         ans.add("");
         for(int i =0; i<digits.length();i++){
             int x = Character.getNumericValue(digits.charAt(i));
-            while(ans.peek().length()==i){
+            while(ans.peek().length()==i){//这个显得很有技巧
                 String t = ans.remove();
                 for(char s : mapping[x].toCharArray())
                     ans.add(t+s);

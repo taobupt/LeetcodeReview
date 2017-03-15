@@ -49,6 +49,40 @@ public class OneHundredTwentyOneToThrity {
         return profit;
     }
 
+    //123 best time to buy and sell stock III
+    //属于头尾各一次dp
+    public int maxProfitIII(int[] prices) {
+        int n=prices.length;
+        int []left=new int[n+1];
+        int []right=new int[n+1];
+        int price=Integer.MAX_VALUE,ans=0;
+        for(int i=1;i<=n;++i){
+            price=Math.min(price,prices[i-1]);
+            left[i]=Math.max(left[i-1],prices[i-1]-price);
+        }
+        price=Integer.MIN_VALUE;
+        for(int i=n-1;i>=0;--i){
+            price=Math.max(price,prices[i]);
+            right[i]=Math.max(right[i+1],price-prices[i]);//dp 就得和前面的进行比较
+            ans=Math.max(ans,left[i]+right[i]);
+        }
+        return ans;
+    }
+
+    //O(1) space
+    public int maxProfitIIIO1(int []prices){
+        int release1=0,release2=0;
+        int hold1=Integer.MIN_VALUE,hold2=Integer.MIN_VALUE;
+        for(int price:prices){
+            release2=Math.max(release2,hold2+price);//use previous state
+            hold2=Math.max(hold2,release1-price);
+            release1=Math.max(release1,hold1+price);
+            hold1=Math.max(hold1,-price);
+        }
+        return release2;
+    }
+
+    //应该拓展到k次交易
 
     //124  binary tree maximum path sum
     //recursive
@@ -101,6 +135,47 @@ public class OneHundredTwentyOneToThrity {
         }
         return true;
     }
+
+
+    //126 还是很难的，我都不愿意做了，就是先建立图，然后再搞。
+
+    //127 word ladder
+    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        Set<String>set=new HashSet<>(wordList);
+        if(!set.contains(endWord))
+            return 0;
+        int ans=2;
+        Queue<String>q=new LinkedList<>();
+        q.offer(beginWord);
+        set.remove(beginWord);//省的有环
+        while(!q.isEmpty()){
+            int size=q.size();
+            while(size-- >0) {
+                StringBuilder top = new StringBuilder(q.poll());
+                int n = top.length();
+                for (int i = 0; i < n; ++i) {
+                    char c = top.charAt(i);
+                    for (int ch = 'a'; ch <= 'z'; ++ch) {
+                        if (c == ch)
+                            continue;
+                        top.setCharAt(i, (char) ch);
+                        if (top.toString().equals(endWord))
+                            return ans;
+                        if (set.contains(top.toString())) {
+                            set.remove(top.toString());
+                            q.offer(top.toString());
+                        }
+                    }
+                    top.setCharAt(i,c);
+                }
+            }
+            ans++;
+        }
+        return 0;
+    }
+
+    //还是可以用双端bfs去搞的
+    //Dijkstra
 
     //128 longest consecutive way
     //当然你可以排序再搞，但是复杂度上去了。
