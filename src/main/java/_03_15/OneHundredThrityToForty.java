@@ -323,6 +323,7 @@ public class OneHundredThrityToForty {
     }
 
     //135 candy
+    //tag
     //往返两次求最值
     //sb 都能想到，但是如何优化空间复杂度呢，这是个问题。感觉吧，优化到o(n)实在是有点变态。不说了，题目咋就这么难呢
     public int candy(int[] ratings) {
@@ -443,6 +444,7 @@ public class OneHundredThrityToForty {
     //139 word break
     //dp
     //应该还有其他的方式
+    //tag bfs
     public boolean wordBreak(String s, Set<String> wordDict) {
         int n=s.length();
         boolean []dp=new boolean[n+1];
@@ -464,7 +466,6 @@ public class OneHundredThrityToForty {
     //暴力的话肯定得跪。之前的做法是取了一个substring后，就用第一问的dp来判断可不可以，若是可以就继续，否则就闪退。
     //还有一种就是用map来做memorization
     //先用自己的办法吧
-
     public void dfs(List<String>res,String s,List<String> sb,Set<String>set,int pos){
         if(pos==s.length()){
             res.add(String.join(" ",sb));
