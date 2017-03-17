@@ -1,5 +1,6 @@
 package _03_17;
 
+import common.ListNode;
 import common.TreeNode;
 
 import java.util.Arrays;
@@ -141,6 +142,96 @@ public class OneHundredFiftyToSixty {
             curr=next;
         }
         return prev;
+    }
 
+
+    public int read4(char[] buf){
+        return 0;
+    }
+
+    //其实这道题是非常经典的，当c++可以直接用buf+res这样读过去，java却需要一步一步来，先copy到一个buffer，然后再到目的buffer。
+    //157 read N characters
+    public int read(char[] buf, int n) {
+        int res=0;
+        char []buffer=new char[4];
+        while(res<n){
+            int c=read4(buffer);
+            for(int i=0;i<c;++i)
+                buf[res+i]=buffer[i];
+            res+=c;
+            if(c!=4)
+                break;
+        }
+        return Math.min(res,n);
+    }
+
+    //158 Read N Characters Given Read4 II - Call multiple times
+    //要用变量记住上次有没有读完，读完了接着调函数读，否则就是读以前的
+    private int cnt=0;
+    private int curEnd=0;
+    private char []buffer=new char[4];
+    public int readII(char[] buf, int n) {
+        int res=0;
+        boolean hasNext=true;
+        while(res<n && hasNext){
+            //only if we there is no word in last time
+            if(curEnd==0)
+                cnt=read4(buffer);
+            if(cnt<4)
+                hasNext=false;
+            for(;curEnd<cnt && res<n;++curEnd)
+                buf[res++]=buffer[curEnd];
+            if(curEnd==cnt)
+                curEnd=0;
+        }
+        return Math.min(res,n);
+    }
+
+
+
+    //159 longest substring with at most two distinct characters
+    //一看就知道是two window
+    //得和以前的题目总结一下，好像都只是需要end-begin，而不是需要+1或者-1
+    public int lengthOfLongestSubstringTwoDistinct(String s) {
+        int []cnt=new int[256];
+        int n=s.length();
+        int res=0,count=0;
+        char []ss=s.toCharArray();
+        int begin=0,end=0;
+        while(end<n){
+            if(cnt[ss[end]]++==0)
+                count++;
+            end++;
+            while(count==3){
+                if(--cnt[ss[begin++]]==0)
+                    count--;
+            }
+            res=Math.max(res,end-begin);//end 已经不是有效的value了
+        }
+        return res;
+    }
+
+    //160 intersection of two linked list
+    //普通做法是算长度差，然后一边走完长度差，再同时走。
+    // 真实的做法是只管走，走到尽头就换着走。
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        if(headA==null||headB==null)
+            return null;
+        ListNode p=headA;
+        ListNode q=headB;
+        while(p!=q){
+            p=p.next;
+            q=q.next;
+            if(p==q)
+                break;
+            if(p==null)
+                p=headB;
+            if(q==null)
+                q=headA;
+        }
+        //或者你可以换一种方式写
+        //a = a == NULL ? headB : a->next;
+        //b = b == NULL ? headA : b->next;
+        return p;
     }
 }
