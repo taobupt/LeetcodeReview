@@ -27,4 +27,14 @@ public class OneHundredSixtyOnetOSeventyTest {
         osos.findMissingRanges(nums,0,99);
     }
 
+    @Test
+    public void testCompareVersion()throws Exception{
+        osos.compareVersion("1","1.1");
+    }
+
+    @Test
+    public void testFractionToDecimal()throws Exception{
+        System.out.println(osos.fractionToDecimal(1,7));
+    }
+
 }

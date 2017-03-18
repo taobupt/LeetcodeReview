@@ -1,8 +1,6 @@
 package _03_18;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by tao on 3/17/17.
@@ -243,6 +241,89 @@ public class OneHundredSixtyOnetOSeventy {
 
     //bucket sort 可以研究一下，挺好玩的
 
+    //165 compare version number
+    //很多corn case
+    //non empty and contains digits and .
+    //一发击中
+    //倘若不允许用split，那么只能先把version 1 按dot来分割了
+    public int compareVersion(String version1, String version2) {
+        //split
+        String []ver1=version1.split("\\.");
+        String[]ver2=version2.split("\\.");
+        int m=ver1.length,n=ver2.length;
+        int i=0;
+        for(;i<m && i<n;++i){
+            int val1=Integer.valueOf(ver1[i]);
+            int val2=Integer.valueOf(ver2[i]);
+            if(val1>val2 )
+                return 1;
+            else if(val1<val2)
+                return -1;
+        }
+        for(;i<m;++i){
+            if(Integer.valueOf(ver1[i])>0)
+                return 1;
+        }
+        for(;i<n;++i){
+            if(Integer.valueOf(ver2[i])>0)
+                return -1;
+        }
+        return 0;
+    }
+
+    //concise
+    public int compareVersionConcise(String version1, String version2) {
+        String[] levels1 = version1.split("\\.");//若是普通办法行不通，可以采取加上\\
+        String[] levels2 = version2.split("\\.");
+
+        int length = Math.max(levels1.length, levels2.length);
+        for (int i=0; i<length; i++) {
+            Integer v1 = i < levels1.length ? Integer.parseInt(levels1[i]) : 0;//trick
+            Integer v2 = i < levels2.length ? Integer.parseInt(levels2[i]) : 0;
+            int compare = v1.compareTo(v2);
+            if (compare != 0) {
+                return compare;
+            }
+        }
+
+        return 0;
+    }
+
+    //166 fraction to recurring decimal
+    //和标准答案居然是一摸一样，我的哥。
+    //主要思想是余数乘10继续除
+    public String fractionToDecimal(int numerator, int denominator) {
+        StringBuilder sb=new StringBuilder();
+        if(numerator==0)
+            return "0";
+        boolean negative=(numerator>0)^(denominator>0);
+        long nume=Math.abs((long)numerator);
+        long deno=Math.abs((long)denominator);
+        sb.append(negative?"-":"");
+        sb.append(nume/deno);
+        if(nume%deno==0)
+            return sb.toString();
+        sb.append(".");
+        Map<Long,Integer>map=new HashMap<>();//store the number and length
+        map.put(nume%deno,sb.length());//这里就map就应该加上数据，否则就晚了。主要是判断余数有没有重复，如果余数有重复，那么必定是重复了。
+        nume=10*(nume%deno);
+        while(true){
+            long val=nume/deno;
+            long mod=nume%deno;
+            sb.append(val);
+            if(mod==0)
+                break;
+            if(map.containsKey(mod)){
+                int index=map.get(mod);
+                sb.insert(index,'(');
+                sb.append(')');
+                break;
+            }
+            map.put(mod,sb.length());
+            nume=10*(mod);
+        }
+        return sb.toString();
+    }
 
 
 
@@ -410,6 +491,8 @@ public class OneHundredSixtyOnetOSeventy {
         for (int i=0; i<k-1; i++) if (counts[i]>n/k) result.add(candidates[i]);
         return result;
     }
+
+    //170 was in the design
 
 
 
