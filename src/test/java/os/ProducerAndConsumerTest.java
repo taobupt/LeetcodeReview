@@ -18,15 +18,16 @@ The t2 thread completes (or completed before the t1 thread did) and the t2.join(
 public class ProducerAndConsumerTest {
 
     ProducerAndConsumer pc=null;
+    ProducerAndConsumerSemaphore pcs=null;
     @Test
     public void testPC()throws Exception{
         pc=new ProducerAndConsumer();
-
+        pcs=new ProducerAndConsumerSemaphore();
         Thread t1=new Thread(new Runnable() {
             @Override
             public void run() {
                 try{
-                    pc.produce();
+                    pcs.produce();
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }
@@ -37,7 +38,7 @@ public class ProducerAndConsumerTest {
             @Override
             public void run() {
                 try{
-                    pc.consume();
+                    pcs.consume();
                 }catch(InterruptedException e){
                     e.printStackTrace();
                 }

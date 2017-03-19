@@ -1,12 +1,10 @@
 package contest;
 
+import common.TreeNode;
 import common.Trie;
 import common.TrieNode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by tao on 3/12/17.
@@ -140,4 +138,134 @@ public class LeetcodeContest {
             res.add(map1.get(str));
         return res;
     }
+
+
+    //leetcode Weekly Contest 24 03/18/2017
+    public void inorder(TreeNode root,List<Integer>res){
+        if(root==null)
+            return;
+        inorder(root.left,res);
+        res.add(root.val);
+        inorder(root.right,res);
+    }
+
+    public void deal(TreeNode root,int []ans,int []sum){
+        if(root==null)
+            return;
+        int index=Arrays.binarySearch(ans,0,ans.length,root.val);
+        root.val= sum[sum.length-1]-sum[index]+root.val;
+        deal(root.left,ans,sum);
+        deal(root.right,ans,sum);
+    }
+    public TreeNode convertBST(TreeNode root) {
+        if(root==null)
+            return null;
+        List<Integer>res=new ArrayList<>();
+        inorder(root,res);
+        int n=res.size();
+        int []sum=new int[n];
+        int []ans=new int[n];
+        for(int i=0;i<n;++i){
+            ans[i]=res.get(i);
+            sum[i]=i==0?res.get(0):sum[i-1]+res.get(i);
+        }
+        deal(root,ans,sum);
+        return root;
+    }
+
+    //太不应该了，应该想到是先把所有的为0的进队列
+    public List<List<Integer>> updateMatrix(List<List<Integer>> matrix) {
+        if (matrix.isEmpty() || matrix.get(0).isEmpty())
+            return matrix;
+        int m = matrix.size(), n = matrix.get(0).size();
+        int [][]rooms=new int[m][n];
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+                if(matrix.get(i).get(j)!=0)
+                    rooms[i][j]=Integer.MAX_VALUE;
+            }
+        }
+        Queue<int[]>q=new LinkedList<>();
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+                if(rooms[i][j]==0)
+                    q.offer(new int[]{i,j});
+            }
+        }
+        while(!q.isEmpty()){
+            int []cur=q.poll();
+            if(cur[0]>0 && rooms[cur[0]-1][cur[1]]==Integer.MAX_VALUE){
+                rooms[cur[0]-1][cur[1]]=rooms[cur[0]][cur[1]]+1;
+                q.offer(new int[]{cur[0]-1,cur[1]});
+            }
+            if(cur[1]>0 && rooms[cur[0]][cur[1]-1]==Integer.MAX_VALUE){
+                rooms[cur[0]][cur[1]-1]=rooms[cur[0]][cur[1]]+1;
+                q.offer(new int[]{cur[0],cur[1]-1});
+            }
+            if(cur[0]<m-1 && rooms[cur[0]+1][cur[1]]==Integer.MAX_VALUE){
+                rooms[cur[0]+1][cur[1]]=rooms[cur[0]][cur[1]]+1;
+                q.offer(new int[]{cur[0]+1,cur[1]});
+            }
+            if(cur[1]<n-1 && rooms[cur[0]][cur[1]+1]==Integer.MAX_VALUE){
+                rooms[cur[0]][cur[1]+1]=rooms[cur[0]][cur[1]]+1;
+                q.offer(new int[]{cur[0],cur[1]+1});
+            }
+        }
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+
+                matrix.get(i).set(j,rooms[i][j]);
+            }
+        }
+        return matrix;
+    }
+
+    //(1,8),(2,7),(3,6),(4,5)
+    public String findContestMatch(int n) {
+        StringBuilder sb=new StringBuilder();
+        StringBuilder[]strs=new StringBuilder[n];
+        for(int i=1;i<=n;++i)
+            strs[i-1]=new StringBuilder(String.valueOf(i));
+        int begin=0,end=n-1;
+        int k=1;
+        for(;k<=12;++k){
+            if((1<<k)==n)
+                break;
+        }
+        while(k-- >1){
+            int saveend=end;
+            while(begin<end){
+                strs[begin].insert(0,'(');
+                strs[begin].append(',').append(strs[end]).append(')');
+                begin++;
+                end--;
+            }
+            begin=0;end=(saveend+1)/2-1;
+
+        }
+
+        sb.append('(').append(strs[0]).append(',').append(strs[1]).append(')');
+
+        return sb.toString();
+    }
+
+
+    public int diameterOfBinaryTree(TreeNode root,int []height){
+        int []lh=new int[1];
+        int []rh=new int[1];
+        int ldimeter=0,rdimater=0;
+        if(root==null){
+            height[0]=1;
+            return 0;
+        }
+        ldimeter=diameterOfBinaryTree(root.left,lh);
+        rdimater=diameterOfBinaryTree(root.right,rh);
+        height[0]=Math.max(lh[0],rh[0])+1;
+        return Math.max(lh[0]+rh[0]+1,Math.max(ldimeter,rdimater));
+    }
+    public int diameterOfBinaryTree(TreeNode root) {
+        int []height=new int[1];
+        return diameterOfBinaryTree(root,height);
+    }
+
 }
