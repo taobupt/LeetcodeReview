@@ -265,7 +265,9 @@ public class LeetcodeContest {
     }
     public int diameterOfBinaryTree(TreeNode root) {
         int []height=new int[1];
-        return diameterOfBinaryTree(root,height);
+        if(root==null)
+            return 0;
+        return diameterOfBinaryTree(root,height)-1;
     }
 
 }
