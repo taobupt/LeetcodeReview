@@ -1,6 +1,7 @@
 package _03_23;
 
 import common.ListNode;
+import sun.jvm.hotspot.opto.MachIfNode;
 
 import java.util.*;
 
@@ -111,4 +112,98 @@ public class TwoHundredSixToFifteen {
         }
         return res;
     }
+
+    //208 design trie
+
+    //209
+    //two window
+    public int minSubArrayLen(int s, int[] nums) {
+        int minLength=Integer.MAX_VALUE;
+        int begin=0,end=0,n=nums.length;
+        int sum=0;
+        while(end<n){
+            sum+=nums[end++];
+            while(sum>=s){
+                minLength=Math.min(minLength,end-begin);
+                sum-=nums[begin++];
+            }
+        }
+        return minLength==Integer.MAX_VALUE?0:minLength;
+    }
+
+    //先求总和数组，然后检测sum[i]>=s, 查询upperbound sum[i]-i;仔细想象，还是很有道理的
+
+    //211 Add and Search Word - Data structure design
+    //215 kth largest element in an array
+    //priority queue
+    public int findKthLargest(int[] nums, int k) {
+        PriorityQueue<Integer>pq=new PriorityQueue<>();
+        int n=nums.length;
+        for(int i=0;i<n;++i){
+            if(i<k)
+                pq.offer(nums[i]);
+            else{
+                if(pq.peek()<nums[i]){
+                    pq.poll();
+                    pq.offer(nums[i]);
+                }
+            }
+        }
+        return pq.peek();
+    }
+
+    public int quickSelect(int []nums,int begin,int end){
+            int left=begin,right=end,key=nums[left];
+            while(left<right){
+                while(left<right && nums[right]>=key)
+                    right--;
+                if(left<right)
+                    nums[left++]=nums[right];
+                while(left<right && nums[left]<=key)
+                    left++;
+                if(left<right)
+                    nums[right--]=nums[left];
+            }
+            nums[left]=key;
+            return left;
+    }
+
+    public int findKthSmallest(int[]nums,int begin,int end,int k){
+        int ind=quickSelect(nums,begin,end);
+        if(ind==k-1)
+            return nums[ind];
+        else if(ind>k-1)
+            return findKthSmallest(nums,begin,ind-1,k);
+        else
+            return findKthSmallest(nums,ind+1,end,k);
+    }
+    public int findKthSmallest(int[]nums,int k){
+        return findKthSmallest(nums,0,nums.length-1,k);
+    }
+
+    //quick select
+    //quick sort
+    public void quickSort(int[]nums,int left,int right){
+        if(left<right){
+            int begin=left,end=right,key=nums[begin];
+            while(begin<end){
+                while(begin<end && nums[end]>=key)
+                    end--;
+                if(begin<end)
+                    nums[begin++]=nums[end];
+                while(begin<end && nums[begin]<=key)
+                    begin++;
+                if(begin<end)
+                    nums[end--]=nums[begin];
+            }
+            nums[begin]=key;
+            quickSort(nums,left,begin-1);//记住俩人都是-1
+            quickSort(nums,begin+1,right);
+        }
+    }
+    public void quickSort(int []nums){
+        int n=nums.length;
+        quickSort(nums,0,n-1);
+    }
+
 }
