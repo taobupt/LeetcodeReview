@@ -270,4 +270,160 @@ public class LeetcodeContest {
         return diameterOfBinaryTree(root,height)-1;
     }
 
+
+    //leetcode Weekly Contest 25 03/25/2017
+    public boolean checkPerfectNumber(int num) {
+        if(num<=0)
+            return false;
+        int sum=1;
+        int mid=(int)Math.sqrt(num);
+        for(int i=2;i<=mid;++i){
+            if(num%i==0){
+                sum+=i;
+                if(i!=num/i)
+                    sum+=num/i;
+            }
+        }
+        System.out.println(sum);
+        return sum==num;
+
+    }
+
+
+    public String complexNumberMultiply(String a, String b) {
+        String[]aa=a.split("\\+");
+        String []bb=b.split("\\+");
+        int index=0;
+        int nnnn=aa.length;
+        while(index<nnnn){
+            if(!aa[index].equals(""))
+                break;
+            index++;
+        }
+        int aa1=Integer.parseInt(aa[index++]);
+        while(index<nnnn){
+            if(!aa[index].equals(""))
+                break;
+            index++;
+        }
+        int n=aa[index].length();
+        int aa2=Integer.parseInt(aa[index].substring(0,n-1));
+
+        index=0;
+        int nnnnnn=bb.length;
+        while(index<nnnnnn){
+            if(!bb[index].equals(""))
+                break;
+            index++;
+        }
+        int bb1=Integer.parseInt(bb[index++]);
+
+        while(index<nnnnnn){
+            if(!bb[index].equals(""))
+                break;
+            index++;
+        }
+        int m=bb[index].length();
+        int bb2=Integer.parseInt(bb[index].substring(0,m-1));
+        int real=aa1*bb1-aa2*bb2;
+        int nreal=aa1*bb2+aa2*bb1;
+        return real+"+"+nreal+"i";
+    }
+
+    //逆时针打印
+    void printLeaves(TreeNode node,List<Integer>res)
+    {
+        if(node==null)
+            return;
+        printLeaves(node.left,res);
+        if (node.left == null && node.right == null)
+            res.add(node.val);
+        printLeaves(node.right,res);
+    }
+
+    // A function to print all left boundry nodes, except a leaf node.
+    // Print the nodes in TOP DOWN manner
+    void printBoundaryLeft(TreeNode node,List<Integer>res)
+    {
+        if(node==null)
+            return;
+        if (node.left != null)
+            {
+
+               res.add(node.val);
+                printBoundaryLeft(node.left,res);
+            }
+        else if (node.right != null)
+        {
+            res.add(node.val);
+                printBoundaryLeft(node.right,res);
+        }
+    }
+
+    // A function to print all right boundry nodes, except a leaf node
+    // Print the nodes in BOTTOM UP manner
+    void printBoundaryRight(TreeNode node,List<Integer>res)
+    {
+        if(node==null)
+            return;
+
+            if (node.right != null)
+            {
+
+                printBoundaryRight(node.right,res);
+                res.add(node.val);
+            }
+            else if (node.left != null)
+            {
+                printBoundaryRight(node.left,res);
+                res.add(node.val);
+            }
+
+    }
+
+    // A function to do boundary traversal of a given binary tree
+    public List<Integer> boundaryOfBinaryTree(TreeNode node) {
+        List<Integer>res=new ArrayList<>();
+        if(node==null)
+            return res;
+        res.add(node.val);
+        printBoundaryLeft(node.left,res);
+        printLeaves(node.left,res);
+        printLeaves(node.right,res);
+        printBoundaryRight(node.right,res);
+        return res;
+    }
+
+    //dp
+    public int removeBoxes(int[] boxes) {
+        int n=boxes.length;
+        int [][]dp=new int[n][n];
+        int res=1;
+        for (int k = 2; k <=n; ++k)
+        {
+            for (int left = 0; left <=n - k; ++left)
+            {
+                int right = left + k-1;
+//                if(k==2){
+//                    dp[left][right]=boxes[left]==boxes[right]?4:2;
+//                    continue;
+//                }
+                int index=0;
+                for (int i = left; i <=right;i++)
+                {
+                    while(i<=right-1){
+                        if(boxes[i]==boxes[i+1]){
+                            index++;
+                            i++;
+                        }
+                        else
+                            break;
+                    }
+                    dp[left][right] = Math.max(dp[left][right], (index+1)*(index+1) + (left<i-index?dp[left][i-index]:0) + (i<right?dp[i][right]:0));
+
+                }
+            }
+        }
+        return Math.max(res,dp[0][n-1]);
+    }
 }

@@ -65,7 +65,19 @@ public class LeetcodeContestTest {
 
     @Test
     public void test2(){
-        System.out.println(lc.findContestMatch(2));
+//        lc.checkPerfectNumber(1);
+//        System.out.println(lc.complexNumberMultiply("1++1i","1++1i"));
+//        TreeNode node=new TreeNode(20);
+//        node.left=new TreeNode(8);
+//        node.right=new TreeNode(22);
+//        node.right.right=new TreeNode(25);
+//        node.left.left=new TreeNode(4);
+//        node.left.right=new TreeNode(12);
+//        node.left.right.left=new TreeNode(10);
+//        node.left.right.right=new TreeNode(14);
+//        lc.boundaryOfBinaryTree(node);
+        int []nums={1, 3, 2, 2, 2, 3, 4, 3, 1};
+        System.out.println(lc.removeBoxes(nums));
     }
 
 }
