@@ -48,13 +48,25 @@ public class ReaderAndWriterTest {
                 }
             }
         });
+        Thread t4=new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try{
+                    readerAndWriter.read();
+                }catch (InterruptedException e){
+                    e.printStackTrace();
+                }
+            }
+        });
 
         t1.start();
         t3.start();
         t2.start();
+        t4.start();
         t1.join();
         t2.join();
         t3.join();
+        t4.join();
     }
 
 }
