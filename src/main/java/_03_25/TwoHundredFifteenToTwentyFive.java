@@ -121,6 +121,36 @@ public class TwoHundredFifteenToTwentyFive {
         return false;
     }
 
+    //很常规的一道题
+    //可以用滚动数组的
+    public int maximalSquare(char[][] matrix) {
+        if(matrix.length==0||matrix[0].length==0)
+            return 0;
+        int m=matrix.length;
+        int n=matrix[0].length;
+        int maxValue=0;
+
+        //处理两条边
+        int [][]dp=new int[m][n];
+        for(int i=0;i<n;++i){
+            dp[0][i]=matrix[0][i]-'0';
+            maxValue=Math.max(dp[0][i],maxValue);
+        }
+
+        for(int i=0;i<m;++i){
+            dp[i][0]=matrix[i][0]-'0';
+            maxValue=Math.max(dp[i][0],maxValue);
+        }
+
+        for(int i=1;i<m;++i){
+            for(int j=1;j<n;++j){
+                dp[i][j]=(matrix[i][j]=='0')?0:1+Math.min(dp[i][j-1],Math.min(dp[i-1][j],dp[i-1][j-1]));
+                maxValue=Math.max(maxValue,dp[i][j]);
+            }
+        }
+        return maxValue;
+    }
+
     //222 Count Complete Tree Nodes
     //其实应该还有一个种解法，先计算上面的，再计算最后一层。
     public int getLeft(TreeNode root){
@@ -191,5 +221,8 @@ public class TwoHundredFifteenToTwentyFive {
         else
             return (1<<(h-1))+countlastlevel(root.right,h-1);
     }
+
+    //225  in the design
+
 
 }
