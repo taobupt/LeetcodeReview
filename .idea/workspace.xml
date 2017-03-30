@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b2dbafe-adc1-43bb-8fae-e149128a4c70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_03_30/TwoHundredFiftySixToSixtyFive.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -908,7 +907,7 @@
       <workItem from="1490833174060" duration="2282000" />
       <workItem from="1490845210052" duration="37000" />
       <workItem from="1490908348136" duration="713000" />
-      <workItem from="1490910375754" duration="5000" />
+      <workItem from="1490910375754" duration="43000" />
     </task>
     <task id="LOCAL-00001" summary="add first 7  /02/28">
       <created>1488350088580</created>
@@ -1127,7 +1126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1490845238217</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="add  255-265  /03/30">
+      <created>1490910400069</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1490910400069</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1163,11 +1169,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316225000" />
+    <option name="totallyTimeSpent" value="316263000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1264,7 +1270,8 @@
     <MESSAGE value="add  225-235  /03/27" />
     <MESSAGE value="add  235-245  /03/28" />
     <MESSAGE value="add  245-255  /03/29" />
-    <option name="LAST_COMMIT_MESSAGE" value="add  245-255  /03/29" />
+    <MESSAGE value="add  255-265  /03/30" />
+    <option name="LAST_COMMIT_MESSAGE" value="add  255-265  /03/30" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
