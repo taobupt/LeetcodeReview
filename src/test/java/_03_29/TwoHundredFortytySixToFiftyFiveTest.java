@@ -34,4 +34,9 @@ public class TwoHundredFortytySixToFiftyFiveTest {
         System.out.println(TFSTFF.minMeetingRooms(intervals));
     }
 
+    @Test
+    public void testFactor(){
+        TFSTFF.getFactors(32);
+    }
+
 }

@@ -166,6 +166,8 @@ public class TwoHundredFortytySixToFiftyFive {
         return cnt;
     }
 
+    //251. Flatten 2D Vector
+    //in design
 
     //252 meeting rooms
     //sort and scan
@@ -223,11 +225,10 @@ public class TwoHundredFortytySixToFiftyFive {
         Arrays.sort(ends);
         int i=0,j=0,res=0;
         while(i<n){
-            if(starts[i]<starts[j]){
+            if(starts[i]<ends[j]){
                 res++;
             }else{
                 j++;
-                res--;
             }
             i++;
         }
@@ -263,5 +264,71 @@ public class TwoHundredFortytySixToFiftyFive {
             pq.offer(interval);
         }
         return pq.size();
+    }
+
+    //254 Factor Combinations
+
+    public void backtrack(List<Integer>factors,int n,List<List<Integer>>res,List<Integer>path,int pos){
+        if(n==1){
+            res.add(new ArrayList<>(path));
+            return;
+        }
+        for(int i=pos;i<factors.size();++i){
+            int num=factors.get(i);
+            if(n>=num && n%num==0){
+                path.add(factors.get(i));
+                backtrack(factors,n/factors.get(i),res,path,i);
+                path.remove(path.size()-1);
+            }
+        }
+    }
+    public List<List<Integer>> getFactors(int n) {
+        //first get all factors;
+        List<Integer>factors=new ArrayList<>();
+        int mid=(int)Math.sqrt(n);
+        for(int i=2;i<=mid;++i){
+            if(n%i==0){
+                factors.add(i);
+                if(i!=n/i)
+                    factors.add(n/i);
+            }
+        }
+        List<List<Integer>>res=new ArrayList<>();
+        List<Integer>path=new ArrayList<>();
+        backtrack(factors,n,res,path,0);
+        return res;
+    }
+
+    //255 verify preorder sequence in bst
+    //o(1) space
+    public boolean verifyPreorder(int[] preorder) {
+        int n=preorder.length;
+        int index=-1;
+        int minValue=Integer.MIN_VALUE;
+        for(int i=0;i<n;++i){
+            if(preorder[i]<minValue)
+                return false;
+            while(index>=0 && preorder[i]>preorder[index]){
+                minValue=preorder[index--];
+            }
+            preorder[++index]=preorder[i];
+        }
+        return true;
+    }
+
+    //actually you can use monotonically stack
+    public boolean verifyPreorderByStack(int[]preorder){
+        int n=preorder.length;
+        Stack<Integer>stk=new Stack<>();
+        int minValue=Integer.MIN_VALUE;
+        for(int x:preorder){
+            if(x<minValue)
+                return false;
+            while(!stk.isEmpty() && stk.peek()<x){
+                minValue=stk.pop();
+            }
+            stk.push(x);
+        }
+        return true;
     }
 }
