@@ -272,7 +272,7 @@ public class FortyOneToFifty {
 
     //47 permutation II
     //contains duplicates
-
+    //another way is used array
     public  void dfs(int[]nums,List<List<Integer>>res,List<Integer>path){
         if(path.size()==nums.length){
             res.add(new ArrayList<>(path));

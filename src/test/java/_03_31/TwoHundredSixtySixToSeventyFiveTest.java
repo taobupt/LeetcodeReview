@@ -18,6 +18,14 @@ public class TwoHundredSixtySixToSeventyFiveTest {
 
     @Test
     public void testPalindromePermutation(){
-        THSSTS.canPermutateByBitSet("abc");
+        //THSSTS.canPermutateByBitSet("abc");
+        THSSTS.generatePalindromes("aaa");
     }
+
+    @Test
+    public void testhINDEX(){
+        int[]nums={0,0,0,0,0,0,1};
+        System.out.println(THSSTS.hIndexII(nums));
+    }
+
 }
