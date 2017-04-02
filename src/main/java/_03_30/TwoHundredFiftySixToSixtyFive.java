@@ -50,6 +50,7 @@ public class TwoHundredFiftySixToSixtyFive {
     //dfs is the most simple
     //很简单的一道题，我擦，脑袋不转了
     //bfs 也是可以做的
+    //这是sb版本，其实string+"->"
     public void dfs(List<String>res,TreeNode root,List<String>path){
         if(root==null)
             return;

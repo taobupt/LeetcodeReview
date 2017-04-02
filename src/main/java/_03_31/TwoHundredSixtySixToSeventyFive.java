@@ -297,6 +297,7 @@ public class TwoHundredSixtySixToSeventyFive {
         return res;
     }
 
+    //tag
     //273 Integer to english words
     String[]digits={"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"};
     String[]Ty={"Zero","Ten","Twenty","Thirty","Forty","Fifty","Sixty","Seventy","Eighty","Ninety"};
@@ -311,7 +312,7 @@ public class TwoHundredSixtySixToSeventyFive {
             return num2str(num/100)+" Hundred"+num2str(num%100);
         else if(num>=20)
             return " "+Ty[num/10]+num2str(num%10);
-        else if(num>=1)
+        else if(num>=1)//为啥这里还要判断一下，这也是好问题
             return " "+digits[num];
         else
             return "";
@@ -323,6 +324,7 @@ public class TwoHundredSixtySixToSeventyFive {
         return res.substring(1);
     }
 
+    //tag
     //274 hindex
     //其实最烦的就是这个，你说暴力吧，显得很没有水平，但是确实属于比较恶心人的那种。
     //n long n, 先排序，然后再二分查找
@@ -374,6 +376,7 @@ public class TwoHundredSixtySixToSeventyFive {
 
 
     //275 为啥不是正方向呢，很好玩的一件事情。
+    //tag
     public int hIndexII(int[] citations) {
         int n=citations.length;
         int end=n,begin=0;

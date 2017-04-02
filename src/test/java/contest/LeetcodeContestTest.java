@@ -76,8 +76,10 @@ public class LeetcodeContestTest {
 //        node.left.right.left=new TreeNode(10);
 //        node.left.right.right=new TreeNode(14);
 //        lc.boundaryOfBinaryTree(node);
-        int []nums={1, 3, 2, 2, 2, 3, 4, 3, 1};
-        System.out.println(lc.removeBoxes(nums));
+        String[]args={"aaa","aa","aaa"};
+        System.out.println(lc.findLUSlengthII(args));
+        int [][]M={{1,1,0},{1,1,0},{0,0,1}};
+        System.out.println(lc.findCircleNum(M));
     }
 
 }

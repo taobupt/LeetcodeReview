@@ -426,4 +426,117 @@ public class LeetcodeContest {
         }
         return Math.max(res,dp[0][n-1]);
     }
+
+
+    //leetcode Weekly Contest 26 04/01/2017
+    public int findLUSlength(String a, String b) {
+        if(a.equals(b))
+            return -1;
+        if(a.length()>b.length())
+            return findLUSlength(b,a);
+        int []cnt=new int[26];
+        int []cnt1=new int[26];
+        char []aa=a.toCharArray();
+        char []bb=b.toCharArray();
+        for(char c:aa)
+            cnt[c-'a']++;
+        for(char c:bb)
+            cnt1[c-'a']++;
+        for(int i=0;i<26;++i){
+            if(cnt[i]!=cnt1[i])
+                return b.length();
+        }
+        return -1;
+    }
+    public boolean ok(String s, String str) {
+        int cnt = 0, n = s.length();
+        for (int i = 0; i < n; ++i) {
+            if (cnt == str.length())
+                return true;
+            if (s.charAt(i) == str.charAt(cnt))
+                cnt++;
+        }
+        return cnt == str.length();
+    }
+
+    public int findLUSlengthII(String[] strs) {
+        int maxV=-1,n=strs.length;
+        for(int i=0;i<n;++i){
+            boolean flag=false;
+            for(int j=0;j<n;++j){
+                if(i==j)
+                    continue;
+                if(strs[i].length()>strs[j].length())
+                    continue;
+                if(ok(strs[j],strs[i]))
+                    flag=true;
+            }
+            if(!flag)
+                maxV=Math.max(maxV,strs[i].length());
+        }
+        return maxV;
+    }
+
+    public int find(int x, int[] parent) {
+        while (x != parent[x]) {
+            parent[x] = parent[parent[x]];
+            x = parent[x];
+        }
+        return x;
+    }
+    public int countComponents(int n, int[][] edges) {
+        int []parent=new int[n];
+        for(int i=0;i<n;++i)
+            parent[i]=i;
+        int res=n;
+        for(int i=0;i<edges.length;++i){
+            int xx=find(edges[i][0],parent);
+            int yy=find(edges[i][1],parent);
+            if(xx!=yy){
+                parent[xx]=yy;
+                res--;
+            }
+        }
+        return res;
+    }
+    public int findCircleNum(int[][] M) {
+        int n=M.length;
+        List<int[]>edgess=new ArrayList<>();
+        for(int i=0;i<n;++i){
+            for(int j=0;j<n;++j){
+                if(i!=j && M[i][j]==1){
+                    edgess.add(new int[]{i,j});
+                }
+            }
+        }
+        int nn=edgess.size();
+        int [][]edges=new int[nn][2];//这里声明错了，导致memory 挂了。炒蛋
+        for(int i=0;i<nn;++i)
+            edges[i]=edgess.get(i);
+        return countComponents(n,edges);
+    }
+
+    //548. Split Array with Equal Sum
+    //囫囵吞枣，之前有一道是类似的
+    public boolean splitArray(int[] nums) {
+        if (nums.length < 7)
+            return false;
+        int[] sum = new int[nums.length];
+        sum[0] = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            sum[i] = sum[i - 1] + nums[i];
+        }
+        for (int j = 3; j < nums.length - 3; j++) {
+            HashSet < Integer > set = new HashSet < > ();
+            for (int i = 1; i < j - 1; i++) {
+                if (sum[i - 1] == sum[j - 1] - sum[i])
+                    set.add(sum[i - 1]);
+            }
+            for (int k = j + 2; k < nums.length - 1; k++) {
+                if (sum[nums.length - 1] - sum[k] == sum[k - 1] - sum[j] && set.contains(sum[k - 1] - sum[j]))
+                    return true;
+            }
+        }
+        return false;
+    }
 }
