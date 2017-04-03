@@ -32,7 +32,7 @@ public class TwoHundredSeventySixToEightyFiveTest {
         res1.add(4);
         res1.add(5);
         res1.add(6);
-        ZigzagIterator zigzag=new ZigzagIterator();
+        ZigzagIterator zigzag=new ZigzagIterator(res,res1);
 
 
     }

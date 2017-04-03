@@ -75,6 +75,8 @@ public class TwoHundredSixToFifteen {
     //210 course reschedule II , iteartive way is the same as 207
     //recursive way dfs
 
+    //很危险的一件事，就是没有经过检验就直接写code到这里，其实这个代码是错的，你应该到那里graph那里去看。
+    //即使这个可以处理207，但也是非常慢的那种，还是需要好好理解啊。这种会重复的，还是3种颜色的靠谱
     public boolean dfs(Stack<Integer>stk,Map<Integer,List<Integer>>edges,boolean[]vis,int node){
         if(vis[node])
             return false ;
