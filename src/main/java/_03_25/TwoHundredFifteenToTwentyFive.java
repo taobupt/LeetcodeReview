@@ -93,7 +93,7 @@ public class TwoHundredFifteenToTwentyFive {
                 return true;
             set.add((long)nums[i]);
             if(i>=k)
-                set.remove((long)nums[i-k]);
+                set.remove((long)nums[i-k]);//比完才删除啊，这里是index差是k，但是在sliding window里面，k是k个数，index差是k-1
         }
 
         return false;
@@ -101,6 +101,38 @@ public class TwoHundredFifteenToTwentyFive {
 
     //bucket sort
     //非常重要，晚上可以查看下max gap，看如何用bucket map做到的
+    public int maximumGap(int[] nums){
+        int n=nums.length;
+        if(n<2)
+            return 0;
+        int min=nums[0],max=nums[0];
+        for(int x:nums){
+            min=Math.min(min,x);
+            max=Math.max(max,x);
+        }
+        if(min==max)
+            return 0;
+        int gap=(int)Math.ceil(1.0*(max-min)/(n-1));
+        int []bucketMin=new int[n];
+        int []bucketMax=new int[n];
+        Arrays.fill(bucketMax,Integer.MIN_VALUE);
+        Arrays.fill(bucketMin,Integer.MAX_VALUE);
+
+        for(int x:nums){
+            int index=(x-min)/gap;
+            bucketMin[index]=Math.min(bucketMin[index],x);
+            bucketMax[index]=Math.max(bucketMax[index],x);
+        }
+
+        for(int i=0;i<n;++i){
+            if(bucketMin[i]!=Integer.MAX_VALUE){
+                gap=Math.max(gap,bucketMin[i]-min);
+                min=bucketMax[i];
+            }
+        }
+        return gap;
+    }
+    //为什么不考虑k呢，因为是有window控制的
     public boolean containsNearbyAlmostDuplicateBucket(int[] nums, int k, int t){
 
         if(k<=0||t<0)

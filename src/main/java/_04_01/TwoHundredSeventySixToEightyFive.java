@@ -105,6 +105,7 @@ public class TwoHundredSeventySixToEightyFive {
     }
 
 
+    //279
     //perfect squares
     // 就一普通的dp
     //不同脑筋的家伙就是这个下场
@@ -170,7 +171,48 @@ public class TwoHundredSeventySixToEightyFive {
         return cnt;
     }
 
+    ///280 wiggle sort
+    public void wiggleSort(int[] nums) {
+        int n=nums.length;//奇数index大，偶数index小
+        for(int i=1;i<n;++i){
+            if(i%2!=0 && nums[i]<nums[i-1])
+                swap(nums,i,i-1);
+            if(i%2==0 && nums[i]>nums[i-1])
+                swap(nums,i,i-1);
+        }
+    }
 
+    //281 in design
+
+    //282 expression add operators
+    //还是挺难的，记得好像是backtrack,还要记录以前的sum
+    //符号是在digits之间的
+    //还是要好好复习啊。
+    //tag
+    public void backtrack(List<String>res,String num,int target,long cul,long cur,int pos,String path){
+        if(pos==num.length() && target==cul){
+            res.add(path);
+            return;
+        }
+        for(int i=pos+1;i<=num.length();++i){
+            if (i != pos+1 && num.charAt(pos) == '0')continue;//去掉lead zero
+            String sub=num.substring(pos,i);
+            long val=Long.parseLong(sub);
+            if(pos==0)
+                backtrack(res,num,target,val,val,i,sub);
+            else{
+                //three cases
+                backtrack(res,num,target,cul+val,val,i,path+"+"+sub);
+                backtrack(res,num,target,cul-val,-val,i,path+"-"+sub);
+                backtrack(res,num,target,cul-cur+cur*val,cur*val,i,path+"*"+sub);
+            }
+        }
+    }
+    public List<String> addOperators(String num, int target) {
+        List<String>res=new ArrayList<>();
+        backtrack(res,num,target,0,0,0,"");
+        return res;
+    }
 
     //283
     public void swap(int[]nums,int i,int j){
@@ -189,6 +231,8 @@ public class TwoHundredSeventySixToEightyFive {
         while(j<n)
             nums[j++]=0;
     }
+
+    //284 in design
     //285 麻蛋，昨天在HEB想了很久，我擦，居然忘了，看来还是理解不够深入啊，得经常复习啊，少年
     //norder Successor in BST
     //recursive

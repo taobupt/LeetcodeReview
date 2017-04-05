@@ -36,6 +36,9 @@ public class OneHundredEightyOneToNinety {
     //187 直接hash 解决,注意重复问题
     //好像可以用bitmap
     //A T C G, 最后3位不同啊,所以10个字母可以用30位来表示，这就是一个转换的过程
+    /*
+    if(mp[sub]++==1)res.push_back(sub);这样就能避免重复了，我们知道，当它重复的时候，这个值就会变成2而不是1，所以做多一次，如果用set，就需要用set存结果
+     */
     public List<String> findRepeatedDnaSequences(String s) {
         int n=s.length();
         Set<String>set=new HashSet<>();
@@ -59,7 +62,7 @@ public class OneHundredEightyOneToNinety {
         for(int i=0;i<9 && i<n;++i)//corn case "" ,否则就会死的很快哈
             t=t<<3|s.charAt(i)&7;
         for(int i=9;i<n-9;++i){
-            t=t<<3&0x3fffffff|s.charAt(i)&7;
+            t=t<<3&0x3fffffff|s.charAt(i)&7;// 7 有3位，10*3=30，所以我们只需要30位就可。
             if(!map.containsKey(t))
                 map.put(t,1);
             else{
@@ -146,6 +149,7 @@ public class OneHundredEightyOneToNinety {
         if(n==0)
             return 0;
         int res=0;
+        //为何不能是先加上1，res再移动。你傻啊，不能这样的。你加是加上这一位的，这一位进位当且仅当有下一位。
         for(int i=0;i<32;++i){
             res <<=i;
             if((n&0x1)!=0)

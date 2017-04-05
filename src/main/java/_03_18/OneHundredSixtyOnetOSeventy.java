@@ -126,6 +126,8 @@ public class OneHundredSixtyOnetOSeventy {
     //164 maximum gap
     //先sort，再找，o(nlogn)
    //只能是radix sort排序了
+
+
     public int maximumGap(int[] nums) {
         int n=nums.length;
         int maxGap=0;
@@ -240,7 +242,6 @@ public class OneHundredSixtyOnetOSeventy {
     }
 
     //bucket sort 可以研究一下，挺好玩的
-
     //165 compare version number
     //很多corn case
     //non empty and contains digits and .

@@ -309,6 +309,7 @@ public class OneHundredNinetyOneToZero {
     //"ab"
     //"aa"
     //基本细想就是让俩个字符都指向一个一个唯一的数
+    //和290 word pattern很像很像
     public boolean isIsomorphicConcise(String s,String t){
         if(s.length()!=t.length())
             return false;
