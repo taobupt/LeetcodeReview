@@ -306,5 +306,38 @@ public class TwoHundredEightySixToNinetyFive {
 
     //294 flip game II
 
+
+    //想想为啥hashmap回溯不需要删除原来的object，要是删除还缓存个p啊。
+    Map<String,Boolean>map=new HashMap<>();
+    public boolean canWin(String s) {
+        if(map.containsKey(s))
+            return map.get(s);
+        int index=s.indexOf("++");
+        if(index==-1)
+            return false;
+        StringBuilder sb=new StringBuilder(s);
+        int start=0,n=s.length();
+        while(start<n){
+            index=s.indexOf("++",start);
+            if(index==-1)
+                break;
+            sb.setCharAt(index,'-');
+            sb.setCharAt(index+1,'-');
+            if(!canWin(sb.toString())){
+                map.put(s,true);//不是sb.toString()
+                return true;
+            }
+            sb.setCharAt(index,'+');
+            sb.setCharAt(index+1,'+');//少加了个1，卧槽
+            start=index+1;
+        }
+        map.put(s,false);
+        return false;
+
+    }
+
+    //用hashmap cache
+
+
     //295 in the design
 }
