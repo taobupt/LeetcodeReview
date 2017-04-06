@@ -80,6 +80,49 @@ public class TwoHundredEightySixToNinetyFive {
         }
     }
 
+    //绝对是精彩绝伦的对决，很高兴能写出来这道题
+    //289 game of life,你要说简单吧，其实也很简单，就是copy另外一个数组搞起，但是这样空间复杂度上去了，肯定是不行的
+    //充分利用bit的一些信息，能使得节省空间
+    public void gameOfLife(int[][] board) {
+        if(board.length==0||board[0].length==0)
+            return;
+        int m=board.length,n=board[0].length;
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+
+                int neighbors=countNeightbors(board,i,j);
+                if(neighbors==3)
+                    board[i][j]+=2;
+                if(neighbors==2 && board[i][j]==1)
+                    board[i][j]+=2;
+
+            }
+        }
+
+        //last 把所有的位向右移动一
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+                board[i][j]>>=1;
+            }
+        }
+
+
+    }
+
+    //count 统计neighbor
+    public int countNeightbors(int[][]board,int x,int y){
+        int neighbors=0;
+        int m=board.length,n=board[0].length;
+        for(int i=Math.max(0,x-1);i<=Math.min(m-1,x+1);++i){
+            for(int j=Math.max(0,y-1);j<=Math.min(n-1,y+1);++j){
+                if(i==x && j==y)
+                    continue;
+                if((board[i][j]&0x1)==1)
+                    neighbors++;
+            }
+        }
+        return neighbors;
+    }
 
     //290 word pattern
     //之前的isomorphic string 最佳是用两个cnt数组
@@ -260,4 +303,8 @@ public class TwoHundredEightySixToNinetyFive {
         }
         return res;
     }
+
+    //294 flip game II
+
+    //295 in the design
 }
