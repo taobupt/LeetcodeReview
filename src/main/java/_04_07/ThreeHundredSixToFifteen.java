@@ -1,9 +1,19 @@
 package _04_07;
 
+import common.FenwickTree;
+
+import java.util.*;
+
 /**
  * Created by tao on 4/6/17.
  */
 public class ThreeHundredSixToFifteen {
+
+
+    //307 range sum query -mutable in design
+    //可以试试用segement tree做做
+
+    //308 range sum query 2d-mutable 其实就是二维的fenwick tree
 
 
 
@@ -32,5 +42,26 @@ public class ThreeHundredSixToFifteen {
     }
 
     //common way 就是调换了下循环的顺序，但是这样就不能判断A[I][J]
+
+
+
+    //315 count of smaller number after self
+    //merge sort and fenwick tree
+    public List<Integer> countSmaller(int[] nums) {
+        int n=nums.length;
+        FenwickTree tree=new FenwickTree(n);
+        int[]arr=nums.clone();
+        Arrays.sort(arr);
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int i=0;i<n;++i)
+            map.put(arr[i],i+1);
+        List<Integer>res=new ArrayList<>();
+        for(int i=n-1;i>=0;--i){
+            res.add(tree.sum(map.get(nums[i])-1));//这里跪了，忘了-1，你应该和reverse pair做一下
+            tree.add(map.get(nums[i]),1);
+        }
+        Collections.reverse(res);
+        return res;
+    }
 
 }

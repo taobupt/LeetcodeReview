@@ -5,6 +5,7 @@ import java.util.Iterator;
 /**
  * Created by tao on 4/2/17.
  */
+//还是第一次遇到这种情况，就是iterator并没有peek，所以我们需要用一个变量来store提前存好这个值，然后搞定。
 class PeekingIterator implements Iterator<Integer> {
 
     private  Iterator<Integer>it=null;

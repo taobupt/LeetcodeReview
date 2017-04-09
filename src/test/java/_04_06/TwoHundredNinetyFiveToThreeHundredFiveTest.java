@@ -22,4 +22,10 @@ public class TwoHundredNinetyFiveToThreeHundredFiveTest {
         System.out.println(THN.lengthOfLIS(nums));
     }
 
+    @Test
+    public void testPixel(){
+        char[][]image={{'0','0','1','0'},{'0','1','1','0'},{'0','1','0','0'}};
+        System.out.println(THN.minArea(image,0,2));
+    }
+
 }

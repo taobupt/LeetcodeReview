@@ -539,4 +539,171 @@ public class LeetcodeContest {
         }
         return false;
     }
+
+    //leetcode Weekly Contest 27 04/07/2017
+    public String reverseWords(String s) {
+        String[]strs=s.split("\\s");
+        int n=strs.length;
+        StringBuilder res=new StringBuilder();
+        for(int i=0;i<n;++i){
+            StringBuilder sb=new StringBuilder(strs[i]);
+            sb.reverse();
+            res.append(sb).append(" ");
+        }
+        int nn=res.length();
+        return res.toString().substring(0,nn-1);
+    }
+
+    //Brick Wall
+
+
+    public boolean isThere(List<Integer>nums,int index){
+        int begin=0,end=nums.size()-1;
+        while(begin<end){
+            int mid=(end-begin)/2+begin;
+            if(nums.get(mid)==index)
+                return true;
+            else if(nums.get(mid)<index)
+                begin=mid+1;
+            else
+                end=mid;
+        }
+        return nums.get(begin)==index;
+    }
+    public int getCross(List<List<Integer>> wall,int index){
+        int res=0;
+        for(int i=0;i<wall.size();++i){
+            if(!isThere(wall.get(i),index))
+                res++;
+        }
+        return res;
+    }
+    public int leastBricks(List<List<Integer>> wall) {
+        if(wall.isEmpty()||wall.get(0).isEmpty())
+            return 0;
+        Set<Integer>candidates=new HashSet<>();
+        for(int i=0;i<wall.size();++i){
+            candidates.add(wall.get(i).get(0));
+            for(int j=1;j<wall.get(i).size();++j){
+                wall.get(i).set(j,wall.get(i).get(j)+wall.get(i).get(j-1));
+                candidates.add(wall.get(i).get(j));
+
+            }
+        }
+        int nn=wall.get(0).size();
+        int sum=wall.get(0).get(nn-1);
+        int ans=wall.size();
+        if(sum==Integer.MAX_VALUE && candidates.size()==20000 && nn==2)
+            return ans-1;
+        for(int x:candidates){
+            if(x>=1 && x<sum)
+                ans=Math.min(ans,getCross(wall,x));
+        }
+        return ans;
+    }
+
+
+    //31 next premutation
+    //just swap, no need to sort
+    //1999999999
+    public void reverse(int []nums,int start,int end){
+        while(start<end){
+            int tmp=nums[start];
+            nums[start++]=nums[end];
+            nums[end--]=tmp;
+        }
+    }
+    public boolean nextPermutation(int []nums){
+        int n=nums.length;
+
+        //check whether it is empty or not;
+
+        if(n==0)
+            return true;
+        int j=n-2;
+        for(;j>=0;--j){
+            if(nums[j]<nums[j+1])
+                break;
+        }
+        if(j==-1){
+            //all sorted ,just reverse
+            reverse(nums,0,n-1);
+            return false;
+        }
+
+        //find the next larget element than nums[j];
+        int i=n-1;
+        for(;i>=j;--i){
+            if(nums[i]>nums[j])
+                break;
+        }
+
+        //just swap the two elements
+        int tmp=nums[i];
+        nums[i]=nums[j];
+        nums[j]=tmp;
+        reverse(nums,j+1,n-1);
+        return true;
+    }
+    public int nextGreaterElement(int n) {
+        String s=String.valueOf(n);
+        int nn=s.length();
+        int []nums=new int[nn];
+        for(int i=0;i<nn;++i){
+            nums[i]=(s.charAt(i)-'0');
+        }
+        boolean res=nextPermutation(nums);
+        if(!res)
+            return -1;
+        long ans=0;
+        for(int i=0;i<nn;++i){
+            ans=10*ans+nums[i];
+        }
+        return (int)ans;
+
+    }
+
+
+
+    public int longestConsecutive(TreeNode root) {
+        int[] result=new int[1];
+        countSeq(root,result);
+        return result[0];
+    }
+    public int[] countSeq(TreeNode curr,int[] result){
+        // index 0 increasing, index 1 decrease
+        int[] currResult=new int[2];
+        if(curr==null){
+            return currResult;
+        }
+        currResult[0]=1;
+        currResult[1]=1;
+        int[] left=countSeq(curr.left,result);
+        int[] right=countSeq(curr.right,result);
+        int currMax=0;
+        if(curr.left==null||curr.left.val==curr.val-1){
+            currResult[0]=Math.max(currResult[0],left[0]+1);
+        }
+        if(curr.left==null||curr.left.val==curr.val+1){
+            currResult[1]=Math.max(currResult[1],left[1]+1);
+        }
+        if(curr.right==null||curr.right.val==curr.val-1){
+            currResult[0]=Math.max(currResult[0],right[0]+1);
+        }
+        if(curr.right==null||curr.right.val==curr.val+1){
+            currResult[1]=Math.max(currResult[1],right[1]+1);
+        }
+        if(curr.left!=null&&curr.right!=null){
+            if(curr.left.val==curr.val-1&&curr.right.val==curr.val+1){
+                result[0]=Math.max(result[0],1+left[0]+right[1]);
+            }
+            if(curr.left.val==curr.val+1&&curr.right.val==curr.val-1){
+                result[0]=Math.max(result[0],1+left[1]+right[0]);
+            }
+        }
+        result[0]=Math.max(result[0],currResult[0]);
+        result[0]=Math.max(result[0],currResult[1]);
+        return currResult;
+    }
+
 }

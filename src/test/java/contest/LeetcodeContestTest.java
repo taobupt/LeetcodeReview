@@ -82,4 +82,25 @@ public class LeetcodeContestTest {
         System.out.println(lc.findCircleNum(M));
     }
 
+    @Test
+    public void testNext(){
+        //woring case [[1],[1],[1]]
+        //System.out.println(lc.nextGreaterElement(1999999999));
+//        Integer [][]nums={{1,2,2,1},
+//                {3,1,2},
+//        {1,3,2},
+//    {2,4},
+//        {3,1,2},
+//        {1,3,1,1}};
+        TreeNode root=new TreeNode(6);
+        root.left=new TreeNode(5);
+        root.right=new TreeNode(7);
+        root.left.left=new TreeNode(2);
+        root.left.left.left=new TreeNode(1);
+        root.left.left.right=new TreeNode(3);
+        root.right.left=new TreeNode(4);
+        root.right.right=new TreeNode(8);
+        System.out.println(lc.longestConsecutive(root));
+    }
+
 }

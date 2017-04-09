@@ -2,11 +2,9 @@ package _04_06;
 
 import common.TreeNode;
 import common.Tuple;
+import common.UnionFind;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created by tao on 4/6/17.
@@ -14,7 +12,8 @@ import java.util.Set;
 public class TwoHundredNinetyFiveToThreeHundredFive {
 
 
-    //297 serialize and deserialize tree
+    //296 in mathQuestions
+    //297 serialize and deserialize tree in design
 
     //298. Binary Tree Longest Consecutive Sequence
 
@@ -163,7 +162,147 @@ public class TwoHundredNinetyFiveToThreeHundredFive {
     //onlog(n) 的解法,非常经典
 
 
+    //301 remove invalid parenthesis
+    //bfs 拓展，valid
+    //如果不用set来标记的化，很容易tle，这告诉我们，进队列的话不能重复进，不然很容易暴增，所以要用vis来标记哪些访问过了，哪些没有访问过
+    //tag
+    public boolean validParenthese(String s){
+        char []ss=s.toCharArray();
+        int n=ss.length;
+        int cnt=0;
+        for(int i=0;i<n;++i){
+            if(ss[i]=='(')
+                cnt++;
+            else if(ss[i]==')')
+                cnt--;
+            if(cnt<0)
+                return false;
+        }
+        return cnt==0;
+    }
+    public List<String> removeInvalidParentheses(String s) {
+        List<String>res=new ArrayList<>();
+        Set<String>vis=new HashSet<>();
+        if(validParenthese(s)){
+            res.add(s);
+            return res;
+        }
+        Queue<String>q=new LinkedList<>();
+        q.offer(s);
+        boolean hasNext=true;
+        while(!q.isEmpty() &&hasNext){
+            int size=q.size();
+            for(int i=0;i<size;++i){
+                StringBuilder sb=new StringBuilder(q.poll());
+                for(int j=0;j<sb.length();++j){
+                    if(sb.charAt(j)!='(' && sb.charAt(j)!=')')
+                        continue;
+                    String newstr=sb.substring(0,j)+sb.substring(j+1);
+                    if(!vis.contains(newstr)&&validParenthese(newstr)){
+                        hasNext=false;
+                        vis.add(newstr);
+                        res.add(newstr);
+                        continue;
+                    }
+                    if(!vis.contains(newstr)){
+                        q.offer(newstr);
+                        vis.add(newstr);
+                    }
+                }
+            }
+        }
+        return res;
+    }
+
+    //dfs way 需要好好研究一下
+
+
+
+    //302. Smallest Rectangle Enclosing Black Pixels
+    //binary search
+    //写得紧凑倒是不容易啊，本来应该分开写的，今天效率不高，人有点迷糊 le
+
+    public boolean containsOne(char[][]image,int index,boolean isCol){
+        int m=image.length,n=image[0].length;
+        if(isCol){
+            for(int i=0;i<m;++i){
+                if(image[i][index]=='1')
+                    return true;
+            }
+        }else{
+            for(int i=0;i<n;++i){
+                if(image[index][i]=='1')
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    public int binarySearch(char[][]image,int begin,int end,boolean isLower,boolean isCol){
+        while(begin<end){
+            int mid=(end-begin)/2+begin;
+            if(isLower){
+                if(containsOne(image,mid,isCol))
+                    end=mid;
+                else
+                    begin=mid+1;
+            }else{
+                if(containsOne(image,mid,isCol))
+                    begin=mid+1;
+                else
+                    end=mid;
+            }
+        }
+        return containsOne(image,begin,isCol)?begin:begin-1;
+    }
+
+    public int minArea(char[][] image, int x, int y) {
+        if(image.length==0||image[0].length==0)
+            return 0;
+        int m=image.length,n=image[0].length;
+        int left=binarySearch(image,0,y,true,true);
+        int right=binarySearch(image,y,n-1,false,true);
+        int upper=binarySearch(image,0,x,true,false);
+        int lower=binarySearch(image,x,m-1,false,false);
+        return (right-left+1)*(lower-upper+1);
+    }
 
     //303 range sum query
     //in design
+
+
+    //304 range sum query2d-immutable
+    //in design
+    //-[row2][col1-1] [row1-1][col2]+[row1-1][col1-1]
+
+    //305 number of islandsII
+    public List<Integer> numIslands2(int m, int n, int[][] positions) {
+        List<Integer>res=new ArrayList<>();
+        int k=positions.length;
+        int[][]grid=new int[m][n];
+        UnionFind uf=new UnionFind(m*n);
+        int cnt=0;
+        for(int i=0;i<k;++i){
+            cnt++;
+            int x=positions[i][0];
+            int y=positions[i][1];
+            grid[x][y]=1;
+            int index=x*n+y;
+            if(x>=1 && grid[x-1][y]==1){
+                if(uf.mix(index,index-n))
+                    cnt--;
+            }
+            if(y>=1 && grid[x][y-1]==1)
+                if(uf.mix(index,index-1))
+                    cnt--;
+            if(x<m-1 && grid[x+1][y]==1)
+                if(uf.mix(index,index+n))
+                    cnt--;
+            if(y<n-1 && grid[x][y+1]==1)
+                if(uf.mix(index,index+1))
+                    cnt--;
+            res.add(cnt);
+        }
+        return res;
+    }
 }
