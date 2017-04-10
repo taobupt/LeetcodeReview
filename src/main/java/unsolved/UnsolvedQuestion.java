@@ -1,5 +1,7 @@
 package unsolved;
 
+import java.util.Arrays;
+
 /**
  * Created by tao on 3/29/17.
  */
@@ -50,5 +52,46 @@ public class UnsolvedQuestion {
         }
 
         return start / s.length();
+    }
+
+
+    //493. Reverse Pairs
+    //当然也是可以用fenwick tree做的，但是我们不能说是从后到前面是算小于／2的，因为／2的不一定在map里面啊，还是*2，放进去，然后用总的减去两倍的即可
+    int ans=0;
+    public void mergePairs(int[]nums,int begin,int mid,int end){
+        int i=begin,j=mid+1;
+        // for(int i = begin, j = mid+1; i<=mid; i++){
+        //     while(j<=end && nums[i]/2.0 > nums[j]) j++;
+        //     ans += j-(mid+1);
+        // }
+
+        while(i<=mid && j<=end){
+            if(nums[i]/2.0 > nums[j])
+                j++;
+            else{
+                ans+=j-mid-1;
+                i++;
+            }
+        }
+        while(i<=mid){
+            if(nums[i]/2.0 > nums[end]){
+                ans+=end-mid;
+            }
+            i++;
+        }
+        Arrays.sort(nums,begin,end+1);
+    }
+    public void reversePairs(int[]nums,int begin,int end){
+        if(begin>=end)
+            return;
+        int mid=(end-begin)/2+begin;
+        reversePairs(nums,begin,mid);
+        reversePairs(nums,mid+1,end);
+        mergePairs(nums,begin,mid,end);
+    }
+    public int reversePairs(int[] nums) {
+        int end=nums.length-1;
+        reversePairs(nums,0,end);
+        return ans;
     }
 }

@@ -22,6 +22,7 @@ public class StringAlgo {
     }
 
     //所以不能允许p[j] = p[ next[j ]]。如果出现了p[j] = p[ next[j] ]咋办呢？如果出现了，则需要再次递归，即令next[j] = next[ next[j] ]。
+    //O(m+n)
     public int[]buildNextOptimal(String pattern){
         char []p=pattern.toCharArray();
         int n=p.length;
