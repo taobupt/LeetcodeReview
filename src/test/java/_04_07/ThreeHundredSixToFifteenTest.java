@@ -39,4 +39,13 @@ public class ThreeHundredSixToFifteenTest {
         System.out.println(THSTF.isAdditiveNumber("101"));
     }
 
+    @Test
+    public void testFindMinimum(){
+
+        int [][]edges={{0,1}};
+        List<Integer>res=THSTF.findMinHeightTrees(2,edges);
+        for(int x:res)
+            System.out.println(x);
+    }
+
 }

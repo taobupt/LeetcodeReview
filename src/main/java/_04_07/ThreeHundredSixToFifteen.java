@@ -52,6 +52,86 @@ public class ThreeHundredSixToFifteen {
     //308 range sum query 2d-mutable 其实就是二维的fenwick tree
 
 
+    //309 best time to buy stock and sell stock with cool down
+    //两个数组
+    public int maxProfit(int[] prices) {
+        int n=prices.length;
+        if(n<2)
+            return 0;
+        int []buy=new int[n];//the profit when buy
+        int []sell=new int[n];//the profit when sell
+        buy[0]=-prices[0];
+        //sell[0]=prices[0];
+        for(int i=1;i<n;++i){
+            buy[i]=Math.max(buy[i-1],(i<2?0:sell[i-2])-prices[i]);
+            sell[i]=Math.max(sell[i-1],buy[i-1]+prices[i]);
+        }
+        return Math.max(sell[n-1],buy[n-1]);
+    }
+
+    //save space
+    public int maxProfitSaveSpace(int[] prices) {
+        int n=prices.length;
+        if(n<2)
+            return 0;
+        int buy=-prices[0];
+        int sell=0;
+        int beforeSell=0;
+        for(int i=1;i<n;++i){
+            int lastbuy=buy;
+            buy=Math.max(buy,beforeSell-prices[i]);
+            beforeSell=sell;
+            sell=Math.max(sell,lastbuy+prices[i]);
+        }
+        return Math.max(sell,buy);
+    }
+
+
+    //310 minimum height tree topologicial sort
+    //最多俩个,每次减去叶子节点，晚上复习一下其他的解法
+    //tag
+    public List<Integer> findMinHeightTrees(int n, int[][] edges) {
+        List<List<Integer>>adj=new ArrayList<>();
+        for(int i=0;i<n;++i)
+            adj.add(new ArrayList<>());
+        int[]degree=new int[n];
+        for(int[]edge:edges){
+            adj.get(edge[0]).add(edge[1]);
+            adj.get(edge[1]).add(edge[0]);
+            ++degree[edge[1]];
+            ++degree[edge[0]];
+        }
+        Queue<Integer>q=new LinkedList<>();
+        for(int i=0;i<n;++i){
+            if(degree[i]<=1)
+                q.offer(i);
+        }
+        int ans=0;
+        Set<Integer>set=new HashSet<>();//visited.
+        Set<Integer>res=new HashSet<>();
+        boolean canAdd=false;
+        while(!q.isEmpty()){
+            if(ans>=n-2)
+                canAdd=true;
+            int size=q.size();
+            for(int i=0;i<size;++i){
+                int top=q.poll();
+                ans++;
+                if(canAdd)
+                    res.add(top);
+                set.add(top);
+                List<Integer>neighbors=adj.get(top);
+                for(int x:neighbors){
+                    --degree[x];
+                    if(degree[x]<=1 && !set.contains(x)){
+                        q.offer(x);
+                        set.add(x);
+                    }
+                }
+            }
+        }
+        return new ArrayList<>(res);
+    }
 
     //311. Sparse Matrix Multiplication
     //有普通做法，就是一行乘以一列的
@@ -163,6 +243,7 @@ public class ThreeHundredSixToFifteen {
 
     //也可以先得到range,省得用hashmap
     //double linkedlist
+    //双链表，只是val是一个vector
     public void getRange(TreeNode root,int[]width,int level){
         if(root==null)
             return;

@@ -23,6 +23,7 @@ public class NumArrayChangeAble {
     public void update(int i, int val) {
         int delta=val-arr[i];
         tree.add(i+1,delta);
+        arr[i]=val;
     }
 
     public int sumRange(int i, int j) {
