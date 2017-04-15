@@ -9,6 +9,36 @@ import java.util.*;
  */
 public class ThreeHundredSixTeenToTwentyFive {
 
+
+    //316. Remove Duplicate Letters
+    public String removeDuplicateLetters(String s) {
+        int n=s.length();
+        int []cnt=new int[26];
+        char []ss=s.toCharArray();
+        for(char c:ss)
+            cnt[c-'a']++;
+        boolean []vis=new boolean[26];
+        Stack<Character>stk=new Stack<>();
+        for(char c:ss){
+            //两人顺序不能调换
+            --cnt[c-'a'];
+            if(vis[c-'a'])
+                continue;
+            while(!stk.isEmpty() && stk.peek()>=c &&cnt[stk.peek()-'a']>0){
+
+                vis[stk.pop()-'a']=false;
+            }
+            stk.push(c);
+            vis[c-'a']=true;
+        }
+        StringBuilder sb=new StringBuilder();
+        while(!stk.isEmpty()){
+            sb.append(stk.pop());
+        }
+        sb.reverse();
+        return sb.toString();
+    }
+
     //317 Shortest Distance from All Buildings
     //
     public int shortestDistance(int[][] grid) {
@@ -61,12 +91,72 @@ public class ThreeHundredSixTeenToTwentyFive {
     }
 
 
+    //318 maximum product word length//26位
+    //没有必要用户map的。数组就可以了
+    //速度快很多
+    public int maxProduct(String[] words) {
+        //an integer can represent a words
+//        Map<String,Integer>map=new HashMap<>();
+//        for(String word:words){
+//            int num=0;
+//            char []ss=word.toCharArray();
+//            for(char c:ss){
+//                num|=1<<(c-'a');
+//            }
+//            map.put(word,num);
+//        }
+
+
+        int n=words.length,res=0;
+        int []map=new int[n];
+        int index=0;
+        for(String word:words){
+            int num=0;
+            char[]ss=word.toCharArray();
+            for(char c:ss){
+                num|=1<<(c-'a');
+            }
+            map[index++]=num;
+        }
+        for(int i=1;i<n;++i){
+            for(int j=0;j<i;++j){
+                if((map[i]&map[j])==0){
+                    res=Math.max(res,words[i].length()*words[j].length());
+                }
+            }
+        }
+        return res;
+    }
+
     //319 bulb switcher
     //只有因数个数是奇数个，才会是开的，这样只有n*n
     public int bulbSwitch(int n) {
         return (int)Math.sqrt(n);
     }
 
+
+
+    //320 generalized abbreviation
+    //我记得第一次是很艰难的写出来了，后来最佳答案好像是递归简化的
+    //第一种解法就是每个地方轮流放1，如果1是连在一起的话，那么就把1加进来，否则就不加了
+
+    //另外一种是，每个位置都有可能变为1或者不变为1，自己选择，所以需要一个变量来记录相邻的，每次都有种走向
+    //居然成功了耶
+    public void dfs(List<String>res,String word,int cnt,int pos,String path){
+        if(pos==word.length()){
+            if(cnt!=0)
+                path=path+cnt;
+            res.add(path);
+            return;
+        }
+        dfs(res,word,cnt+1,pos+1,path);
+        dfs(res,word,0,pos+1,path+(cnt==0?"":cnt)+word.charAt(pos));
+    }
+    public List<String> generateAbbreviations(String word) {
+        List<String>res=new ArrayList<>();
+        dfs(res,word,0,0,"");
+        return res;
+    }
     //322 coin change
     //纯dp
     public int coinChange(int[] coins, int amount) {

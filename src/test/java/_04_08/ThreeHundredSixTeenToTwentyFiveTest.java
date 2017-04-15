@@ -3,6 +3,8 @@ package _04_08;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -33,6 +35,18 @@ public class ThreeHundredSixTeenToTwentyFiveTest {
     public void testWiggleSort()throws Exception{
         int[]nums={1,4,1,5,1};
         THSTTTF.wiggleSort(nums);
+    }
+
+    @Test
+    public void testRemoveDuplicate()throws Exception{
+        System.out.println(THSTTTF.removeDuplicateLetters("bbcaac"));
+    }
+
+    @Test
+    public void testGeneralizedAbbreviation()throws Exception{
+        List<String> res=THSTTTF.generateAbbreviations("word");
+        for(String str:res)
+            System.out.println(str);
     }
 
 }

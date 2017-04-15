@@ -243,7 +243,7 @@ public class TwoHundredEightySixToNinetyFive {
     }
 
     //看了下最近做这道题的时间是2个月前，不会的还是不会，嗯，就是这么sb，你越是怕，越是不敢挑战，越会欺负你。
-    //看了下高分答案,这种backtracking的题应该是很明显的,还要添加set，"ab" "aa"
+    //看了下高分答案,这种backtracking的题应该是很明显的,还要添加set，"ab" "aa".a->a,a->b
     //递归+map好像是最爱啊，纯暴力好像出力不讨好
     public boolean wordPatternMatchBetter(String pattern, String str){
         if(pattern.length()>str.length())
