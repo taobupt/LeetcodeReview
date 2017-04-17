@@ -111,7 +111,6 @@ public class OneHundredNinetyOneToZero {
             for(int j=0;j<n;++j){
                 if(grid[i][j]=='1'){
                     ans++;
-
                     q.offer(new int[]{i,j});
                     while(!q.isEmpty()){
                         int []top=q.poll();

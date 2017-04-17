@@ -1,6 +1,7 @@
 package unsolved;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * Created by tao on 3/29/17.
@@ -93,5 +94,38 @@ public class UnsolvedQuestion {
         int end=nums.length-1;
         reversePairs(nums,0,end);
         return ans;
+    }
+
+
+    //402 remove k digits
+    //get n-k digits
+    public String removeKdigits(String num, int k) {
+        int n=num.length();
+        if(k>=n)
+            return "0";
+        Stack<Character> stk=new Stack<>();
+        k=n-k;
+        int i=0;
+        while(i<n){
+            while((n-i)>(k-stk.size()) && !stk.isEmpty() && stk.peek()>num.charAt(i)){
+                stk.pop();
+            }
+            if(stk.size()<k)
+                stk.push(num.charAt(i));
+            i++;
+        }
+        StringBuilder sb=new StringBuilder();
+        while(!stk.isEmpty()){
+            sb.append(stk.pop());
+        }
+        String ans=sb.reverse().toString();
+        int index=0;
+        while(index<ans.length()){
+            if(ans.charAt(index)=='0')
+                index++;
+            else
+                break;
+        }
+        return index==ans.length()?"0":ans.substring(index);
     }
 }

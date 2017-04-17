@@ -103,4 +103,11 @@ public class LeetcodeContestTest {
         System.out.println(lc.longestConsecutive(root));
     }
 
+    @Test
+    public void testLR(){
+        //System.out.println(lc.checkRecord("PPALLP"));
+        int []nums={1000,100,10,2};
+        lc.optimalDivision(nums);
+    }
+
 }

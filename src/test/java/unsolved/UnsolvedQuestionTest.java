@@ -21,4 +21,10 @@ public class UnsolvedQuestionTest {
         System.out.println(uq.wordsTypingBetter(word,4,6));
     }
 
+    @Test
+    public void testRemoveKdigits(){
+        System.out.println(uq.removeKdigits("112",1));
+    }
+
+
 }

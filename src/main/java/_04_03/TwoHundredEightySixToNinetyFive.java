@@ -80,6 +80,8 @@ public class TwoHundredEightySixToNinetyFive {
         }
     }
 
+    //288 in design unique word design
+
     //绝对是精彩绝伦的对决，很高兴能写出来这道题
     //289 game of life,你要说简单吧，其实也很简单，就是copy另外一个数组搞起，但是这样空间复杂度上去了，肯定是不行的
     //充分利用bit的一些信息，能使得节省空间

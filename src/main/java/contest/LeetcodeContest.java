@@ -3,6 +3,7 @@ package contest;
 import common.TreeNode;
 import common.Trie;
 import common.TrieNode;
+import org.omg.CORBA.INTERNAL;
 
 import java.util.*;
 
@@ -706,4 +707,69 @@ public class LeetcodeContest {
         return currResult;
     }
 
+    public boolean checkRecord(String s) {
+        Map<Character,Integer>map=new HashMap<>();
+        char []ss=s.toCharArray();
+        for(char c:ss){
+            if(!map.containsKey(c))
+                map.put(c,1);
+            else
+                map.put(c,map.get(c)+1);
+        }
+        if(map.containsKey('A') && map.get('A')>1)
+            return false;
+        if(s.indexOf("LLL")!=-1)
+            return false;
+        return true;
+    }
+
+
+    //
+    public List<expression> diffWaysToCompute(String input) {
+        int n=input.length();
+        List<expression>res=new ArrayList<>();
+        for(int i=0;i<n;++i){
+            char c=input.charAt(i);
+            if(c=='/'){
+                List<expression>left=diffWaysToCompute(input.substring(0,i));
+                List<expression>right=diffWaysToCompute(input.substring(i+1));
+                for(int m=0;m<left.size();++m){
+                    for(int k=0;k<right.size();++k){
+                        if(right.get(k).exp.contains("/"))
+                            res.add(new expression(1.0*left.get(m).res/right.get(k).res,left.get(m).exp+"/"+"("+right.get(k).exp+")"));
+                        else
+                            res.add(new expression(1.0*left.get(m).res/right.get(k).res,left.get(m).exp+"/"+right.get(k).exp));
+                    }
+                }
+            }
+        }
+        if(res.isEmpty())//这一句至关重要
+            res.add(new expression(Double.valueOf(input),input));
+        return res;
+    }
+
+    class expression{
+        public double res;
+        public String exp;
+        public expression(double res,String exp){
+            this.res=res;
+            this.exp=exp;
+        }
+    }
+    public String optimalDivision(int[] nums) {
+        StringBuilder sb=new StringBuilder();
+        for(int x:nums){
+            if(sb.length()==0)
+                sb.append(x);
+            else
+                sb.append("/"+x);
+        }
+        List<expression>res=diffWaysToCompute(sb.toString());
+        expression exs=new expression(Double.MIN_VALUE,"");
+        for(expression ex:res){
+            if(ex.res>exs.res)
+                exs=ex;
+        }
+        return exs.exp;
+    }
 }
