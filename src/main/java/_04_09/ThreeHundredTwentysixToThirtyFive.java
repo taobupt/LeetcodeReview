@@ -2,6 +2,7 @@ package _04_09;
 
 import common.FenwickTree;
 import common.ListNode;
+import common.TreeNode;
 
 import java.util.*;
 
@@ -164,6 +165,78 @@ public class ThreeHundredTwentysixToThirtyFive {
             }
         }
         return res[0];
+    }
+
+    //333 largest bst subtree
+    //错误的代码，因为你并没有把该有的值的大小关系传上来，应该用结构体来传的。
+//    int ans=0;
+//    public int isBSTTree(TreeNode root){
+//        if(root==null)
+//            return 0;
+//        if(root.left==null && root.right==null)
+//            return 1;
+//        int l=isBSTTree(root.left);
+//        int r=isBSTTree(root.right);
+//        if(l!=-1 && r!=-1){
+//            if(root.left!=null && root.right!=null){
+//                if(root.val>root.left.val && root.val<root.right.val){
+//                    ans=Math.max(ans,l+r+1);
+//                    return 1+l+r;
+//                }else
+//                    return -1;
+//            }else if(root.left!=null && root.right==null && root.val>root.left.val){
+//                ans=Math.max(ans,l+1);
+//                return 1+l;
+//            }else if(root.right!=null && root.left==null && root.val<root.right.val){
+//                ans=Math.max(ans,r+1);
+//                return 1+r;
+//            }else
+//                return -1;
+//        }
+//        return -1;
+//    }
+    class info{
+        int minvalue;
+        int maxvalue;
+        int size;
+        boolean isBST;
+        public info(){
+            minvalue=Integer.MAX_VALUE;
+            maxvalue=Integer.MIN_VALUE;
+            isBST=true;
+            size=0;
+        }
+
+    }
+
+    public info dfs(TreeNode root){
+        info res=new info();
+        if(root==null){
+            return res;
+        }
+        if(root.left==null && root.right==null){
+            res.isBST=true;
+            res.size=1;
+            res.maxvalue=root.val;
+            res.minvalue=root.val;
+            return res;
+        }
+        info l=dfs(root.left);
+        info r=dfs(root.right);
+        if(!l.isBST ||!r.isBST||l.maxvalue>=root.val||r.minvalue<=root.val){
+            res.isBST=false;
+            res.size=Math.max(l.size,r.size);// 要想root是最大，必须要哦更新
+            return res;
+        }
+        res.isBST=true;
+        res.size=l.size+r.size+1;
+        res.minvalue=root.left!=null?l.minvalue:root.val;
+        res.maxvalue=root.right!=null?r.maxvalue:root.val;//手误，忘了写
+        return res;
+
+    }
+    public int largestBSTSubtree(TreeNode root) {
+        return dfs(root).size;
     }
 
     //334 increasing triplet subsequence

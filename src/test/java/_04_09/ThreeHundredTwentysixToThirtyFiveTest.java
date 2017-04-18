@@ -1,6 +1,7 @@
 package _04_09;
 
 import common.ListNode;
+import common.TreeNode;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,5 +43,14 @@ public class ThreeHundredTwentysixToThirtyFiveTest {
     public void testRange(){
         int []nums={2147483647,-2147483648,-1,0};
         System.out.println(THTTT.countRangeSum(nums,-1,0));
+    }
+
+    @Test
+    public void testLargest(){
+        TreeNode root=new TreeNode(3);
+        root.left=new TreeNode(1);
+        root.left.left=new TreeNode(2);
+        root.left.left.right=new TreeNode(4);
+        System.out.println(THTTT.largestBSTSubtree(root));
     }
 }

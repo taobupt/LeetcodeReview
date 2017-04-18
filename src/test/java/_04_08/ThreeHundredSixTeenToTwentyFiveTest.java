@@ -49,4 +49,13 @@ public class ThreeHundredSixTeenToTwentyFiveTest {
             System.out.println(str);
     }
 
+    @Test
+    public void createMaximumNumber()throws Exception{
+        int []nums1={3,9};
+        int []nums2={8,9};
+        int []res=THSTTTF.maxNumber(nums1,nums2,3);
+        for(int x:res)
+            System.out.println(x);
+    }
+
 }

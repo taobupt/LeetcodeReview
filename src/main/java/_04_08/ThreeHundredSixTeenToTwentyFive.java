@@ -157,6 +157,64 @@ public class ThreeHundredSixTeenToTwentyFive {
         dfs(res,word,0,0,"");
         return res;
     }
+
+
+    //321. Create Maximum Number
+
+    public int[]getK(int[]nums,int k){
+        int n=nums.length;
+        Stack<Integer>stk=new Stack<>();
+        int i=0;
+        while(i<n){
+            while((n-i)>(k-stk.size()) &&!stk.isEmpty() && stk.peek()<nums[i]){
+                stk.pop();
+            }
+            if(stk.size()<k)
+                stk.push(nums[i]);
+            i++;
+        }
+        int []res=new int[k];
+        i=k;
+        while(!stk.isEmpty()){
+            res[--i]=stk.pop();
+        }
+        return res;
+    }
+
+    public boolean isGreater(int[]nums1,int start1,int []nums2,int start2){
+        //compare nums1+nums2 >nums2+nums1
+        int m=nums1.length,n=nums2.length;
+        while(start1<m && start2<n){
+            if(nums1[start1]>nums2[start2])
+                return true;
+            else if(nums1[start1]<nums2[start2])
+                return false;
+            start1++;
+            start2++;
+        }
+        return start1!=m;
+
+    }
+    public int[] maxNumber(int[] nums1, int[] nums2, int k) {
+        int []res=new int[k];
+        int m=nums1.length,n=nums2.length;
+        if(k<=0)
+            return res;
+        for(int i=Math.max(0,k-n);i<=Math.min(m,k);++i){
+            //nums1 取i个，nums2 取k-i个
+            int []res1=getK(nums1,i);
+            int []res2=getK(nums2,k-i);
+            int []ans=new int[k];
+            int pos=0,pos1=0,pos2=0;
+            while(pos1<res1.length||pos2<res2.length){
+                ans[pos++]=isGreater(res1,pos1,res2,pos2)?res1[pos1++]:res2[pos2++];
+            }
+            if(isGreater(ans,0,res,0))
+                res=ans.clone();
+        }
+        return res;
+    }
+
     //322 coin change
     //纯dp
     public int coinChange(int[] coins, int amount) {
