@@ -1,9 +1,11 @@
 package _04_10;
 
 import common.TreeNode;
+import design.NestedInteger;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -12,6 +14,7 @@ import java.util.Set;
 public class ThreeHundredThirtysixToFourtyFive {
 
 
+    //336其实是很难的题目，得好好把握一下子，好好复习，留给以后做把
 
     //337 house robber III
 
@@ -52,6 +55,45 @@ public class ThreeHundredThirtysixToFourtyFive {
         for(int i=1;i<=num;++i)
             res[i]=res[i<<1]+(i&0x1);
         return res;
+    }
+
+    //339
+
+    public void dfs(List<NestedInteger>nestedList,int[]res,int level){
+        int n=nestedList.size();
+        for(int i=0;i<n;++i){
+            if(nestedList.get(i).isInteger()){
+                res[0]+=level*nestedList.get(i).getInteger();
+            }else{
+                dfs(nestedList.get(i).getList(),res,level+1);
+            }
+        }
+    }
+    public int depthSum(List<NestedInteger> nestedList) {
+        int []res=new int[1];
+        dfs(nestedList,res,1);
+        return res[0];
+    }
+
+
+    //340 Longest Substring with At Most K Distinct Characters 和159是孪生兄弟
+    //典型的two window
+    public int lengthOfLongestSubstringKDistinct(String s, int k) {
+        char []ss=s.toCharArray();
+        int begin=0,end=0,n=ss.length,length=0;
+        int []cnt=new int[128];
+        while(end<n){
+            if(++cnt[ss[end++]]==1)
+                --k;
+            if(end-begin>length){
+                length=end-begin;
+            }
+            while(k==-1){
+                if(--cnt[ss[begin++]]==0)
+                    k++;
+            }
+        }
+        return length;
     }
 
     //341 flatten nested list iterator
