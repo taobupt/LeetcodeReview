@@ -4,7 +4,7 @@ package design;
  * Created by tao on 4/7/17.
  */
 
-
+//maximal sum in rectangle 和363好像的 Max Sum of Rectangle No Larger Than k
 public class NumMatrix {
 
     private int[][]sum=null;

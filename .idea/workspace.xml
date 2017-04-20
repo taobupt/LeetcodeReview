@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b2dbafe-adc1-43bb-8fae-e149128a4c70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/SummaryRanges.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/TicTacToe.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_11/ThreeHundredFourtysixToFiftyFiveTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/design/MovingAverage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/HitCounter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/design/Logger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_12/ThreeHundredFiftysixToSixtyFiveTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java" afterPath="$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java" afterPath="$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/design/NumMatrix.java" afterPath="$PROJECT_DIR$/src/main/java/design/NumMatrix.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,30 +38,6 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ThreeHundredThirtysixToFourtyFive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/_04_10/ThreeHundredThirtysixToFourtyFive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreeHundredFourtysixToFiftyFive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="123" column="35" lean-forward="false" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ThreeHundredFiftysixToSixtyFive.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -72,54 +46,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryRanges.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/design/SummaryRanges.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#290#291#0" expanded="true" />
-                <element signature="e#954#955#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SummaryRangesTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TwoHundredNinetyFiveToThreeHundredFive.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/_04_06/TwoHundredNinetyFiveToThreeHundredFive.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2085">
-              <caret line="143" column="6" lean-forward="false" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ThreeHundredFourtysixToFiftyFiveTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/_04_11/ThreeHundredFourtysixToFiftyFiveTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -175,9 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/common/Graph.java" />
-        <option value="$PROJECT_DIR$/src/main/java/_03_23/TwoHundredSixToFifteen.java" />
-        <option value="$PROJECT_DIR$/src/main/java/_04_01/TwoHundredSeventySixToEightyFive.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_18/OneHundredSixtyOnetOSeventy.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java" />
         <option value="$PROJECT_DIR$/src/main/java/_03_22/OneHundredNinetyOneToZero.java" />
@@ -190,7 +113,6 @@
         <option value="$PROJECT_DIR$/src/main/java/design/NumArray.java" />
         <option value="$PROJECT_DIR$/src/test/java/design/CodecTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/design/Codec.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/NumMatrix.java" />
         <option value="$PROJECT_DIR$/src/main/java/design/PeekingIterator.java" />
         <option value="$PROJECT_DIR$/src/test/java/_04_06/TwoHundredNinetyFiveToThreeHundredFiveTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/mathQuestions/MathQuestions.java" />
@@ -225,6 +147,10 @@
         <option value="$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/design/SummaryRanges.java" />
         <option value="$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/design/Logger.java" />
+        <option value="$PROJECT_DIR$/src/main/java/design/HitCounter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/design/NumMatrix.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_04_12/ThreeHundredFiftysixToSixtyFiveTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java" />
       </list>
     </option>
@@ -290,14 +216,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -318,66 +236,14 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="design" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_04_12" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,11 +261,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="_04_12" />
       <recent name="design" />
       <recent name="_04_11" />
       <recent name="_04_10" />
       <recent name="_04_08" />
-      <recent name="common" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -417,111 +283,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.SummaryRangesTest.testSummaryRange">
-    <configuration default="false" name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_09.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_09" />
-      <option name="MAIN_CLASS_NAME" value="_04_09.ThreeHundredTwentysixToThirtyFiveTest" />
-      <option name="METHOD_NAME" value="testLargest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ThreeHundredThirtysixToFourtyFiveTest.lengthOfLongestSubstringKDistinct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_10.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_10" />
-      <option name="MAIN_CLASS_NAME" value="_04_10.ThreeHundredThirtysixToFourtyFiveTest" />
-      <option name="METHOD_NAME" value="lengthOfLongestSubstringKDistinct" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ThreeHundredFourtysixToFiftyFiveTest.topKFrequent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_11.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_11" />
-      <option name="MAIN_CLASS_NAME" value="_04_11.ThreeHundredFourtysixToFiftyFiveTest" />
-      <option name="METHOD_NAME" value="topKFrequent" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="ThreeHundredFourtysixToFiftyFiveTest.envelops" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_11.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_11" />
-      <option name="MAIN_CLASS_NAME" value="_04_11.ThreeHundredFourtysixToFiftyFiveTest" />
-      <option name="METHOD_NAME" value="envelops" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString">
     <configuration default="false" name="SummaryRangesTest.testSummaryRange" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -535,6 +297,110 @@
       <option name="PACKAGE_NAME" value="design" />
       <option name="MAIN_CLASS_NAME" value="design.SummaryRangesTest" />
       <option name="METHOD_NAME" value="testSummaryRange" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ThreeHundredFiftysixToSixtyFiveTest.testTransformed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_12" />
+      <option name="MAIN_CLASS_NAME" value="_04_12.ThreeHundredFiftysixToSixtyFiveTest" />
+      <option name="METHOD_NAME" value="testTransformed" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ThreeHundredFiftysixToSixtyFiveTest.testWaterANDJugs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_12" />
+      <option name="MAIN_CLASS_NAME" value="_04_12.ThreeHundredFiftysixToSixtyFiveTest" />
+      <option name="METHOD_NAME" value="testWaterANDJugs" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ThreeHundredFiftysixToSixtyFiveTest.testFindMatrix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_12" />
+      <option name="MAIN_CLASS_NAME" value="_04_12.ThreeHundredFiftysixToSixtyFiveTest" />
+      <option name="METHOD_NAME" value="testFindMatrix" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_12.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_12" />
+      <option name="MAIN_CLASS_NAME" value="_04_12.ThreeHundredFiftysixToSixtyFiveTest" />
+      <option name="METHOD_NAME" value="testRearrangeString" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -929,19 +795,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ThreeHundredTwentysixToThirtyFiveTest.testLargest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ThreeHundredThirtysixToFourtyFiveTest.lengthOfLongestSubstringKDistinct" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ThreeHundredFourtysixToFiftyFiveTest.topKFrequent" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ThreeHundredFourtysixToFiftyFiveTest.envelops" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SummaryRangesTest.testSummaryRange" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.SummaryRangesTest.testSummaryRange" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testTransformed" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testWaterANDJugs" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testFindMatrix" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.SummaryRangesTest.testSummaryRange" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ThreeHundredFourtysixToFiftyFiveTest.envelops" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ThreeHundredFourtysixToFiftyFiveTest.topKFrequent" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ThreeHundredThirtysixToFourtyFiveTest.lengthOfLongestSubstringKDistinct" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ThreeHundredTwentysixToThirtyFiveTest.testLargest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testFindMatrix" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testWaterANDJugs" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ThreeHundredFiftysixToSixtyFiveTest.testTransformed" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.SummaryRangesTest.testSummaryRange" />
       </list>
     </recent_temporary>
   </component>
@@ -1082,7 +948,11 @@
       <workItem from="1492552933658" duration="31000" />
       <workItem from="1492561172378" duration="4015000" />
       <workItem from="1492575135655" duration="2040000" />
-      <workItem from="1492579095432" duration="533000" />
+      <workItem from="1492579095432" duration="574000" />
+      <workItem from="1492616017427" duration="2406000" />
+      <workItem from="1492641448991" duration="1546000" />
+      <workItem from="1492649063727" duration="6810000" />
+      <workItem from="1492662149313" duration="3360000" />
     </task>
     <task id="LOCAL-00001" summary="add 266-275">
       <created>1490995309850</created>
@@ -1182,12 +1052,12 @@
       <option name="project" value="LOCAL" />
       <updated>1492552957995</updated>
     </task>
-    <task id="LOCAL-00015" summary="add  161-170  /03/17">
-      <created>1489805530776</created>
+    <task id="LOCAL-00015" summary="add 356-365">
+      <created>1492579847817</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1489805530776</updated>
+      <updated>1492579847817</updated>
     </task>
     <task id="LOCAL-00016" summary="add  thread  /03/17">
       <created>1489812810488</created>
@@ -1294,46 +1164,46 @@
       <option name="project" value="LOCAL" />
       <updated>1490766409245</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SummaryRangesTest_testSummaryRange - 2017.04.19 at 00h 20m 36s.xml">
-      <configuration name="SummaryRangesTest.testSummaryRange" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 22h 58m 57s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredFourtysixToFiftyFiveTest_envelops - 2017.04.18 at 23h 22m 11s.xml">
-      <configuration name="ThreeHundredFourtysixToFiftyFiveTest.envelops" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 22h 59m 38s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredFourtysixToFiftyFiveTest_envelops - 2017.04.18 at 23h 22m 34s.xml">
-      <configuration name="ThreeHundredFourtysixToFiftyFiveTest.envelops" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 22h 59m 55s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredFourtysixToFiftyFiveTest_envelops - 2017.04.18 at 23h 47m 38s.xml">
-      <configuration name="ThreeHundredFourtysixToFiftyFiveTest.envelops" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 23m 10s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredThirtysixToFourtyFiveTest_lengthOfLongestSubstringKDistinct - 2017.04.17 at 23h 51m 45s.xml">
-      <configuration name="ThreeHundredThirtysixToFourtyFiveTest.lengthOfLongestSubstringKDistinct" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 23m 37s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredTwentysixToThirtyFiveTest_testLargest - 2017.04.17 at 00h 41m 47s.xml">
-      <configuration name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 27m 18s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredTwentysixToThirtyFiveTest_testLargest - 2017.04.17 at 00h 42m 08s.xml">
-      <configuration name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 27m 38s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredTwentysixToThirtyFiveTest_testLargest - 2017.04.17 at 00h 43m 29s.xml">
-      <configuration name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 31m 06s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredTwentysixToThirtyFiveTest_testLargest - 2017.04.17 at 00h 45m 17s.xml">
-      <configuration name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 31m 36s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ThreeHundredTwentysixToThirtyFiveTest_testLargest - 2017.04.17 at 00h 46m 39s.xml">
-      <configuration name="ThreeHundredTwentysixToThirtyFiveTest.testLargest" configurationId="JUnit" />
+    <history-entry file="ThreeHundredFiftysixToSixtyFiveTest_testRearrangeString - 2017.04.19 at 23h 31m 51s.xml">
+      <configuration name="ThreeHundredFiftysixToSixtyFiveTest.testRearrangeString" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180650000" />
+    <option name="totallyTimeSpent" value="194813000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1345,7 +1215,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3485342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26547232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1357,7 +1227,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35016286" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35016286" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1385,7 +1255,8 @@
     <MESSAGE value="add 306" />
     <MESSAGE value="add some reviews" />
     <MESSAGE value="add 335-346" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 335-346" />
+    <MESSAGE value="add 356-365" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 356-365" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1695,8 +1566,26 @@
           <properties />
           <option name="timeStamp" value="116" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java</url>
+          <line>66</line>
+          <properties />
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java</url>
+          <line>231</line>
+          <properties />
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_04_12/ThreeHundredFiftysixToSixtyFive.java</url>
+          <line>201</line>
+          <properties />
+          <option name="timeStamp" value="123" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="117" />
+      <option name="time" value="128" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1705,41 +1594,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/PeekingIterator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="62" lean-forward="false" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_04_06/TwoHundredNinetyFiveToThreeHundredFiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="27" column="50" lean-forward="false" selection-start-line="27" selection-start-column="50" selection-end-line="27" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_04_03/TwoHundredEightySixToNinetyFiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="27" column="28" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/design/NumArrayChangeAbleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/NumMatrixChangable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_03_03/ThirtyOneToForty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2385">
@@ -1827,13 +1681,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/NumMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1897,13 +1744,6 @@
         <state relative-caret-position="420">
           <caret line="28" column="77" lean-forward="false" selection-start-line="28" selection-start-column="77" selection-end-line="28" selection-end-column="77" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_04/FortyOneToFifty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="129" column="31" lean-forward="false" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -2014,37 +1854,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/common/Tuple.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="1" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="12" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/design/TicTacToe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_10/ThreeHundredThirtysixToFourtyFive.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/SummaryRanges.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        <state relative-caret-position="615">
+          <caret line="41" column="5" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#253#254#0" expanded="false" />
+            <element signature="e#290#291#0" expanded="false" />
+            <element signature="e#954#955#0" expanded="false" />
+            <element signature="e#980#981#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_06/TwoHundredNinetyFiveToThreeHundredFive.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2085">
-          <caret line="143" column="6" lean-forward="false" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2052,41 +1889,96 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_10/ThreeHundredThirtysixToFourtyFive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/SummaryRanges.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/Logger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#954#955#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="442">
+          <caret line="31" column="5" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="1845">
           <caret line="123" column="35" lean-forward="false" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/HitCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_02_28/OneToTen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_04/FortyOneToFifty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2565">
+          <caret line="129" column="31" lean-forward="false" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/design/NumMatrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_06/TwoHundredNinetyFiveToThreeHundredFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1800">
+          <caret line="143" column="6" lean-forward="false" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_04_12/ThreeHundredFiftysixToSixtyFiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Tuple.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="12" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
