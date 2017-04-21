@@ -9,7 +9,70 @@ import java.util.*;
  */
 public class ThreeHundredFiftysixToSixtyFive {
 
+
+    //356  Line Reflection
+    //不难，但是我翻了跟头
+    //秒过,都不需要排序，直接最大值，最小值，对啊，我慢就慢在arraylist线性查找那块
+    public boolean isReflected(int[][] points) {
+        int n=points.length;
+        if(n<=1)
+            return true;
+        int []xaxis=new int[n];
+        Arrays.sort(points, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] o1, int[] o2) {
+                return Integer.compare(o1[0],o2[0]);
+            }
+        });
+        int duichen=points[n-1][0]+points[0][0];
+        Map<Integer,List<Integer>>map=new HashMap<>();
+        for(int []point:points){
+            if(!map.containsKey(point[0]))
+                map.put(point[0],new ArrayList<>());
+            map.get(point[0]).add(point[1]);
+        }
+
+        for(int []point:points){
+            if(!map.containsKey(duichen-point[0])||!map.get(duichen-point[0]).contains(point[1]))
+                return  false;
+        }
+        return true;
+    }
+
+    //concise
+    public boolean isReflectedConcise(int[][] points) {
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        HashSet<String> set = new HashSet<>();
+        for(int[] p:points){
+            max = Math.max(max,p[0]);
+            min = Math.min(min,p[0]);
+            String str = p[0] + "a" + p[1];
+            set.add(str);
+        }
+        int sum = max+min;
+        for(int[] p:points){
+            //int[] arr = {sum-p[0],p[1]};
+            String str = (sum-p[0]) + "a" + p[1];
+            if( !set.contains(str))
+                return false;
+
+        }
+        return true;
+    }
     //357 就是用dp来做的，结合之前的一道题，可以总结一下
+    public int countNumbersWithUniqueDigits(int n) {
+        int dp[]=new int[n+1];
+        dp[0]=1;
+        for(int i=1;i<=n;++i){
+            dp[i]=9;
+            for(int j=1;j<i;++j){
+                dp[i]*=(10-j);
+            }
+            dp[i]+=dp[i-1];
+        }
+        return dp[n];
+    }
     //358 rearrange string k distance part
     //感觉优先级队列，hashmap，贪心能做出来
     //居然过了，卧槽，不过效率很低啊，少年！
@@ -244,6 +307,7 @@ public class ThreeHundredFiftysixToSixtyFive {
     }
 
 
+    //还好复习的，hashmap实现降维打击
     public int maxSumSubmatrix(int[][] matrix, int k) {
         if(matrix.length==0||matrix[0].length==0)
             return Integer.MIN_VALUE;
@@ -273,6 +337,7 @@ public class ThreeHundredFiftysixToSixtyFive {
 
     //364 Nested List Weight Sum II
     //dfs 或者是bfs，每次都保留值。
+    //bfs 也是可以的
     //居然错了一次，我曹
     public int getDepth(List<NestedInteger> nestedList){
         int n=nestedList.size();
@@ -308,6 +373,7 @@ public class ThreeHundredFiftysixToSixtyFive {
 
     //365 这道题确实是挺好玩的。很有意思，就是gcd的变种
     //z=x*a+y*b, 求x,y的gcd，和欧几里得拓展定理差不多
+    //tag，应该还是要理解拓展欧几里得的应用
     public int gcd(int a,int b){
         return b==0?a:gcd(b,a%b);
     }
