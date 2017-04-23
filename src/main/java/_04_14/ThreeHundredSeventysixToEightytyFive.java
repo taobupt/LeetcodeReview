@@ -42,4 +42,19 @@ public class ThreeHundredSeventysixToEightytyFive {
         return 0;
     }
 
+    //383 ransome note
+    public boolean canConstruct(String ransomNote, String magazine) {
+        char []ransom=ransomNote.toCharArray();
+        char []mag=magazine.toCharArray();
+        int []cnt=new int[128];
+        for(char c:mag)
+            cnt[c]++;
+        for(char c:ransom){
+            cnt[c]--;
+            if(cnt[c]<0)
+                return false;
+        }
+        return true;
+    }
+
 }
