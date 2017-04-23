@@ -286,6 +286,7 @@ public class ThreeHundredSixtysixToSeventytyFive {
     }
 
     //concise
+    //复习，挺好的，说实在的，能想到这一点其实很不错了
     public List<int[]> kSmallestPairsSaveTime(int[] nums1, int[] nums2, int k){
         PriorityQueue<Tuple<Integer,Integer>>pq=new PriorityQueue<>(new Comparator<Tuple<Integer, Integer>>() {
             @Override
@@ -313,6 +314,7 @@ public class ThreeHundredSixtysixToSeventytyFive {
     //374 太简单了
 
     //375 guess number higher or lower II 博弈论
+    //tag 晚上复习博弈论
     public int getMoneyAmount(int n){
         return getMoneyAmount(1,n,new int[n+1][n+1]);
     }
