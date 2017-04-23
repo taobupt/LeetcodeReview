@@ -772,4 +772,79 @@ public class LeetcodeContest {
         }
         return exs.exp;
     }
+
+
+
+    public int getSum(TreeNode root){
+        if(root==null)
+            return 0;
+        return root.val+getSum(root.left)+getSum(root.right);
+    }
+    public int findTilt(TreeNode root) {
+        if(root==null||root.left==null && root.right==null)
+            return 0;
+        return Math.abs(getSum(root.left)-getSum(root.right))+findTilt(root.left)+findTilt(root.right);
+    }
+
+
+    public int arrayPairSum(int[] nums) {
+        int res=0,n=nums.length;
+        Arrays.sort(nums);
+        for(int i=0;i<n;i+=2){
+            res+=nums[i];
+        }
+        return res;
+    }
+
+
+    int dfs(int[][]matrix,int[]res,int x,int y,int[]next,int[][][]dist,int k){
+        if(dist[x][y][k]!=-1)
+            return dist[x][y][k];
+        dist[x][y][k]=1;
+        int xx=x+next[0];
+        int yy=y+next[1];
+        if(xx<0||xx>=matrix.length||yy<0||yy>=matrix[0].length||matrix[xx][yy]==0){
+            res[0]=Math.max(res[0],dist[x][y][k]);
+            return dist[x][y][k];
+        }
+        dist[x][y][k]=Math.max(dist[x][y][k],1+dfs(matrix,res,xx,yy,next,dist,k));
+        res[0]=Math.max(res[0],dist[x][y][k]);
+        return dist[x][y][k];
+
+    }
+    public int longestIncreasingPath(int[][] matrix) {
+        if(matrix.length==0||matrix[0].length==0)
+            return 0;
+        int m=matrix.length,n=matrix[0].length;
+        int []res=new int[1];
+        int []dx={1,-1,0,0,1,1,-1,-1};
+        int []dy={0,0,1,-1,1,-1,1,-1};
+        int [][]choice={{1,0},{-1,0},{0,1},{0,-1},{1,1},{1,-1},{-1,1},{-1,-1}};
+        res[0]=1;//min value;
+        int [][][]dist=new int[m][n][8];
+        for(int i=0;i<m;++i)
+            for(int j=0;j<n;++j)
+                Arrays.fill(dist[i][j],-1);
+        for(int i=0;i<m;++i){
+            for(int j=0;j<n;++j){
+                if(matrix[i][j]==1){
+                    for(int k=0;k<8;++k){
+                        int xx=i+dx[k];
+                        int yy=j+dy[k];
+                        dist[i][j][k]=1;
+                        if(xx<0||xx>=matrix.length||yy<0||yy>=matrix[0].length||matrix[xx][yy]==0)
+                            continue;
+                        dist[i][j][k]=Math.max(dist[i][j][k],1+dfs(matrix,res,xx,yy,choice[k],dist,k));
+                        res[0]=Math.max(res[0],dist[i][j][k]);
+                    }
+                }
+            }
+        }
+        return res[0];
+    }
+    public int longestLine(int[][] M) {
+        return longestIncreasingPath(M);
+    }
+
+    
 }
