@@ -42,6 +42,10 @@ public class ThreeHundredSeventysixToEightytyFive {
         return 0;
     }
 
+
+    //382 in design solution
+    //398 in design solution ,same question
+
     //383 ransome note
     public boolean canConstruct(String ransomNote, String magazine) {
         char []ransom=ransomNote.toCharArray();
@@ -56,5 +60,8 @@ public class ThreeHundredSeventysixToEightytyFive {
         }
         return true;
     }
+
+    //384 shuffle an array
+    //in design solution
 
 }
