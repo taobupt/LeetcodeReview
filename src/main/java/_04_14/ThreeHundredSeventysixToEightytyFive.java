@@ -1,11 +1,55 @@
 package _04_14;
 
-import java.util.Arrays;
+import java.util.*;
 
 /**
  * Created by tao on 4/21/17.
  */
+
+
+  class NestedInteger {
+      private List<NestedInteger>res=null;
+      private Integer val =null;
+      // Constructor initializes an empty nested list.
+              public NestedInteger(){
+                  res=new ArrayList<>();
+              }
+
+              // Constructor initializes a single integer.
+              public NestedInteger(int value){
+                  val = value;
+              }
+
+              // @return true if this NestedInteger holds a single integer, rather than a nested list.
+              public boolean isInteger(){
+                  return val!=null;
+              }
+
+              // @return the single integer that this NestedInteger holds, if it holds a single integer
+              // Return null if this NestedInteger holds a nested list
+              public Integer getInteger(){
+                  return val;
+              }
+
+              // Set this NestedInteger to hold a single integer.
+              public void setInteger(int value){
+                  val =value;
+              }
+
+              // Set this NestedInteger to hold a nested list and adds a nested integer to it.
+              public void add(NestedInteger ni){
+                  res.add(ni);
+              }
+
+              // @return the nested list that this NestedInteger holds, if it holds a nested list
+              // Return null if this NestedInteger holds a single integer
+              public List<NestedInteger> getList(){
+                  return res;
+              }
+  }
 public class ThreeHundredSeventysixToEightytyFive {
+
+    //376
 
     //377 combination sum iV
     //
@@ -42,6 +86,12 @@ public class ThreeHundredSeventysixToEightytyFive {
         return 0;
     }
 
+    ///379 phone directory, one pass, 没啥好说的
+    //核心考察的是用linkedlist来链接，用set来判断是否合法，我太sb了。当然还得用一个数来记录最大值，这样判断是否是valid的时候，首先先判断是不是在[0,maxi]里，再去判断是否在set里。还是不稳啊
+
+
+    //380 Insert Delete GetRandom O(1)
+    //非常经典的一道题，就是交换到尾部，然后进行删除，真是瞎了狗眼了，居然4个月前的东西忘了怎么破
 
     //382 in design solution
     //398 in design solution ,same question
@@ -63,5 +113,106 @@ public class ThreeHundredSeventysixToEightytyFive {
 
     //384 shuffle an array
     //in design solution
+
+    //385 mini parser
+    //stack and string
+    //stack iterative way & recursive way
+    //好吧，浪费了巨大的时间才把它写出来，太sble
+    //corner case, [],-126; 空括号，负数
+    public NestedInteger deserialize(String s) {
+        if(s.charAt(0)!='['){
+            return new NestedInteger(Integer.parseInt(s));
+        }else if(s.equals("[]")){
+            return new NestedInteger();}
+        else{
+            //先检测有没有单个的数。
+            int i=1;
+            int cnt=0;
+            int start=i;
+            int end=i;
+            NestedInteger res=new NestedInteger();
+            while(i<s.length()){
+                if(s.charAt(i)==','){
+                    i++;
+                    continue;
+                }else if(s.charAt(i)=='-' ||Character.isDigit(s.charAt(i))){
+                    start=i;
+                    while(i<s.length() && s.charAt(i)!='[')
+                        i++;
+                    String sub = "";
+                    if(i==s.length())
+                        sub=s.substring(start,i-1);
+                    else
+                        sub=s.substring(start,i);
+                    String[]subs=sub.split(",");
+                    for(String substr:subs){
+                        if(!substr.isEmpty())
+                            res.add(new NestedInteger(Integer.parseInt(substr)));
+                    }
+                }else if(i<s.length() && s.charAt(i)=='['){
+                    start=i;
+                    while(i<s.length()){
+                        if(s.charAt(i)=='['){
+                            cnt++;
+                        }
+                        else if(s.charAt(i)==']'){
+                            end=i;
+                            cnt--;
+                        }
+                        i++;
+                        if(cnt==0){
+                            res.add(deserialize(s.substring(start,end+1)));
+                            i++;
+                            break;
+                        }
+                    }
+                }
+            }
+            return res;
+        }
+    }
+
+    //iterative way
+    public NestedInteger deserializeIterative(String s){
+        if(s.charAt(0)!='['){
+            return new NestedInteger(Integer.parseInt(s));
+        }
+        else{
+            NestedInteger cur =new NestedInteger();
+            Stack<NestedInteger>stk=new Stack<>();
+            int i=1,n=s.length(),start=0,end=0;
+            while(i<n){
+                if(s.charAt(i)==','){
+                    i++;
+                    continue;
+                }else if(s.charAt(i)=='-'||Character.isDigit(s.charAt(i))){
+                    start = i;
+                    while(i<n && (s.charAt(i)!=']' && s.charAt(i)!='['))
+                        i++;
+                    String sub = "";
+                    if(s.charAt(i)==']'){
+                        sub = s.substring(start,i);
+                    }else
+                        sub=s.substring(start,i-1);//,[]
+                    String []subs=sub.split(",");
+                    for(String substr:subs){
+                        if(!substr.isEmpty())
+                            cur.add(new NestedInteger(Integer.parseInt(substr)));
+                    }
+                }else if(i<n && s.charAt(i)=='['){
+                    stk.push(cur);
+                    cur=new NestedInteger();
+                    i++;
+                }else if(i<n && s.charAt(i)==']'){
+                    if(!stk.isEmpty()){
+                        stk.peek().add(cur);
+                        cur=stk.pop();
+                    }
+                    i++;
+                }
+            }
+            return cur;
+        }
+    }
 
 }
