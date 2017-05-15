@@ -17,7 +17,6 @@ public class ThreeHundredSeventysixToEightytyFiveTest {
     @Test
     public void deserialize() throws Exception {
         thsstef.deserializeIterative("[-123,[456,[789]],[123,124],245]");
-
     }
 
 }
