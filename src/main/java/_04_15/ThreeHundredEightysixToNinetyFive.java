@@ -137,6 +137,65 @@ public class ThreeHundredEightysixToNinetyFive {
     }
 
 
+    //391 perfect rectangle
+    //扫描线算法求矩形面积
+    public boolean isRectangleCover(int[][] rectangles) {
+        int n=rectangles.length;
+        int leftx=rectangles[0][0];
+        int lefty=rectangles[0][1];
+        int rightx=rectangles[0][2];
+        int righty=rectangles[0][3];
+        int sumArea=(righty-lefty)*(rightx-leftx);
+        for(int i=1;i<n;++i){
+            leftx=Math.min(leftx,rectangles[i][0]);
+            lefty=Math.min(lefty,rectangles[i][1]);
+            rightx=Math.max(rightx,rectangles[i][2]);
+            righty=Math.max(righty,rectangles[i][3]);
+            sumArea+=(rectangles[i][3]-rectangles[i][1])*(rectangles[i][2]-rectangles[i][0]);
+        }
+        int totalArea=(rightx-leftx)*(righty-lefty);
+        return sumArea==totalArea;//再加个扫描线算法就对了，我靠，扫描线算法这么强啊，得好好研究一下
+    }
+
+    //简洁版
+    //the large rectangle area should be equal to the sum of small rectangles
+    //count of all the points should be even, and that of all the four corner points should be one
+    public boolean isRectangleCoverConcise(int[][] rectangles) {
+        if (rectangles.length == 0 || rectangles[0].length == 0) return false;
+
+        int x1 = Integer.MAX_VALUE;
+        int x2 = Integer.MIN_VALUE;
+        int y1 = Integer.MAX_VALUE;
+        int y2 = Integer.MIN_VALUE;
+
+        HashSet<String> set = new HashSet<String>();
+        int area = 0;
+
+        for (int[] rect : rectangles) {
+            x1 = Math.min(rect[0], x1);
+            y1 = Math.min(rect[1], y1);
+            x2 = Math.max(rect[2], x2);
+            y2 = Math.max(rect[3], y2);
+
+            area += (rect[2] - rect[0]) * (rect[3] - rect[1]);
+
+            String s1 = rect[0] + " " + rect[1];
+            String s2 = rect[0] + " " + rect[3];
+            String s3 = rect[2] + " " + rect[3];
+            String s4 = rect[2] + " " + rect[1];
+
+            if (!set.add(s1)) set.remove(s1);
+            if (!set.add(s2)) set.remove(s2);
+            if (!set.add(s3)) set.remove(s3);
+            if (!set.add(s4)) set.remove(s4);
+        }
+
+        if (!set.contains(x1 + " " + y1) || !set.contains(x1 + " " + y2) || !set.contains(x2 + " " + y1) || !set.contains(x2 + " " + y2) || set.size() != 4) return false;
+
+        return area == (x2-x1) * (y2-y1);
+    }
+
+
     //392 is subsequence
     public boolean isSubsequence(String s, String t) {
         int m=t.length(),n=s.length();
