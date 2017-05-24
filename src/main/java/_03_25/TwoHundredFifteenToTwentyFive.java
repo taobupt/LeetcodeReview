@@ -62,6 +62,68 @@ public class TwoHundredFifteenToTwentyFive {
         return false;
     }
 
+    //218 the skyline problem
+    public List<int[]>getSkyline(int[][]buildings){
+        List<int[]>result=new ArrayList<>();
+        List<int[]>height=new ArrayList<>();
+        for(int []b:buildings){
+            height.add(new int[]{b[0],-b[2]});
+            height.add(new int[]{b[1],b[2]});
+        }
+        Collections.sort(height,(a,b)->{
+            if(a[0]!=b[0])
+                return Integer.compare(a[0],b[0]);
+            return Integer.compare(a[1],b[1]);
+        });
+        PriorityQueue<Integer>pq=new PriorityQueue<>((a,b)->(b-a));
+        pq.offer(0);
+        int prev=0;
+        for(int[]h:height){
+            if(h[1]<0){
+                pq.offer(-h[1]);
+            }else
+                pq.remove(h[1]);//remove need o(n) time, this can be solved by treemap;
+            int cur=pq.peek();
+            if(prev!=cur){
+                result.add(new int[]{h[0],cur});
+                prev=cur;
+            }
+        }
+        return result;
+
+    }
+
+    public List<int[]> getSkylineOptimal(int[][] buildings) {
+        List<int[]> points = new ArrayList<>();
+        for(int [] b : buildings){
+            points.add(new int[]{b[0], -b[2]});
+            points.add(new int[]{b[1], b[2]});
+        }
+        Collections.sort(points, new Comparator<int[]>(){
+            @Override
+            public int compare(int [] p1, int [] p2){
+                if(p1[0] == p2[0]) return p1[1] -p2[1];
+                else return p1[0] - p2[0];
+            }
+        });
+        List<int[]> result = new ArrayList<>();
+        TreeMap<Integer, Integer> treeMap = new TreeMap<>();// using TreeMap to archive TreeMultiSet
+        treeMap.put(0, 1);//add a sentinel to avoid processing with empty TreeMap
+        int prev = 0;
+        for(int [] point: points){
+            if(point[1]<0) treeMap.put(-point[1], treeMap.getOrDefault(-point[1], 0) + 1);//reach a new rectangle, height count+1
+            else {
+                treeMap.put(point[1], treeMap.getOrDefault(point[1], 0) - 1);//leave a new rectangle, height count-1
+                if(treeMap.get(point[1]) == 0) treeMap.remove(point[1]);
+            }
+            int cur = treeMap.lastKey();
+            if(prev != cur){//find a new skyline strip
+                result.add(new int[]{point[0], cur});
+                prev = cur;
+            }
+        }
+        return result;
+    }
     //219 contains duplicates II
     //hash map and O(nlong)先排序，存的是结构体，存index 和nums[index],按照值排序
     public boolean containsNearbyDuplicate(int[] nums, int k) {

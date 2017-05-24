@@ -13,6 +13,27 @@ import java.util.*;
 public class ThreeHundredNinetysixToFourHundredFive {
 
 
+    //396 Rotate Function
+    //挺有意思的找规律
+    //F(0)-F[1]=n*A(n-1)-(a0+a1+a2+a...n)
+    //F(1)-F[2]=n*A(n-2)-(a0+a1+a2+a...n)
+    public int maxRotateFunction(int[] A) {
+        long sum=0;
+        long res=0;
+        int n=A.length;
+        for(int i=0;i<n;++i){
+            sum+=A[i];
+            res+=i*A[i];
+        }
+        long changedSum=res;
+        for(int i=1;i<n;++i){
+            long changed = changedSum-(n*A[n-i]-sum);
+            changedSum=changed;
+            res = Math.max(changed,res);
+        }
+        return (int)res;
+    }
+
 
     //397 Integer Replacement
     Map<Integer,Integer>map=new HashMap<>();
@@ -36,6 +57,67 @@ public class ThreeHundredNinetysixToFourHundredFive {
             map.put(n,x+1);
             return x+1;
         }
+    }
+
+    //398 already solved in the unsolved section
+
+
+    //399 evaluate division
+    //dfs bfs,你可以都写一下，毕竟都是考点
+    //转换成图来做，权重就是他们的值。难道要用俩hashmap？
+
+    public double dfs(String from, String to,Map<String,List<String>>map,Map<String,List<Double>>valueMap,Set<String>vis){
+        if(from.equals(to) && map.containsKey(from))
+            return 1.0;
+
+        if(!vis.contains(from)){
+            double res =1.0;
+            vis.add(from);
+            List<String>adj= map.getOrDefault(from,new ArrayList<>());
+            for(int j=0;j<adj.size();++j){
+                //System.out.println(valueMap.get(from).get(j));
+                //System.out.println(map.get(from).get(j));
+                res*=valueMap.get(from).get(j)*dfs(map.get(from).get(j),to,map,valueMap,vis);
+                if(res>0)
+                    return res;
+                res=1.0;
+            }
+        }
+        return -1.0;
+    }
+
+    public double[] calcEquation(String[][] equations, double[] values, String[][] queries) {
+        Map<String,List<String>>map=new HashMap<>();
+        Map<String,List<Double>>valueMap=new HashMap<>();
+        int n=equations.length;
+        for(int i=0;i<n;++i){
+            if(!map.containsKey(equations[i][0])){
+                map.put(equations[i][0],new ArrayList<>());
+            }
+            if(!map.containsKey(equations[i][1])){
+                map.put(equations[i][1],new ArrayList<>());
+            }
+            if(!valueMap.containsKey(equations[i][0])){
+                valueMap.put(equations[i][0],new ArrayList<>());
+            }
+            if(!valueMap.containsKey(equations[i][1])){
+                valueMap.put(equations[i][1],new ArrayList<>());
+            }
+            map.get(equations[i][0]).add(equations[i][1]);
+            valueMap.get(equations[i][0]).add(values[i]);
+            map.get(equations[i][1]).add(equations[i][0]);
+            valueMap.get(equations[i][1]).add(1.0/values[i]);
+        }
+
+        int m=queries.length;
+        double []res=new double[m];
+        Arrays.fill(res,-1);
+        for(int i=0;i<m;++i){
+            res[i]=dfs(queries[i][0],queries[i][1],map,valueMap,new HashSet<>());
+            if(res[i]<=0)
+                res[i]=-1;//这一步至关重要
+        }
+        return res;
     }
     //400 n-digit
     //binary search
@@ -167,6 +249,167 @@ public class ThreeHundredNinetysixToFourHundredFive {
         return ans.isEmpty()?"0":ans;
          */
 
+    }
+
+    // Frog Jump
+    //dp,dfs 很容易爆，虽然思想是对的，还是枚举比较好
+//    public boolean dfs(int start,int end,Map<Integer,Map<Integer,Boolean>>map,Map<Integer,Integer>positions,int step){
+//        if(map.containsKey(start)){
+//            if(map.get(start).containsKey(step))
+//                return map.get(start).get(step);
+//        }
+//        if(start==end)
+//            return true;
+//        if(start>end)
+//            return false;
+//        if(positions.containsKey(start) && step>=0){
+//            boolean res=false;
+//            if(step>1){
+//                if(positions.containsKey(start+step-1)){
+//                    res=dfs(start+step-1,end,map,positions,step-1);
+//                }
+//                map.put(start+step-1,new HashMap<>());
+//                map.get(start+step-1).put(start+step-1,res);
+//                if(res)
+//                    return true;
+//            }
+//            if(step>0){
+//                if(positions.containsKey(start+step)){
+//                    res=dfs(start+step,end,map,positions,step);
+//                }
+//                map.put(start+step,new HashMap<>());
+//                map.get(start+step).put(start+step,res);
+//                if(res)
+//                    return true;
+//            }
+//            if(positions.containsKey(start+step+1)){
+//                res=dfs(start+step+1,end,map,positions,step+1);
+//            }
+//            map.put(start+step+1,new HashMap<>());
+//            map.get(start+step+1).put(start+step+1,res);
+//            if(res)
+//                return true;
+//        }
+//        return false;
+//    }
+//    public boolean canCross(int[] stones) {
+//        Map<Integer,Map<Integer,Boolean>>map=new HashMap<>();
+//        int n=stones.length;
+//        Map<Integer,Integer>positions=new HashMap<>();
+//
+//        for(int x=0;x<n;++x)
+//            positions.put(stones[x],x);
+//        if(stones[1]!=1)
+//            return false;
+//        if(n==2)
+//            return true;
+//        map.put(1,new HashMap<>());
+//        map.get(1).put(1,true);
+//        return dfs(stones[2],stones[n-1],map,positions,1);
+//
+//    }
+
+//    public boolean dfs(Map<Integer,Map<Integer,Boolean>>map,Map<Integer,Integer>positions,int[]stones,int step,int index){
+//        if(index==stones.length-1){
+//            map.put(stones[index],new HashMap<>());
+//            map.get(stones[index]).put(step,true);
+//            return true;
+//        }
+//        if(step>=0){
+//            boolean res=false;
+//            if(step>0 && positions.containsKey(stones[index]+step)){
+//                if(map.containsKey(stones[index]+step) && map.get(stones[index]+step).containsKey(step)){
+//                    res=map.get(stones[index]+step).containsKey(step);
+//                }else{
+//                    map.put(stones[index]+step,new HashMap<>());
+//                    map.get(stones[index]+step).put(step,true);
+//                    res=dfs(map,positions,stones,step,positions.get(stones[index]+step));
+//                }
+//            }else{
+//                map.put(stones[index]+step,new HashMap<>());
+//                map.get(stones[index]+step).put(step,false);
+//                //return false;
+//            }
+//            if(res)
+//                return true;
+//            if(step>1 && positions.containsKey(stones[index]+step-1)){
+//                if(map.containsKey(stones[index]+step-1)){
+//                    if(map.get(stones[index]+step-1).containsKey(step-1))
+//                        return map.get(stones[index]+step-1).containsKey(step-1);
+//                }
+//                map.put(stones[index]+step-1,new HashMap<>());
+//                map.get(stones[index]+step-1).put(step-1,true);
+//                res=dfs(map,positions,stones,step-1,positions.get(stones[index]+step-1));
+//            }else{
+//                map.put(stones[index]+step-1,new HashMap<>());
+//                map.get(stones[index]+step-1).put(step-1,false);
+//            }
+//            if(res)
+//                return true;
+//            if(positions.containsKey(stones[index]+step+1)){
+//                if(map.containsKey(stones[index]+step+1)){
+//                    if(map.get(stones[index]+step+1).containsKey(step+1))
+//                        return map.get(stones[index]+step+1).containsKey(step+1);
+//                }
+//                map.put(stones[index]+step+1,new HashMap<>());
+//                map.get(stones[index]+step+1).put(step+1,true);
+//                res=dfs(map,positions,stones,step+1,positions.get(stones[index]+step+1));
+//            }else{
+//                map.put(stones[index]+step+1,new HashMap<>());
+//                map.get(stones[index]+step+1).put(step+1,false);
+//                //return false;
+//            }
+//            if(res)
+//                return true;
+//        }
+//        return false;
+//    }
+//
+//
+//    public boolean canCross(int[] stones) {
+//        Map<Integer,Map<Integer,Boolean>>map=new HashMap<>();
+//        Map<Integer,Integer>positions=new HashMap<>();
+//        int n=stones.length;
+//        if(n==2)
+//            return stones[1]==1;
+//        for(int x=0;x<n;++x){
+//            positions.put(stones[x],x);
+//        }
+//        map.put(1,new HashMap<>());
+//        map.get(1).put(1,true);
+//        dfs(map,positions,stones,1,1);
+//        if(map.containsKey(stones[n-1])){
+//            Map<Integer,Boolean>map1=map.get(stones[n-1]);
+//            for(Map.Entry<Integer,Boolean>entry:map1.entrySet()){
+//                if(entry.getValue())
+//                    return true;
+//            }
+//        }
+//        return false;
+//    }
+    public boolean canCross(int[] stones) {
+        Map<Integer,HashSet<Integer>>map=new HashMap<>();
+        int n=stones.length;
+        for(int i=0;i<n;++i){
+            map.put(stones[i],new HashSet<>());
+        }
+        map.get(0).add(1);
+        for(int i=0;i<n-1;++i){
+            int stone=stones[i];
+            for(int step:map.get(stone)){
+                int reach =stone+step;
+                if(reach==stones[n-1]){
+                    return true;
+                }
+                if(map.get(reach)!=null){
+                    if(step>1)
+                        map.get(reach).add(step-1);
+                    map.get(reach).add(step);
+                    map.get(reach).add(step+1);
+                }
+            }
+        }
+        return false;
     }
 
     //404 sum of left leaves
