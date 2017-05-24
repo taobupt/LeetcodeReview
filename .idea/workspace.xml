@@ -5,17 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b2dbafe-adc1-43bb-8fae-e149128a4c70" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_04_17/FourHundredsixToFourHundredFifteen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_17/FourHundredsixToFourHundredFifteenTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/unsolved/UnsolvedQuestion.class" afterPath="$PROJECT_DIR$/target/classes/unsolved/UnsolvedQuestion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/unsolved/UnsolvedQuestionTest.class" afterPath="$PROJECT_DIR$/target/test-classes/unsolved/UnsolvedQuestionTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_04_19/FourHundredTwentySixToFourHundredThirtyFive.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/_04_20/FourHundredThirtySixToFourHundredFortyFive.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/Backpack.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/SegmentTree.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/SegmentTreeNode.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/common/SegmentTreeQuestions.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_19/FourHundredTwentySixToFourHundredThirtyFiveTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/_04_20/FourHundredThirtySixToFourHundredFortyFiveTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/common/BackpackTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/_03_25/TwoHundredFifteenToTwentyFive.class" afterPath="$PROJECT_DIR$/target/classes/_03_25/TwoHundredFifteenToTwentyFive.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/common/Trie.class" afterPath="$PROJECT_DIR$/target/classes/common/Trie.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/_03_25/TwoHundredFifteenToTwentyFiveTest.class" afterPath="$PROJECT_DIR$/target/test-classes/_03_25/TwoHundredFifteenToTwentyFiveTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_04_15/ThreeHundredEightysixToNinetyFive.java" afterPath="$PROJECT_DIR$/src/main/java/_04_15/ThreeHundredEightysixToNinetyFive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_04_16/ThreeHundredNinetysixToFourHundredFive.java" afterPath="$PROJECT_DIR$/src/main/java/_04_16/ThreeHundredNinetysixToFourHundredFive.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_04_15/ThreeHundredEightysixToNinetyFiveTest.java" afterPath="$PROJECT_DIR$/src/test/java/_04_15/ThreeHundredEightysixToNinetyFiveTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_04_16/ThreeHundredNinetysixToFourHundredFiveTest.java" afterPath="$PROJECT_DIR$/src/test/java/_04_16/ThreeHundredNinetysixToFourHundredFiveTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java" afterPath="$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java" afterPath="$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/common/Trie.java" afterPath="$PROJECT_DIR$/src/main/java/common/Trie.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_03_25/TwoHundredFifteenToTwentyFiveTest.java" afterPath="$PROJECT_DIR$/src/test/java/_03_25/TwoHundredFifteenToTwentyFiveTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java" afterPath="$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,28 +56,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="FourHundredSixteenToFourHundredTwentyFive.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java">
+      <file leaf-file-name="FourHundredTwentySixToFourHundredThirtyFive.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/_04_19/FourHundredTwentySixToFourHundredThirtyFive.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FourHundredSixteenToFourHundredTwentyFiveTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#856#857#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -132,18 +123,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/common/SortAlgoTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/common/SortAlgo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/NumArrayChangeAble.java" />
-        <option value="$PROJECT_DIR$/src/test/java/_04_07/ThreeHundredSixToFifteenTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/_04_03/TwoHundredEightySixToNinetyFive.java" />
-        <option value="$PROJECT_DIR$/src/test/java/design/ValidWordAbbrTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/ValidWordAbbr.java" />
-        <option value="$PROJECT_DIR$/src/main/java/_04_08/ThreeHundredSixTeenToTwentyFive.java" />
-        <option value="$PROJECT_DIR$/src/test/java/_04_08/ThreeHundredSixTeenToTwentyFiveTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/_04_09/ThreeHundredTwentysixToThirtyFiveTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/design/NestedIterator.java" />
-        <option value="$PROJECT_DIR$/src/test/java/_04_10/ThreeHundredThirtysixToFourtyFiveTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/design/MovingAverage.java" />
         <option value="$PROJECT_DIR$/src/main/java/design/TicTacToe.java" />
         <option value="$PROJECT_DIR$/src/test/java/_04_11/ThreeHundredFourtysixToFiftyFiveTest.java" />
@@ -181,8 +160,20 @@
         <option value="$PROJECT_DIR$/src/main/java/_04_15/ThreeHundredEightysixToNinetyFive.java" />
         <option value="$PROJECT_DIR$/src/test/java/_04_17/FourHundredsixToFourHundredFifteenTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/_04_17/FourHundredsixToFourHundredFifteen.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_03_25/TwoHundredFifteenToTwentyFiveTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/SegmentTreeNode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/SegmentTree.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/SegmentTreeQuestions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java" />
+        <option value="$PROJECT_DIR$/src/test/java/common/BackpackTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/Backpack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/common/Trie.java" />
         <option value="$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_04_19/FourHundredTwentySixToFourHundredThirtyFiveTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/_04_20/FourHundredThirtySixToFourHundredFortyFiveTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/_04_20/FourHundredThirtySixToFourHundredFortyFive.java" />
+        <option value="$PROJECT_DIR$/src/main/java/_04_19/FourHundredTwentySixToFourHundredThirtyFive.java" />
       </list>
     </option>
   </component>
@@ -200,10 +191,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="48" />
-    <option name="y" value="23" />
-    <option name="width" value="1232" />
-    <option name="height" value="777" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -224,7 +213,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -299,32 +287,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_04_17" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -355,7 +317,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_04_18" />
+              <option name="myItemId" value="_04_20" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,90 +343,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="_04_01" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_03_27" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_03_25" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LeetcodeReview" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_03_22" />
+              <option name="myItemId" value="_04_19" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -480,14 +365,15 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="_04_20" />
+      <recent name="_04_19" />
+      <recent name="common" />
       <recent name="_04_18" />
       <recent name="_04_17" />
-      <recent name="_04_16" />
-      <recent name="_04_15" />
-      <recent name="_04_14" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -505,60 +391,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct">
-    <configuration default="false" name="ThreeHundredEightysixToNinetyFiveTest.testRect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_15.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_15" />
-      <option name="MAIN_CLASS_NAME" value="_04_15.ThreeHundredEightysixToNinetyFiveTest" />
-      <option name="METHOD_NAME" value="testRect" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FourHundredsixToFourHundredFifteenTest.testConstructHeight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="_04_17.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="LeetcodeReview" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_17" />
-      <option name="MAIN_CLASS_NAME" value="_04_17.FourHundredsixToFourHundredFifteenTest" />
-      <option name="METHOD_NAME" value="testConstructHeight" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="FourHundredSixteenToFourHundredTwentyFiveTest.testPacific" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.FourHundredThirtySixToFourHundredFortyFiveTest.testParser">
+    <configuration default="false" name="FourHundredSixteenToFourHundredTwentyFiveTest.testWordSquare" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="_04_18.*" />
@@ -570,7 +404,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="_04_18" />
       <option name="MAIN_CLASS_NAME" value="_04_18.FourHundredSixteenToFourHundredTwentyFiveTest" />
-      <option name="METHOD_NAME" value="testPacific" />
+      <option name="METHOD_NAME" value="testWordSquare" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -584,7 +418,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FourHundredSixteenToFourHundredTwentyFiveTest.testWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="_04_18.*" />
@@ -596,7 +430,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="_04_18" />
       <option name="MAIN_CLASS_NAME" value="_04_18.FourHundredSixteenToFourHundredTwentyFiveTest" />
-      <option name="METHOD_NAME" value="testPartitionSum" />
+      <option name="METHOD_NAME" value="testWord" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -610,19 +444,71 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="FourHundredTwentySixToFourHundredThirtyFiveTest.countSegments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="_04_18.*" />
+          <option name="PATTERN" value="_04_19.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="LeetcodeReview" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="_04_18" />
-      <option name="MAIN_CLASS_NAME" value="_04_18.FourHundredSixteenToFourHundredTwentyFiveTest" />
-      <option name="METHOD_NAME" value="testReconstruct" />
+      <option name="PACKAGE_NAME" value="_04_19" />
+      <option name="MAIN_CLASS_NAME" value="_04_19.FourHundredTwentySixToFourHundredThirtyFiveTest" />
+      <option name="METHOD_NAME" value="countSegments" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FourHundredThirtySixToFourHundredFortyFiveTest.findAnagramsSaveTime" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_20.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_20" />
+      <option name="MAIN_CLASS_NAME" value="_04_20.FourHundredThirtySixToFourHundredFortyFiveTest" />
+      <option name="METHOD_NAME" value="findAnagramsSaveTime" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="_04_20.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="LeetcodeReview" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="_04_20" />
+      <option name="MAIN_CLASS_NAME" value="_04_20.FourHundredThirtySixToFourHundredFortyFiveTest" />
+      <option name="METHOD_NAME" value="testParser" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1068,19 +954,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ThreeHundredEightysixToNinetyFiveTest.testRect" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.FourHundredsixToFourHundredFifteenTest.testConstructHeight" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testPacific" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testWordSquare" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testWord" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.FourHundredTwentySixToFourHundredThirtyFiveTest.countSegments" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.FourHundredThirtySixToFourHundredFortyFiveTest.findAnagramsSaveTime" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FourHundredThirtySixToFourHundredFortyFiveTest.testParser" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testPacific" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.FourHundredsixToFourHundredFifteenTest.testConstructHeight" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ThreeHundredEightysixToNinetyFiveTest.testRect" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FourHundredThirtySixToFourHundredFortyFiveTest.testParser" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FourHundredThirtySixToFourHundredFortyFiveTest.findAnagramsSaveTime" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FourHundredTwentySixToFourHundredThirtyFiveTest.countSegments" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testWord" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FourHundredSixteenToFourHundredTwentyFiveTest.testWordSquare" />
       </list>
     </recent_temporary>
   </component>
@@ -1254,7 +1140,11 @@
       <workItem from="1495384120025" duration="5185000" />
       <workItem from="1495405546215" duration="17792000" />
       <workItem from="1495433184363" duration="1089000" />
-      <workItem from="1495474622653" duration="11396000" />
+      <workItem from="1495474622653" duration="11421000" />
+      <workItem from="1495504110359" duration="6814000" />
+      <workItem from="1495563370704" duration="5365000" />
+      <workItem from="1495578694230" duration="12181000" />
+      <workItem from="1495614509938" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="add 266-275">
       <created>1490995309850</created>
@@ -1410,12 +1300,12 @@
       <option name="project" value="LOCAL" />
       <updated>1495391230100</updated>
     </task>
-    <task id="LOCAL-00023" summary="add  195-205  /03/22">
-      <created>1490218762510</created>
+    <task id="LOCAL-00023" summary="add 415-425">
+      <created>1495500028411</created>
       <option name="number" value="00023" />
       <option name="presentableId" value="LOCAL-00023" />
       <option name="project" value="LOCAL" />
-      <updated>1490218762511</updated>
+      <updated>1495500028411</updated>
     </task>
     <task id="LOCAL-00024" summary="add  206-215  /03/23">
       <created>1490307246873</created>
@@ -1466,79 +1356,111 @@
       <option name="project" value="LOCAL" />
       <updated>1490766409245</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 35m 38s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_findAnagramsSaveTime - 2017.05.23 at 22h 19m 58s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.findAnagramsSaveTime" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 39m 45s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 09m 56s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 44m 37s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 10m 05s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 49m 09s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 10m 18s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 49m 49s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 30m 31s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 50m 20s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 39m 44s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testPartitionSum - 2017.05.22 at 16h 50m 50s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testPartitionSum" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 41m 08s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testReconstruct - 2017.05.22 at 17h 26m 16s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 41m 16s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testReconstruct - 2017.05.22 at 17h 30m 22s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" configurationId="JUnit" />
+    <history-entry file="FourHundredThirtySixToFourHundredFortyFiveTest_testParser - 2017.05.23 at 23h 41m 35s.xml">
+      <configuration name="FourHundredThirtySixToFourHundredFortyFiveTest.testParser" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FourHundredSixteenToFourHundredTwentyFiveTest_testReconstruct - 2017.05.22 at 17h 30m 30s.xml">
-      <configuration name="FourHundredSixteenToFourHundredTwentyFiveTest.testReconstruct" configurationId="JUnit" />
+    <history-entry file="FourHundredTwentySixToFourHundredThirtyFiveTest_countSegments - 2017.05.23 at 22h 19m 28s.xml">
+      <configuration name="FourHundredTwentySixToFourHundredThirtyFiveTest.countSegments" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="301092000" />
+    <option name="totallyTimeSpent" value="325484000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="48" y="23" width="1232" height="777" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27617604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31676137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15294118" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15347335" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49317148" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3309659" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32670453" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49317148" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32776934" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27617604" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15462185" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -1562,7 +1484,8 @@
     <MESSAGE value="add 376-385" />
     <MESSAGE value="add 386-395" />
     <MESSAGE value="add 395-405" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 395-405" />
+    <MESSAGE value="add 415-425" />
+    <option name="LAST_COMMIT_MESSAGE" value="add 415-425" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2095,19 +2018,49 @@
           <option name="timeStamp" value="220" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java</url>
-          <line>192</line>
+          <url>file://$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java</url>
+          <line>66</line>
           <properties />
-          <option name="timeStamp" value="228" />
+          <option name="timeStamp" value="230" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java</url>
+          <line>78</line>
+          <properties />
+          <option name="timeStamp" value="231" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/common/Backpack.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="233" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/common/Backpack.java</url>
+          <line>87</line>
+          <properties />
+          <option name="timeStamp" value="235" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java</url>
-          <line>197</line>
+          <line>482</line>
           <properties />
-          <option name="timeStamp" value="229" />
+          <option name="timeStamp" value="243" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_04_20/FourHundredThirtySixToFourHundredFortyFive.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="251" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/_04_20/FourHundredThirtySixToFourHundredFortyFive.java</url>
+          <line>115</line>
+          <properties />
+          <option name="timeStamp" value="255" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="230" />
+      <option name="time" value="256" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -2116,140 +2069,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/SummaryRanges.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#253#254#0" expanded="false" />
-            <element signature="e#290#291#0" expanded="false" />
-            <element signature="e#954#955#0" expanded="false" />
-            <element signature="e#980#981#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/design/SummaryRangesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_04_11/ThreeHundredFourtysixToFiftyFiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/HitCounter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_02_28/OneToTen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_05/FiftyOneToSixty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-945">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/NumMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="72" lean-forward="false" selection-start-line="6" selection-start-column="72" selection-end-line="6" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/_04_12/ThreeHundredFiftysixToSixtyFiveTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/design/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_09/ThreeHundredTwentysixToThirtyFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="5" lean-forward="false" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_11/ThreeHundredFourtysixToFiftyFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_08/ThreeHundredSixTeenToTwentyFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2580">
-          <caret line="176" column="12" lean-forward="false" selection-start-line="176" selection-start-column="12" selection-end-line="176" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_10/ThreeHundredThirtysixToFourtyFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="5" lean-forward="false" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_07/ThreeHundredSixToFifteen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_06/TwoHundredNinetyFiveToThreeHundredFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2055">
-          <caret line="143" column="6" lean-forward="false" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_06/SixtyOneToSeventy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3480">
-          <caret line="236" column="26" lean-forward="false" selection-start-line="232" selection-start-column="8" selection-end-line="236" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/common/UndirectedGraphNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -2361,13 +2180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_01/ElevenToTwenty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6900">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.11/junit-4.11.jar!/org/junit/runners/ParentRunner.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -2429,24 +2241,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_04_16/ThreeHundredNinetysixToFourHundredFive.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3120">
-          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/_04_15/ThreeHundredEightysixToNinetyFiveTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
           <caret line="54" column="25" lean-forward="false" selection-start-line="54" selection-start-column="25" selection-end-line="54" selection-end-column="25" />
-          <folding>
-            <element signature="e#1125#1126#0" expanded="false" />
-            <element signature="e#1186#1187#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2455,7 +2253,7 @@
         <state relative-caret-position="161">
           <caret line="161" column="6" lean-forward="false" selection-start-line="161" selection-start-column="6" selection-end-line="161" selection-end-column="6" />
           <folding>
-            <element signature="e#4625#4633#0" expanded="true" />
+            <element signature="e#4625#4633#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2464,15 +2262,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="129" column="31" lean-forward="false" selection-start-line="129" selection-start-column="31" selection-end-line="129" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/_03_22/OneHundredNinetyOneToZero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1718">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2480,7 +2269,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-353">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2496,7 +2284,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
           <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2504,29 +2291,167 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_28/TwoHundredThirtySixToFortyFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="89" column="13" lean-forward="false" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_07/ThreeHundredSixToFifteen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3593">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_03_25/TwoHundredFifteenToTwentyFiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/SegmentTreeNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="34" column="25" lean-forward="true" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/SegmentTree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="82" column="42" lean-forward="true" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_25/TwoHundredFifteenToTwentyFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="95" column="40" lean-forward="false" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/SegmentTreeQuestions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="63" column="23" lean-forward="false" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/common/BackpackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="35" column="56" lean-forward="false" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_16/ThreeHundredNinetysixToFourHundredFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5783">
+          <caret line="12" column="51" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Backpack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="153" column="14" lean-forward="false" selection-start-line="153" selection-start-column="14" selection-end-line="153" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/TrieNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_22/OneHundredNinetyOneToZero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4065">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_23/TwoHundredSixToFifteen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2437">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/common/Trie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="13" column="24" lean-forward="false" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_03_01/ElevenToTwenty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="196" column="13" lean-forward="false" selection-start-line="196" selection-start-column="13" selection-end-line="196" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/_04_18/FourHundredSixteenToFourHundredTwentyFiveTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="33" column="63" lean-forward="false" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="273">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/_04_18/FourHundredSixteenToFourHundredTwentyFive.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+        <state relative-caret-position="-1005">
+          <caret line="105" column="54" lean-forward="true" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_04_19/FourHundredTwentySixToFourHundredThirtyFiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_20/FourHundredThirtySixToFourHundredFortyFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="132" column="29" lean-forward="true" selection-start-line="115" selection-start-column="8" selection-end-line="132" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#739#740#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/_04_20/FourHundredThirtySixToFourHundredFortyFiveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="28" column="57" lean-forward="false" selection-start-line="28" selection-start-column="57" selection-end-line="28" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/_04_19/FourHundredTwentySixToFourHundredThirtyFive.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>

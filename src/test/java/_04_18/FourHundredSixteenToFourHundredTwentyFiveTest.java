@@ -3,6 +3,8 @@ package _04_18;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 /**
@@ -32,6 +34,18 @@ public class FourHundredSixteenToFourHundredTwentyFiveTest {
     @Test
     public void testReconstruct(){
         System.out.println(fhstfhtf.originalDigits("owoztneoer"));
+    }
+
+    @Test
+    public void testWordSquare(){
+        String[]args={"ball","asee","let","lep"};
+        System.out.println(fhstfhtf.validWordSquare(Arrays.asList(args)));
+    }
+
+    @Test
+    public void testWord(){
+        String[]args={"aba","bab","ata","ata"};
+        fhstfhtf.wordSquares(args);
     }
 
 }
