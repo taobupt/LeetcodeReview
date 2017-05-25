@@ -2,6 +2,9 @@ package _04_19;
 
 import common.Interval;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 /**
  * Created by tao on 5/23/17.
  */
@@ -41,7 +44,29 @@ public class FourHundredTwentySixToFourHundredThirtyFive {
     //没啥印象
     //先排序，发现有重叠就删之。
     public int eraseOverlapIntervals(Interval[] intervals) {
-        return 0;
+        Arrays.sort(intervals, new Comparator<Interval>() {
+            @Override
+            public int compare(Interval o1, Interval o2) {
+                if(o1.start!=o2.start)
+                    return o1.start-o2.start;
+                else
+                    return o1.end-o2.end;
+            }
+        });
+        int cnt=0,n=intervals.length;
+        if(n<=1)
+            return 0;
+        int end=intervals[0].end;
+        for(int i=1;i<n;++i){
+            if(intervals[i].start<end){
+                cnt++;
+                end=Math.min(end,intervals[i].end);//漏掉了，唉
+                continue;
+            }else{
+                end=Math.max(end,intervals[i].end);
+            }
+        }
+        return cnt;
     }
 
 }
