@@ -363,6 +363,7 @@ public class FourHundredSixteenToFourHundredTwentyFive {
 
     //424 Longest Repeating Character Replacement
     //失算啊，都不知到用window
+    //two window
     public int characterReplacement(String s, int k) {
         int []cnt=new int[26];
         int start=0,end=0,n=s.length(),maxCharCount=0,res=0;

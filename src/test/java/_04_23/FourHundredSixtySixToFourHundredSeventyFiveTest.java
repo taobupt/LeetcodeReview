@@ -36,4 +36,15 @@ public class FourHundredSixtySixToFourHundredSeventyFiveTest {
         System.out.println(FHSSTFHS.findRadius(houses,heaters));
     }
 
+    @Test
+    public void testMasticks(){
+        int []nums={1,1,2,2,3,3,4,4,4};
+        System.out.println(FHSSTFHS.makesquare(nums));
+    }
+
+    @Test
+    public void testEncodeString()throws Exception{
+        System.out.println(FHSSTFHS.encode("abbbabbbcabbbabbbc"));
+    }
+
 }
