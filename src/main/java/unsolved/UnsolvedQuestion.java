@@ -1,5 +1,6 @@
 package unsolved;
 
+import common.TreeNode;
 import mathQuestions.MathQuestions;
 
 import java.util.*;
@@ -276,5 +277,25 @@ public class UnsolvedQuestion {
             }
         }
         return res;
+    }
+
+    //543 the diameter of dfs
+    int res=1;
+
+    public int dfs(TreeNode root){
+        if(root==null){
+            return 0;
+        }
+        if(root.left==null && root.right==null)
+            return 1;
+        int l= dfs(root.left);
+        int r =dfs(root.right);
+        res=Math.max(res,l+r+1);
+        return Math.max(l,r)+1;//返回什么才是应该想清楚的
+
+    }
+    public int diameterOfBinaryTree(TreeNode root) {
+        dfs(root);
+        return res-1;
     }
 }
