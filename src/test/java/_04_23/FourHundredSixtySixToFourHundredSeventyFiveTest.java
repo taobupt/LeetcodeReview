@@ -47,4 +47,9 @@ public class FourHundredSixtySixToFourHundredSeventyFiveTest {
         System.out.println(FHSSTFHS.encode("abbbabbbcabbbabbbc"));
     }
 
+    @Test
+    public void testIP(){
+        System.out.println(FHSSTFHS.validIPAddress("256.256.256.256"));
+    }
+
 }

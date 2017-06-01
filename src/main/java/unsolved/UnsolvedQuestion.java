@@ -298,4 +298,139 @@ public class UnsolvedQuestion {
         dfs(root);
         return res-1;
     }
+
+
+    //599
+
+    public String[] findRestaurant(String[] list1, String[] list2) {
+        Map<String,Integer>map1=new HashMap<>();
+        Map<String,Integer>map2=new HashMap<>();
+        int m=list1.length,n=list2.length;
+        for(int i=0;i<m;++i){
+            map1.put(list1[i],i);
+        }
+        for(int i=0;i<n;++i){
+            map2.put(list2[i],i);
+        }
+        List<String>res=new ArrayList<>();
+        int index= Integer.MAX_VALUE;
+        if(m<n){
+            for(int i=0;i<m;++i){
+                if(map2.containsKey(list1[i]) && index>(i+map2.get(list1[i]))){
+                    index=i+map2.get(list1[i]);
+                }
+            }
+            for(int i=0;i<m;++i){
+                if(map2.containsKey(list1[i]) && index==(i+map2.get(list1[i]))){
+                    res.add(list1[i]);
+                }
+            }
+
+
+        }else{
+            for(int i=0;i<n;++i){
+                if(map1.containsKey(list2[i]) && index>(i+map1.get(list2[i]))){
+                    index=i+map1.get(list2[i]);
+                }
+            }
+
+            for(int i=0;i<n;++i){
+                if(map1.containsKey(list2[i]) && index==(i+map1.get(list2[i]))){
+                    res.add(list2[i]);
+                }
+            }
+
+        }
+        String[]ans =new String[res.size()];
+        for(int i=0;i<res.size();++i){
+            ans[i]=res.get(i);
+        }
+        return ans;
+    }
+
+
+
+    //the maze II
+    //505
+    class Point {
+        int x,y,dist;
+        public Point(int _x, int _y,int _di) {x=_x;y=_y;dist=_di;}
+    }
+
+    public int shortestDistance(int[][] maze, int[] start, int[] destination) {
+        int m=maze.length, n=maze[0].length;
+        if (start[0]==destination[0] && start[1]==destination[1]) return 0;
+        int[][] dir=new int[][] {{-1,0},{0,1},{1,0},{0,-1}};
+        int [][] visited=new int[m][n];
+        for(int i=0;i<m;++i)
+            Arrays.fill(visited,Integer.MAX_VALUE);
+        LinkedList<Point> list=new LinkedList<>();
+        list.offer(new Point(start[0], start[1],0));
+        while (!list.isEmpty()) {
+            Point p=list.poll();
+            int x=p.x, y=p.y;
+            if(visited[x][y]<=p.dist)//关键
+                continue;
+            visited[x][y]=p.dist;
+            for (int i=0;i<4;i++) {
+                int xx=x, yy=y;
+                int di=0;
+                while (xx>=0 && xx<m && yy>=0 && yy<n && maze[xx][yy]==0) {
+                    xx+=dir[i][0];
+                    yy+=dir[i][1];
+                    di++;
+                }
+                xx-=dir[i][0];
+                yy-=dir[i][1];
+                if (xx==destination[0] && yy==destination[1]) return p.dist+di-1;
+                list.offer(new Point(xx, yy,p.dist+di-1));
+            }
+        }
+        return -1;
+    }
+
+    //564 array nesting
+    //TLE 不能理解啊,同一个循环内的所有数，都有相同的周期，所以可以用一个数组来记录一个周期内的所有数，这样就省了很多时间
+    public int arrayNesting(int[] nums) {
+        int maxSize=0,n=nums.length;
+        boolean []vis = new boolean[n];
+        for(int i=0;i<n;++i){
+            int first=nums[i];
+            if(vis[first])
+                continue;
+            int num=first;
+            int cnt=1;
+            vis[first]=true;
+            while(first!=nums[num]){
+                cnt++;
+                num=nums[num];
+                vis[num]=true;
+            }
+            maxSize=Math.max(maxSize,cnt);
+        }
+        return maxSize;
+    }
+
+    //583. Delete Operation for Two Strings, 幸好过了，不然就是个SB了。
+
+    public int minDistance(String word1, String word2) {
+        if(word1.equals(word2))
+            return 0;
+        int m=word1.length();
+        int n=word2.length();
+        int [][]dp=new int[m+1][n+1];
+        for(int i=1;i<=m;++i)
+            dp[i][0]=i;
+        for(int i=1;i<=n;++i)
+            dp[0][i]=i;
+        for(int i=1;i<=m;++i){
+            for(int j=1;j<=n;++j){
+                if(word1.charAt(i-1)==word2.charAt(j-1))
+                    dp[i][j]=Math.min(Math.min(dp[i-1][j],dp[i][j-1])+1,dp[i-1][j-1]);
+                else
+                    dp[i][j]=Math.min(dp[i-1][j],dp[i][j-1])+1;
+            }
+        }
+        return dp[m][n];
+    }
 }
