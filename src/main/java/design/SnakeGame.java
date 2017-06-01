@@ -1,10 +1,12 @@
 package design;
 
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by tao on 5/31/17.
  */
+
+//将二维数组变成一维数组是一个主要的idea
 public class SnakeGame {
     /** Initialize your data structure here.
      @param width - screen width
@@ -12,24 +14,24 @@ public class SnakeGame {
      @param food - A list of food positions
      E.g food = [[1,1], [1,0]] means the first food is positioned at [1,1], the second is at [1,0]. */
 
-    private int ind;//the index of food
-    private boolean [][]vis;//the snake;
-    private int [][]foods;
-    private int w;
-    private int h;
-    private List<int[]>snake=null;//装足迹
-    private int[][]dir=null;
+   //2D position info is encoded to 1d and stored as two copies
+    Set<Integer>set;//the copy is good for fast loop-up for eating bldy case
+    Deque<Integer>body;//this coy is good for updating tail
+    int score;
+    int [][]food;
+    int foodIndex;
+    int w;
+    int h;
+
     public SnakeGame(int width, int height, int[][] food) {
-        this.h=height;
+
         this.w=width;
-        ind=0;
-        vis=new boolean[width][height];
-        foods=new int[food.length][];
-        for(int i=0;i<food.length;++i)
-            foods[i]=food[i].clone();
-        snake.add(new int[]{0,0,-1});//x, y, direction
-        vis[0][0]=true;
-        dir=new int[][]{{1,0},{0,-1},{0,1},{-1,0}};
+        this.h=height;
+        this.food=food;
+        set=new HashSet<>();
+        set.add(0);//initially at [0][0]
+        body=new LinkedList<>();
+        body.offerLast(0);
     }
 
     /** Moves the snake.
@@ -37,15 +39,46 @@ public class SnakeGame {
      @return The game's score after the move. Return -1 if game over.
      Game over when snake crosses the screen boundary or bites its body. */
     public int move(String direction) {
-        int x = snake.get(0)[0];
-        int y=snake.get(0)[1];
-        int dire = snake.get(0)[2];
-        if(direction.equals("U")){
-            if(x==0)//碰墙
-                return -1;
-            if(vis[x+1][y])//collision
-                return -1;
+        if(score==-1)
+            return -1;
+        int rowHead = body.peekFirst()/w;
+        int colHead = body.peekFirst()%w;
+        switch (direction){
+            case "U":
+                rowHead--;
+                break;
+            case "D":
+                rowHead++;
+                break;
+            case "L":
+                colHead--;
+                break;
+                default:
+                    colHead++;
         }
-        return -1;
+
+        int head = rowHead*w+colHead;
+
+
+        //case one out of boundary or eating body
+
+        set.remove(body.peekLast());// new head is legal to be in old tail's pos
+        if(rowHead<0||rowHead==h||colHead<0||colHead==w||set.contains(head)){
+            return score=-1;
+        }
+
+        set.add(head);
+        body.offerFirst(head);
+
+        //case 2: eating food, keep tail .add head
+        if(foodIndex<food.length && rowHead==food[foodIndex][0] && colHead==food[foodIndex][1]){
+            set.add(body.peekLast());//old tail does not change, so add it back to set
+            foodIndex++;
+            return ++score;
+        }
+
+        //case3: normal move, remove tail. add head
+        body.pollLast();
+        return score;
     }
 }
