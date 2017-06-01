@@ -1,6 +1,7 @@
 package _04_23;
 
 import java.util.*;
+import java.util.regex.Pattern;
 
 /**
  * Created by tao on 5/25/17.
@@ -12,8 +13,78 @@ public class FourHundredSixtySixToFourHundredSeventyFive {
 
     // 467. Unique Substrings in Wraparound String
     //都是dp，都不会啊，稍微难一点的dp就跪了，真是个忧伤的故事
+    //真是太奇妙了，我都不太会，太惨了
     public int findSubstringInWraproundString(String p) {
-        return 0;
+        int[] count = new int[26];
+
+        // store longest contiguous substring ends at current position.
+        int maxLengthCur = 0;
+
+        for (int i = 0; i < p.length(); i++) {
+            if (i > 0 && (p.charAt(i) - p.charAt(i - 1) == 1 || (p.charAt(i - 1) - p.charAt(i) == 25))) {
+                maxLengthCur++;
+            }
+            else {
+                maxLengthCur = 1;
+            }
+
+            int index = p.charAt(i) - 'a';
+            count[index] = Math.max(count[index], maxLengthCur);
+        }
+
+        // Sum to get result
+        int sum = 0;
+        for (int i = 0; i < 26; i++) {
+            sum += count[i];
+        }
+        return sum;
+    }
+
+
+    //468 valid IP address
+    public String validIPAddress(String IP) {
+        String regex1 = "^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})$";
+        String regex2 = "^([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4}):([0-9A-Fa-f]{1,4})$";
+        Pattern pattern1 = Pattern.compile(regex1);
+        Pattern pattern2 = Pattern.compile(regex2);
+        try{
+            if(pattern1.matcher(IP).find()){
+                String []args = IP.split("\\.");
+                for (String str:args){
+                    if((str.length()>1 && str.charAt(0)=='0')||Integer.parseInt(str)>255)
+                        return "Neither";
+                }
+                return "IPv4";
+            }
+
+            if(pattern2.matcher(IP).find())
+                return "IPv6";
+            return "Neither";
+
+        }catch (Exception e){
+            return "Neither";
+        }
+    }
+
+    //469 convex polygon
+    //真是走了狗屎运，一次就通过了。
+    public int crossProduct(List<List<Integer>>res,int a,int b,int c){
+        return (res.get(a).get(0)-res.get(c).get(0))*(res.get(b).get(1)-res.get(c).get(1))-(res.get(b).get(0)-res.get(c).get(0))*(res.get(a).get(1)-res.get(c).get(1));
+    }
+    public boolean isConvex(List<List<Integer>> points) {
+        int n=points.size(),t=0;
+        int positive =0;
+        int negative=0;
+        for(int i=0;i<n;++i){
+            t = crossProduct(points,i,(i+1)%n,(i+2)%n);
+            if(t>0)
+                positive++;
+            else if(t<0)
+                negative++;
+            if(positive*negative!=0)
+                return false;
+        }
+        return true;
     }
 
     //471 encode string with shortest length

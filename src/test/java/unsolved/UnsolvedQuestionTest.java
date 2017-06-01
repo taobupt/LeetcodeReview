@@ -41,5 +41,24 @@ public class UnsolvedQuestionTest {
         System.out.println(uq.findUnsortedSubarray(nums));
     }
 
+    @Test
+    public void testMinium(){
+        String []list1= {"Shogun","Tapioca Express","Burger King","KFC"};
+        String []list2={"Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun"};
+        uq.findRestaurant(list1,list2);
+    }
+
+    @Test
+    public void testMazeII(){
+        int [][]maze ={{0,0,1,0,0},{0,0,0,0,0},{0,0,0,1,0},{1,1,0,1,1},{0,0,0,0,0}};
+        int []start={0,4};
+        int []dest={4,4};
+        System.out.println(uq.shortestDistance(maze,start,dest));
+    }
+
+    @Test
+    public void testMinDistacne(){
+        System.out.println(uq.minDistance("sea","eat"));
+    }
 
 }
