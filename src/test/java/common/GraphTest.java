@@ -26,4 +26,19 @@ public class GraphTest {
         g.topologicalSort(4,edges);
     }
 
+    @Test
+    public void testMST(){
+//        int []start = {0,0,0,1,2};
+//        int []end = {1,2,3,3,3};
+//        int []weight ={10,6,5,15,4};
+        int []start = {0,1,2,3,3,4,4,1,4,0};
+        int []end = {1,2,3,2,0,2,3,4,1,4};
+        int []weight ={10,1,4,6,7,9,2,2,3,5};
+        g = new Graph();
+        //g.MSTKruskal();
+        //g.MSTPrim(start,end,weight);
+        g.dijkstra(start,end,weight,0);
+    }
+
+
 }

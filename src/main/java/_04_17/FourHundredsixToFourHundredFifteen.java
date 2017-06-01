@@ -26,6 +26,13 @@ public class FourHundredsixToFourHundredFifteen {
         return res.toArray(new int[people.length][]);
     }
 
+
+    //407 trapping water II, 我记得我以前做过的啊，只是没过而已，为啥把我的记录都删了？，另外一个账号
+    //原来的两边高度夹击的办法，这里不能用，你想想就明白了，有可能是会流到第二行
+    public int trapRainWater(int[][] heightMap) {
+        return 0;
+    }
+
     //408 Valid Word Abbreviation
     //"a" "01"
     public boolean validWordAbbreviation(String word, String abbr) {
